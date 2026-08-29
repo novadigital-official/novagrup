@@ -6,21 +6,23 @@ export async function POST(request: NextRequest) {
     const { name, hotel, hotelName, phone, email, department, message } = body;
     const resolvedHotel = hotel || hotelName;
 
-    // Validate required fields
-    if (!name || !resolvedHotel || !phone || !email) {
+    // Validate required fields (email is optional)
+    if (!name || !resolvedHotel || !phone) {
       return NextResponse.json(
         { error: 'Lütfen tüm zorunlu alanları doldurun.' },
         { status: 400 }
       );
     }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'Geçerli bir e-posta adresi girin.' },
-        { status: 400 }
-      );
+    // Email validation (only if provided)
+    if (email && email.trim() !== '') {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return NextResponse.json(
+          { error: 'Geçerli bir e-posta adresi girin.' },
+          { status: 400 }
+        );
+      }
     }
 
     // For now, log the submission (in production, integrate with Resend/SendGrid/Nodemailer)

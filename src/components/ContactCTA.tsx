@@ -39,7 +39,7 @@ function InstagramIcon({ size = 20, className = "" }: { size?: number; className
 }
 
 export default function ContactCTA() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle");
   const [formData, setFormData] = useState({
     name: "",
@@ -273,8 +273,7 @@ export default function ContactCTA() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder={t.contact.emailPlaceholder}
-                      required
+                      placeholder={language === "tr" ? "E-Posta Adresiniz (Opsiyonel)" : "Email Address (Optional)"}
                       className="w-full pl-9 pr-3 py-2.5 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
                     />
                   </div>
