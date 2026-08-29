@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { useLanguage } from "@/lib/LanguageContext";
+import { LegalModal, LegalModalType } from "./LegalModals";
 
 function InstagramIcon({ size = 14, className = "" }: { size?: number; className?: string }) {
   return (
@@ -29,6 +31,7 @@ function InstagramIcon({ size = 14, className = "" }: { size?: number; className
 
 export default function Footer() {
   const { language, t } = useLanguage();
+  const [activeLegal, setActiveLegal] = useState<LegalModalType>(null);
 
   const footerLinks = [
     {
@@ -155,6 +158,35 @@ export default function Footer() {
 
         </div>
 
+        {/* Legal Compliance Bar */}
+        <div className="py-3 border-t border-white/5 flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 text-[11px] text-white/50">
+          <span className="text-gold font-semibold">Yasal Bilgilendirme:</span>
+          <button
+            onClick={() => setActiveLegal("kvkk")}
+            className="hover:text-gold transition-colors underline cursor-pointer"
+          >
+            KVKK Aydınlatma Metni
+          </button>
+          <button
+            onClick={() => setActiveLegal("gizlilik")}
+            className="hover:text-gold transition-colors underline cursor-pointer"
+          >
+            Gizlilik ve Çerez Politikası
+          </button>
+          <button
+            onClick={() => setActiveLegal("kullanim")}
+            className="hover:text-gold transition-colors underline cursor-pointer"
+          >
+            Kullanım Şartları & 5651 Yasal Uyarı
+          </button>
+          <button
+            onClick={() => setActiveLegal("kunye")}
+            className="hover:text-gold transition-colors underline cursor-pointer"
+          >
+            Resmi Künye
+          </button>
+        </div>
+
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -171,6 +203,9 @@ export default function Footer() {
           </p>
         </motion.div>
       </div>
+
+      {/* Legal Modal Popup */}
+      <LegalModal type={activeLegal} onClose={() => setActiveLegal(null)} />
     </footer>
   );
 }
