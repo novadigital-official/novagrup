@@ -23,6 +23,8 @@ export default function Navbar() {
   const navLinks = [
     { label: t.nav.home, href: "#hero" },
     { label: t.nav.departments, href: "#hizmetler" },
+    { label: language === "tr" ? "İş Arıyorum (Başvuru)" : "Job Application", href: "#basvuru" },
+    { label: language === "tr" ? "Personel Arıyorum (Otel İK)" : "Request Staffing", href: "#basvuru" },
     { label: t.nav.workflow, href: "#is-akisi" },
     { label: t.nav.whyUs, href: "#neden-nova" },
     { label: t.nav.contact, href: "#iletisim" },

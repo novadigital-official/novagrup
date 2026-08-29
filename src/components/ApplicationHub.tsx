@@ -63,9 +63,9 @@ export default function ApplicationHub() {
   };
 
   return (
-    <section id="basvuru" className="py-20 relative bg-gradient-to-b from-[#080d1a] via-[#0c1324] to-[#080d1a] overflow-hidden">
+    <section id="basvuru" className="py-20 relative bg-gradient-to-b from-brand-darkest via-brand-deeper to-brand-darkest overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gold/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -173,7 +173,7 @@ export default function ApplicationHub() {
                   <select
                     value={jobPosition}
                     onChange={(e) => setJobPosition(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-[#0c1324] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#2E0A11] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
                   >
                     <option value="Garson / Servis Elemanı">Garson / Komi / Servis</option>
                     <option value="Kat Görevlisi (Maid / Housekeeping)">Kat Görevlisi (Housekeeping)</option>
@@ -191,7 +191,7 @@ export default function ApplicationHub() {
                   <select
                     value={jobLodging}
                     onChange={(e) => setJobLodging(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-[#0c1324] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#2E0A11] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
                   >
                     <option value="Evet (Lojman İstiyorum)">Evet, Lojman ve Servis İstiyorum</option>
                     <option value="Hayır (Kendi Evim Var / Servis Yeterli)">Hayır, Kendi Evim Var</option>
@@ -279,7 +279,7 @@ export default function ApplicationHub() {
                   <select
                     value={corpDepartment}
                     onChange={(e) => setCorpDepartment(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-[#0c1324] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#2E0A11] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
                   >
                     <option value="Kat Hizmetleri (Meydancı & Kat Görevlisi)">Kat Hizmetleri (Meydancı & Kat Görevlisi)</option>
                     <option value="Servis & Bar (Garson, Komi & Runner)">Servis & Bar (Garson, Komi)</option>
@@ -296,7 +296,7 @@ export default function ApplicationHub() {
                   <select
                     value={corpCount}
                     onChange={(e) => setCorpCount(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-[#0c1324] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#2E0A11] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
                   >
                     <option value="1 - 3 Personel">1 - 3 Personel</option>
                     <option value="4 - 8 Personel">4 - 8 Personel</option>
@@ -312,7 +312,7 @@ export default function ApplicationHub() {
                   <select
                     value={corpDate}
                     onChange={(e) => setCorpDate(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-[#0c1324] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#2E0A11] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
                   >
                     <option value="Acil (24-48 Saat İçinde)">Acil (24-48 Saat İçinde)</option>
                     <option value="Bu Hafta İçinde">Bu Hafta İçinde</option>

@@ -81,11 +81,11 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
         <div className="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
           <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2">
             <p><strong>Ticari Tanıtım Ünvanı:</strong> NOVA ORGANİZASYON & TURİZM YÖNETİMİ</p>
-            <p><strong>Yetkili Yönetici:</strong> Çelebi Asal</p>
-            <p><strong>Resmi Alan Adı:</strong> novaorganizasyon7.com.tr</p>
+            <p><strong>Operasyon & Yönetim:</strong> Saha Koordinasyon Kurulu</p>
+            <p><strong>Resmi Alan Adı:</strong> www.novaorganizasyon7.com.tr</p>
             <p><strong>Kurumsal E-Posta:</strong> iknovaofis@gmail.com</p>
-            <p><strong>Kurumsal İletişim / WhatsApp:</strong> +90 505 410 48 00 / +90 507 087 17 89</p>
-            <p><strong>Hizmet Bölgesi:</strong> Antalya (Muratpaşa, Kepez, Konyaaltı, Belek, Kemer, Alanya) / Türkiye Geneli</p>
+            <p><strong>Kurumsal İletişim / WhatsApp:</strong> +90 505 410 48 00</p>
+            <p><strong>Hizmet Bölgesi:</strong> Türkiye Geneli (Antalya, Muğla, İzmir, İstanbul & Tüm Tesisler)</p>
             <p><strong>Faaliyet Alanı:</strong> Turizm, Otelcilik Destek, Etkinlik, Kongre & Organizasyon Yönetimi</p>
           </div>
         </div>

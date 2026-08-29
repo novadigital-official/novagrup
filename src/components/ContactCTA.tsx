@@ -222,28 +222,6 @@ export default function ContactCTA() {
                 </div>
               </a>
 
-              {/* Yönetici & B2B Anlaşma Hattı */}
-              <a
-                href="https://wa.me/905070871789"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Yönetici & B2B Anlaşma Hattı"
-                className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
-              >
-                <div className="w-11 h-11 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
-                  <Phone size={19} />
-                </div>
-                <div>
-                  <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
-                    {language === "tr" ? "Yönetici & B2B Hattı" : "Executive & B2B Desk"}
-                  </p>
-                  <p className="text-white font-black text-sm sm:text-base group-hover:text-gold transition-colors">
-                    0507 087 17 89
-                  </p>
-                  <p className="text-white/50 text-xs mt-0.5">Çelebi Asal — Operasyon Yönetimi</p>
-                </div>
-              </a>
-
               {/* Email Card */}
               <a
                 href="mailto:iknovaofis@gmail.com"
