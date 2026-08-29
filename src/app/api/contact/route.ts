@@ -3,51 +3,50 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, hotel, hotelName, phone, email, department, message } = body;
-    const resolvedHotel = hotel || hotelName;
+    const { type = 'corporate', name, phone } = body;
 
-    // Validate required fields (email is optional)
-    if (!name || !resolvedHotel || !phone) {
+    // Validate base required fields
+    if (!name || !phone) {
       return NextResponse.json(
-        { error: 'Lütfen tüm zorunlu alanları doldurun.' },
+        { error: 'Lütfen ad soyad ve telefon numaranızı girin.' },
         { status: 400 }
       );
     }
 
-    // Email validation (only if provided)
-    if (email && email.trim() !== '') {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        return NextResponse.json(
-          { error: 'Geçerli bir e-posta adresi girin.' },
-          { status: 400 }
-        );
-      }
+    if (type === 'jobseeker') {
+      const { ageLocation, desiredRole } = body;
+      console.log('👤 Yeni Personel İş Başvurusu:', {
+        type: 'JOB_APPLICATION',
+        name,
+        phone,
+        ageLocation: ageLocation || 'Belirtilmedi',
+        desiredRole: desiredRole || 'Genel Başvuru',
+        timestamp: new Date().toISOString(),
+      });
+
+      return NextResponse.json(
+        { success: true, message: 'İş başvurunuz başarıyla alındı.' },
+        { status: 200 }
+      );
     }
 
-    // For now, log the submission (in production, integrate with Resend/SendGrid/Nodemailer)
-    console.log('📧 New contact form submission:', {
+    // Corporate Proposal Request
+    const { hotel, hotelName, email, department, message } = body;
+    const resolvedHotel = hotel || hotelName || 'Belirtilmedi';
+
+    console.log('🏛️ Yeni Kurumsal Teklif Talebi:', {
+      type: 'CORPORATE_PROPOSAL',
       name,
       hotel: resolvedHotel,
       phone,
-      email,
-      department,
-      message,
+      email: email || 'Belirtilmedi',
+      department: department || 'Tüm Departmanlar',
+      message: message || '',
       timestamp: new Date().toISOString(),
     });
 
-    // TODO: Integrate with email service
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'NOVA Form <noreply@novaorganizasyon7.com.tr>',
-    //   to: 'iknovaofis@gmail.com',
-    //   subject: `Yeni Teklif Talebi: ${hotel} — ${department}`,
-    //   html: `<h2>Yeni Teklif Talebi</h2>...`,
-    // });
-
     return NextResponse.json(
-      { success: true, message: 'Form başarıyla gönderildi.' },
+      { success: true, message: 'Teklif talebiniz başarıyla alındı.' },
       { status: 200 }
     );
   } catch (error) {
