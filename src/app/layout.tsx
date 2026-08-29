@@ -27,20 +27,20 @@ export const metadata: Metadata = {
     "antalya otel personeli",
     "hotel operations antalya",
   ],
-  authors: [{ name: "NOVA ORGANİZASYON", url: "https://novaorganizasyon7.com.tr" }],
+  authors: [{ name: "NOVA ORGANİZASYON", url: "https://www.novaorganizasyon7.com.tr" }],
   creator: "NOVA Turizm Organizasyon ve Danışmanlık Hizmetleri Ltd. Şti.",
-  metadataBase: new URL("https://novaorganizasyon7.com.tr"),
+  metadataBase: new URL("https://www.novaorganizasyon7.com.tr"),
   alternates: {
-    canonical: "https://novaorganizasyon7.com.tr",
+    canonical: "https://www.novaorganizasyon7.com.tr",
     languages: {
-      "tr-TR": "https://novaorganizasyon7.com.tr",
-      "en-US": "https://novaorganizasyon7.com.tr/?lang=en",
+      "tr-TR": "https://www.novaorganizasyon7.com.tr",
+      "en-US": "https://www.novaorganizasyon7.com.tr/?lang=en",
     },
   },
   openGraph: {
     type: "website",
     locale: "tr_TR",
-    url: "https://novaorganizasyon7.com.tr",
+    url: "https://www.novaorganizasyon7.com.tr",
     title: "NOVA ORGANİZASYON | Otel Operasyon & Departman Yönetimi",
     description:
       "Antalya 5 yıldızlı oteller için profesyonel departman yönetimi ve kesintisiz operasyon desteği.",
