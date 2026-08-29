@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     // Example with Resend:
     // const resend = new Resend(process.env.RESEND_API_KEY);
     // await resend.emails.send({
-    //   from: 'NOVA Form <noreply@novagrup.com.tr>',
+    //   from: 'NOVA Form <noreply@novaorganizasyon7.com.tr>',
     //   to: 'iknovaofis@gmail.com',
     //   subject: `Yeni Teklif Talebi: ${hotel} — ${department}`,
     //   html: `<h2>Yeni Teklif Talebi</h2>...`,

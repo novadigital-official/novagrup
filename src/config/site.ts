@@ -1,6 +1,8 @@
 export const siteConfig = {
+  domain: "novaorganizasyon7.com.tr",
+  url: "https://novaorganizasyon7.com.tr",
   company: {
-    name: "NOVA GRUP",
+    name: "NOVA ORGANİZASYON",
     legalName: "NOVA Turizm Organizasyon ve Danışmanlık Hizmetleri Ltd. Şti.",
   },
   contact: {
