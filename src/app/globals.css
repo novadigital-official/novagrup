@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* === NOVA Brand Colors (from logo: Deep Burgundy/Wine) === */
+  --color-burgundy: #6B1525;
+  --color-burgundy-light: #8A1E32;
+  --color-burgundy-dark: #4A0F1A;
+  --color-burgundy-deeper: #2E0A11;
+  
+  /* Accent: Warm Gold (pairs perfectly with burgundy) */
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8C84A;
+  --color-gold-dark: #B8952E;
+  
+  /* Neutrals */
+  --color-cream: #FBF8F4;
+  --color-warm-gray: #F5F0EB;
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --font-sans: var(--font-inter);
+
+  /* Semantic Brand Colors */
+  --color-brand-darkest: #1E050B;
+  --color-brand-deeper: #2E0A11;
+  --color-brand-dark: #4A0F1A;
+  --color-brand-base: #6B1525;
+  --color-brand-light: #8A1E32;
+  --color-gold-bright: #F5D769;
+  --color-surface-warm: #FAF8F5;
+  --color-surface-cream: #FBF8F4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #4A0F1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E8C84A;
+}
+
+/* Gold text gradient utility */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5D769 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Burgundy text gradient */
+.text-gradient-burgundy {
+  background: linear-gradient(135deg, #6B1525 0%, #8A1E32 50%, #6B1525 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mesh gradient background for hero (burgundy theme) */
+.hero-mesh {
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(107, 21, 37, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, #2E0A11 0%, #4A0F1A 30%, #6B1525 70%, #4A0F1A 100%);
+}
+
+/* Animated gold shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #D4AF37 0%,
+    #F5D769 25%,
+    #D4AF37 50%,
+    #F5D769 75%,
+    #D4AF37 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Floating animation for WhatsApp button */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Subtle pulse for stats */
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 3s ease-in-out infinite;
 }

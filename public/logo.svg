@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <!-- Shield -->
+  <path d="M100 10 L180 50 L180 140 C180 190 145 230 100 250 C55 230 20 190 20 140 L20 50 Z" fill="#6B1525"/>
+  <!-- Inner shield cutout for depth -->
+  <path d="M100 25 L168 60 L168 138 C168 183 137 218 100 236 C63 218 32 183 32 138 L32 60 Z" fill="#7A1E30"/>
+  <!-- N Letter -->
+  <text x="100" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="100" fill="white" letter-spacing="-4">N</text>
+  <!-- 4-pointed Star -->
+  <path d="M100 8 L104 20 L116 20 L106 27 L110 40 L100 32 L90 40 L94 27 L84 20 L96 20 Z" fill="#6B1525"/>
+  <!-- Star alternative: clean 4-point -->
+  <polygon points="100,0 103,14 116,14 106,22 109,36 100,28 91,36 94,22 84,14 97,14" fill="#6B1525"/>
+</svg>
