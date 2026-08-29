@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import ApplicationHub from "@/components/ApplicationHub";
 import Workflow from "@/components/Workflow";
 import WhyUs from "@/components/WhyUs";
 import ContactCTA from "@/components/ContactCTA";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <ApplicationHub />
         <Workflow />
         <WhyUs />
         <ContactCTA />
