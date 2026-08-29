@@ -1,12 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { UserCheck, Building2, Send, CheckCircle2, Phone, Briefcase, Users, Calendar, Sparkles } from "lucide-react";
+import { UserCheck, Building2, Send, CheckCircle2, Phone, Briefcase, Users, Calendar } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export default function ApplicationHub() {
   const [activeTab, setActiveTab] = useState<"jobSeeker" | "corporate">("jobSeeker");
+
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash;
+      if (hash === "#is-ariyorum") {
+        setActiveTab("jobSeeker");
+      } else if (hash === "#personel-ariyorum") {
+        setActiveTab("corporate");
+      }
+    };
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
 
   // Job Seeker Form State
   const [jobName, setJobName] = useState("");
@@ -64,6 +78,10 @@ export default function ApplicationHub() {
 
   return (
     <section id="basvuru" className="py-20 relative bg-gradient-to-b from-brand-darkest via-brand-deeper to-brand-darkest overflow-hidden">
+      {/* Target Anchors for Direct Navbar Routing */}
+      <div id="is-ariyorum" className="absolute -top-24 pointer-events-none" />
+      <div id="personel-ariyorum" className="absolute -top-24 pointer-events-none" />
+
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gold/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -71,10 +89,6 @@ export default function ApplicationHub() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Hızlı İletişim & Başvuru Masası</span>
-          </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             İş mi Arıyorsunuz, <span className="text-gradient-gold">Personel mi?</span>
           </h2>
@@ -84,30 +98,32 @@ export default function ApplicationHub() {
         </div>
 
         {/* Dual Tab Switcher */}
-        <div className="flex justify-center mb-8">
-          <div className="p-1.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-2">
+        <div className="flex justify-center mb-8 px-2">
+          <div className="p-1.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
             <button
+              type="button"
               onClick={() => setActiveTab("jobSeeker")}
-              className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeTab === "jobSeeker"
-                  ? "bg-gradient-to-r from-gold via-amber-400 to-yellow-500 text-black shadow-lg shadow-gold/20 scale-[1.02]"
+                  ? "bg-gradient-to-r from-gold via-amber-400 to-yellow-500 text-black shadow-lg shadow-gold/20 scale-[1.01]"
                   : "text-slate-300 hover:text-white hover:bg-white/5"
               }`}
             >
-              <UserCheck className="w-4 h-4" />
-              <span>İş Arıyorum (Personel Başvurusu)</span>
+              <UserCheck className="w-4 h-4 flex-shrink-0" />
+              <span>İş Arıyorum</span>
             </button>
 
             <button
+              type="button"
               onClick={() => setActiveTab("corporate")}
-              className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeTab === "corporate"
-                  ? "bg-gradient-to-r from-gold via-amber-400 to-yellow-500 text-black shadow-lg shadow-gold/20 scale-[1.02]"
+                  ? "bg-gradient-to-r from-gold via-amber-400 to-yellow-500 text-black shadow-lg shadow-gold/20 scale-[1.01]"
                   : "text-slate-300 hover:text-white hover:bg-white/5"
               }`}
             >
-              <Building2 className="w-4 h-4" />
-              <span>Personel Arıyorum (Otel / İşletme)</span>
+              <Building2 className="w-4 h-4 flex-shrink-0" />
+              <span>Personel Arıyorum</span>
             </button>
           </div>
         </div>

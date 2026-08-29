@@ -49,25 +49,12 @@ export default function Hero() {
           
           {/* Left Column: Headline & Value Proposition */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            {/* Top Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/30 bg-gold/10 mb-4 backdrop-blur-md"
-            >
-              <div className="w-1.5 h-1.5 rounded-full bg-gold animate-subtle-pulse" />
-              <span className="text-gold text-xs font-semibold tracking-wide">
-                {t.hero.badge}
-              </span>
-            </motion.div>
-
             {/* Main Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.15] mb-4 tracking-tight"
+              className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.15] mb-4 tracking-tight break-words"
             >
               {t.hero.headlinePart1}
               <span className="text-gradient-gold">{t.hero.headlineGold}</span>
@@ -80,7 +67,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-sm sm:text-base text-white/70 leading-relaxed mb-6 max-w-xl mx-auto lg:mx-0 font-light"
+              className="text-xs sm:text-base text-white/70 leading-relaxed mb-6 max-w-xl mx-auto lg:mx-0 font-light break-words"
             >
               {t.hero.subheadline}
             </motion.p>
@@ -90,19 +77,19 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 max-w-lg mx-auto lg:mx-0"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-lg mx-auto lg:mx-0"
             >
               <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
                 <Users2 size={16} className="text-gold flex-shrink-0" />
-                <span className="text-xs text-white/90 font-medium">{t.hero.badge1}</span>
+                <span className="text-xs text-white/90 font-medium break-words">{t.hero.badge1}</span>
               </div>
               <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
                 <Zap size={16} className="text-gold flex-shrink-0" />
-                <span className="text-xs text-white/90 font-medium">{t.hero.badge2}</span>
+                <span className="text-xs text-white/90 font-medium break-words">{t.hero.badge2}</span>
               </div>
-              <div className="col-span-2 sm:col-span-1 flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
                 <ShieldCheck size={16} className="text-gold flex-shrink-0" />
-                <span className="text-xs text-white/90 font-medium">{t.hero.badge3}</span>
+                <span className="text-xs text-white/90 font-medium break-words">{t.hero.badge3}</span>
               </div>
             </motion.div>
           </div>
