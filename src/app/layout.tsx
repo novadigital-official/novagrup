@@ -10,50 +10,90 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NOVA GRUP | 5 Yıldızlı Otel Departman Yönetimi & Operasyon Çözümleri",
+  title: "NOVA ORGANİZASYON | 5 Yıldızlı Otel & Tesis Departman Yönetimi",
   description:
-    "Antalya ve Akdeniz genelinde 5 yıldızlı oteller için kat hizmetleri, restoran servis, bulaşıkhane ve animasyon departmanlarında profesyonel operasyon ve kadro yönetimi.",
+    "Türkiye genelinde 5 yıldızlı oteller ve sanayi tesisleri için kat hizmetleri, F&B servis, mutfak hijyeni ve fabrika operasyonlarında profesyonel kadro ve taşeronluk çözümleri.",
   icons: {
     icon: "/images/nova-emblem.jpg",
     apple: "/images/nova-emblem.jpg",
   },
   keywords: [
-    "otel operasyon yönetimi",
-    "housekeeping yönetimi",
-    "kat hizmetleri personeli",
-    "otel servis personeli",
-    "otel steward kadrosu",
-    "otel animasyon ekibi",
+    "otel iş ilanları",
     "antalya otel personeli",
-    "hotel operations antalya",
+    "otel personel tedariği",
+    "kat görevlisi iş başvurusu",
+    "otel garson işi",
+    "steward bulaşıkhane kadrosu",
+    "otel departman yönetimi",
+    "5 yıldızlı otel taşeronluğu",
+    "sanayi fabrika iş gücü",
   ],
-  authors: [{ name: "NOVA GRUP", url: "https://novaorganizasyon7.com.tr" }],
+  authors: [{ name: "NOVA ORGANİZASYON", url: "https://www.novaorganizasyon7.com.tr" }],
   creator: "NOVA Turizm Organizasyon ve Danışmanlık Hizmetleri Ltd. Şti.",
-  metadataBase: new URL("https://novaorganizasyon7.com.tr"),
+  metadataBase: new URL("https://www.novaorganizasyon7.com.tr"),
   alternates: {
-    canonical: "/",
+    canonical: "https://www.novaorganizasyon7.com.tr",
     languages: {
-      "tr-TR": "/",
-      "en-US": "/?lang=en",
+      "tr-TR": "https://www.novaorganizasyon7.com.tr",
+      "en-US": "https://www.novaorganizasyon7.com.tr/?lang=en",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
     type: "website",
     locale: "tr_TR",
-    url: "https://novaorganizasyon7.com.tr",
-    title: "NOVA GRUP | Otel, İnşaat ve Sanayi Saha Operasyonları",
+    url: "https://www.novaorganizasyon7.com.tr",
+    title: "NOVA ORGANİZASYON | Otel & Tesis Saha Operasyonları",
     description:
-      "Antalya ve Akdeniz genelinde 5 yıldızlı oteller, şantiyeler ve sanayi tesisleri için profesyonel saha taşeronluğu ve operasyon desteği.",
-    siteName: "NOVA GRUP",
+      "Türkiye genelinde 5 yıldızlı oteller, şantiyeler ve sanayi tesisleri için profesyonel departman taşeronluğu ve operasyon desteği.",
+    siteName: "NOVA ORGANİZASYON",
     images: [
       {
         url: "/images/hotel-housekeeping.png",
         width: 1200,
         height: 630,
-        alt: "NOVA GRUP Otel Operasyon Yönetimi",
+        alt: "NOVA ORGANİZASYON Otel Operasyon Yönetimi",
       },
     ],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.novaorganizasyon7.com.tr/#organization",
+      name: "NOVA ORGANİZASYON",
+      url: "https://www.novaorganizasyon7.com.tr",
+      logo: "https://www.novaorganizasyon7.com.tr/images/nova-emblem.jpg",
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+90-505-410-48-00",
+        contactType: "customer service",
+        availableLanguage: ["Turkish", "English"],
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.novaorganizasyon7.com.tr/#website",
+      url: "https://www.novaorganizasyon7.com.tr",
+      name: "NOVA ORGANİZASYON",
+      publisher: {
+        "@id": "https://www.novaorganizasyon7.com.tr/#organization",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -63,6 +103,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.variable} antialiased selection:bg-[#D4AF37] selection:text-[#2E0A11]`}>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
