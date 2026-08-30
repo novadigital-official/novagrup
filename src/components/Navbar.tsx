@@ -22,9 +22,9 @@ export default function Navbar() {
 
   const navLinks = [
     { label: t.nav.departments, href: "#hizmetler" },
+    { label: t.nav.workflow, href: "#is-akisi" },
     { label: language === "tr" ? "İş Arıyorum" : "Job Application", href: "#iletisim", tab: "jobseeker" as const },
     { label: language === "tr" ? "Personel Arıyorum" : "Request Staff", href: "#iletisim", tab: "corporate" as const },
-    { label: t.nav.workflow, href: "#is-akisi" },
     { label: t.nav.contact, href: "#iletisim" },
   ];
 
