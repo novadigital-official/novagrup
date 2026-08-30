@@ -9,6 +9,12 @@ export default function ApplicationHub() {
   const [activeTab, setActiveTab] = useState<"jobSeeker" | "corporate">("jobSeeker");
 
   useEffect(() => {
+    const handleTabEvent = (e: Event) => {
+      const customEvent = e as CustomEvent<"jobSeeker" | "corporate">;
+      if (customEvent.detail) {
+        setActiveTab(customEvent.detail);
+      }
+    };
     const handleHash = () => {
       const hash = window.location.hash;
       if (hash === "#is-ariyorum") {
@@ -19,7 +25,11 @@ export default function ApplicationHub() {
     };
     handleHash();
     window.addEventListener("hashchange", handleHash);
-    return () => window.removeEventListener("hashchange", handleHash);
+    window.addEventListener("set-application-tab", handleTabEvent);
+    return () => {
+      window.removeEventListener("hashchange", handleHash);
+      window.removeEventListener("set-application-tab", handleTabEvent);
+    };
   }, []);
 
   // Job Seeker Form State

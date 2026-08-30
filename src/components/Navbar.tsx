@@ -28,6 +28,28 @@ export default function Navbar() {
     { label: t.nav.contact, href: "#iletisim" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href === "#is-ariyorum") {
+      e.preventDefault();
+      setIsMobileMenuOpen(false);
+      window.dispatchEvent(new CustomEvent("set-application-tab", { detail: "jobSeeker" }));
+      document.getElementById("basvuru")?.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", "#is-ariyorum");
+    } else if (href === "#personel-ariyorum") {
+      e.preventDefault();
+      setIsMobileMenuOpen(false);
+      window.dispatchEvent(new CustomEvent("set-application-tab", { detail: "corporate" }));
+      document.getElementById("basvuru")?.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", "#personel-ariyorum");
+    } else if (href.startsWith("#")) {
+      e.preventDefault();
+      setIsMobileMenuOpen(false);
+      const targetId = href.replace("#", "");
+      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", href);
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -42,7 +64,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Logo */}
-          <Link href="#hero" className="flex items-center gap-3.5 group">
+          <Link href="#hero" onClick={(e) => handleNavClick(e, "#hero")} className="flex items-center gap-3.5 group">
             <div className="relative w-12 sm:w-14 h-12 sm:h-14 rounded-xl overflow-hidden shadow-lg shadow-black/50 border-2 border-gold/60 bg-white flex items-center justify-center group-hover:border-gold group-hover:shadow-gold/30 transition-all duration-300">
               <Image
                 src="/images/nova-emblem.jpg"
@@ -69,7 +91,8 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group"
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="relative px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group cursor-pointer"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent group-hover:w-3/4 transition-all duration-300" />
@@ -169,8 +192,8 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center justify-between px-4 py-2.5 text-white/85 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="flex items-center justify-between px-4 py-2.5 text-white/85 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 cursor-pointer"
                   >
                     <span className="font-medium">{link.label}</span>
                     <ChevronRight size={16} className="text-gold/60" />
