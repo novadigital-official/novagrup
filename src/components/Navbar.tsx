@@ -22,16 +22,16 @@ export default function Navbar() {
 
   const navLinks = [
     { label: t.nav.departments, href: "#hizmetler" },
-    { label: language === "tr" ? "İş Arıyorum" : "Job Application", href: "#basvuru", tab: "jobSeeker" as const },
-    { label: language === "tr" ? "Personel Arıyorum" : "Request Staff", href: "#basvuru", tab: "corporate" as const },
+    { label: language === "tr" ? "İş Arıyorum" : "Job Application", href: "#iletisim", tab: "jobseeker" as const },
+    { label: language === "tr" ? "Personel Arıyorum" : "Request Staff", href: "#iletisim", tab: "corporate" as const },
     { label: t.nav.workflow, href: "#is-akisi" },
     { label: t.nav.contact, href: "#iletisim" },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, tab?: "jobSeeker" | "corporate") => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, tab?: "jobseeker" | "corporate") => {
     setIsMobileMenuOpen(false);
     if (tab) {
-      window.dispatchEvent(new CustomEvent("set-application-tab", { detail: tab }));
+      window.dispatchEvent(new CustomEvent("set-contact-tab", { detail: tab }));
     }
     if (href.startsWith("#")) {
       const targetId = href.replace("#", "");

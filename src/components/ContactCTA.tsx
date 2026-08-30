@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Send,
@@ -44,6 +44,30 @@ export default function ContactCTA() {
   const { language } = useLanguage();
   const [activeTab, setActiveTab] = useState<"corporate" | "jobseeker">("corporate");
   const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle");
+
+  useEffect(() => {
+    const handleTabEvent = (e: Event) => {
+      const customEvent = e as CustomEvent<"corporate" | "jobseeker">;
+      if (customEvent.detail) {
+        setActiveTab(customEvent.detail);
+      }
+    };
+    const handleHash = () => {
+      const hash = window.location.hash;
+      if (hash === "#is-ariyorum") {
+        setActiveTab("jobseeker");
+      } else if (hash === "#personel-ariyorum") {
+        setActiveTab("corporate");
+      }
+    };
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    window.addEventListener("set-contact-tab", handleTabEvent);
+    return () => {
+      window.removeEventListener("hashchange", handleHash);
+      window.removeEventListener("set-contact-tab", handleTabEvent);
+    };
+  }, []);
 
   // Corporate Form Data
   const [corpData, setCorpData] = useState({
@@ -157,7 +181,11 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="iletisim" className="relative py-14 sm:py-16 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
+    <section id="iletisim" className="scroll-mt-20 relative py-14 sm:py-16 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
+      {/* Target Anchors for Direct Navbar Routing */}
+      <div id="is-ariyorum" className="scroll-mt-20 absolute top-0 pointer-events-none" />
+      <div id="personel-ariyorum" className="scroll-mt-20 absolute top-0 pointer-events-none" />
+      <div id="basvuru" className="scroll-mt-20 absolute top-0 pointer-events-none" />
       {/* Subtle background grid & glowing accents */}
       <div className="absolute inset-0 pointer-events-none">
         <div
