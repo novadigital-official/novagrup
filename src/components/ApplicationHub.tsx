@@ -87,10 +87,10 @@ export default function ApplicationHub() {
   };
 
   return (
-    <section id="basvuru" className="py-20 relative bg-gradient-to-b from-brand-darkest via-brand-deeper to-brand-darkest overflow-hidden">
-      {/* Target Anchors for Direct Navbar Routing */}
-      <div id="is-ariyorum" className="absolute -top-24 pointer-events-none" />
-      <div id="personel-ariyorum" className="absolute -top-24 pointer-events-none" />
+    <section id="basvuru" className="scroll-mt-20 py-20 relative bg-gradient-to-b from-brand-darkest via-brand-deeper to-brand-darkest overflow-hidden">
+      {/* Target Anchors for Direct Routing */}
+      <div id="is-ariyorum" className="scroll-mt-20" />
+      <div id="personel-ariyorum" className="scroll-mt-20" />
 
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gold/10 blur-[120px] rounded-full pointer-events-none" />

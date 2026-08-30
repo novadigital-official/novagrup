@@ -22,31 +22,31 @@ export default function Navbar() {
 
   const navLinks = [
     { label: t.nav.departments, href: "#hizmetler" },
-    { label: language === "tr" ? "İş Arıyorum" : "Job Application", href: "#is-ariyorum" },
-    { label: language === "tr" ? "Personel Arıyorum" : "Request Staff", href: "#personel-ariyorum" },
+    { label: language === "tr" ? "İş Arıyorum" : "Job Application", href: "#basvuru", tab: "jobSeeker" as const },
+    { label: language === "tr" ? "Personel Arıyorum" : "Request Staff", href: "#basvuru", tab: "corporate" as const },
     { label: t.nav.workflow, href: "#is-akisi" },
     { label: t.nav.contact, href: "#iletisim" },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href === "#is-ariyorum") {
-      e.preventDefault();
-      setIsMobileMenuOpen(false);
-      window.dispatchEvent(new CustomEvent("set-application-tab", { detail: "jobSeeker" }));
-      document.getElementById("basvuru")?.scrollIntoView({ behavior: "smooth" });
-      window.history.pushState(null, "", "#is-ariyorum");
-    } else if (href === "#personel-ariyorum") {
-      e.preventDefault();
-      setIsMobileMenuOpen(false);
-      window.dispatchEvent(new CustomEvent("set-application-tab", { detail: "corporate" }));
-      document.getElementById("basvuru")?.scrollIntoView({ behavior: "smooth" });
-      window.history.pushState(null, "", "#personel-ariyorum");
-    } else if (href.startsWith("#")) {
-      e.preventDefault();
-      setIsMobileMenuOpen(false);
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, tab?: "jobSeeker" | "corporate") => {
+    setIsMobileMenuOpen(false);
+    if (tab) {
+      window.dispatchEvent(new CustomEvent("set-application-tab", { detail: tab }));
+    }
+    if (href.startsWith("#")) {
       const targetId = href.replace("#", "");
-      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
-      window.history.pushState(null, "", href);
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const navHeight = 70;
+        const rect = targetEl.getBoundingClientRect();
+        const scrollTarget = window.pageYOffset + rect.top - navHeight;
+        window.scrollTo({
+          top: scrollTarget,
+          behavior: "smooth",
+        });
+        window.history.pushState(null, "", href);
+      }
     }
   };
 
@@ -89,9 +89,9 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
-                key={link.href}
+                key={link.href + (link.tab || "")}
                 href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
+                onClick={(e) => handleNavClick(e, link.href, link.tab)}
                 className="relative px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group cursor-pointer"
               >
                 {link.label}
@@ -132,7 +132,8 @@ export default function Navbar() {
             <div className="flex items-center">
               <Link
                 href="#iletisim"
-                className="px-5 py-2.5 bg-gradient-to-r from-gold to-gold-light text-brand-deeper font-bold text-sm rounded-lg hover:shadow-lg hover:shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+                onClick={(e) => handleNavClick(e, "#iletisim")}
+                className="px-5 py-2.5 bg-gradient-to-r from-gold to-gold-light text-brand-deeper font-bold text-sm rounded-lg hover:shadow-lg hover:shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
               >
                 {t.nav.ctaButton}
               </Link>
@@ -185,14 +186,14 @@ export default function Navbar() {
             <nav aria-label="Mobile navigation" className="px-4 py-5 space-y-1">
               {navLinks.map((link, index) => (
                 <motion.div
-                  key={link.href}
+                  key={link.href + (link.tab || "")}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.06 }}
                 >
                   <Link
                     href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
+                    onClick={(e) => handleNavClick(e, link.href, link.tab)}
                     className="flex items-center justify-between px-4 py-2.5 text-white/85 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 cursor-pointer"
                   >
                     <span className="font-medium">{link.label}</span>
@@ -204,8 +205,8 @@ export default function Navbar() {
               <div className="pt-3">
                 <Link
                   href="#iletisim"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-gold to-gold-light text-brand-deeper font-bold rounded-lg shadow-lg text-sm"
+                  onClick={(e) => handleNavClick(e, "#iletisim")}
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-gold to-gold-light text-brand-deeper font-bold rounded-lg shadow-lg text-sm cursor-pointer"
                 >
                   {t.nav.mobileCta}
                 </Link>
