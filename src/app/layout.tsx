@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google683b96f9e18d1ed7",
+    google: "fR8NTGZT48RtZOrNp-z6DJl1H_eieUF7__6y7cIq4LU",
   },
   robots: {
     index: true,
