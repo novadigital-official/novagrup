@@ -12,40 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/#hizmetler`,
+      url: `${baseUrl}/?lang=en`,
       lastModified,
       changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#is-ariyorum`,
-      lastModified,
-      changeFrequency: "daily",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/#personel-ariyorum`,
-      lastModified,
-      changeFrequency: "daily",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/#is-akisi`,
-      lastModified,
-      changeFrequency: "monthly",
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#neden-nova`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#iletisim`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
     },
   ];
 }
