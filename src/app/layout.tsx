@@ -38,6 +38,9 @@ export const metadata: Metadata = {
       "en-US": "https://www.novaorganizasyon7.com.tr/?lang=en",
     },
   },
+  verification: {
+    google: "google683b96f9e18d1ed7",
+  },
   robots: {
     index: true,
     follow: true,
