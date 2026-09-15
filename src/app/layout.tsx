@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NOVA ORGANİZASYON | 5 Yıldızlı Otel & Tesis Departman Yönetimi",
+  title: "NOVA GLOBAL | 5 Yıldızlı Otel & Tesis Departman Yönetimi",
   description:
     "Türkiye genelinde 5 yıldızlı oteller ve sanayi tesisleri için kat hizmetleri, F&B servis, mutfak hijyeni ve fabrika operasyonlarında profesyonel kadro ve taşeronluk çözümleri.",
   icons: {
@@ -27,8 +27,9 @@ export const metadata: Metadata = {
     "otel departman yönetimi",
     "5 yıldızlı otel taşeronluğu",
     "sanayi fabrika iş gücü",
+    "nova global",
   ],
-  authors: [{ name: "NOVA ORGANİZASYON", url: "https://www.novaorganizasyon7.com.tr" }],
+  authors: [{ name: "NOVA GLOBAL", url: "https://www.novaorganizasyon7.com.tr" }],
   creator: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
   metadataBase: new URL("https://www.novaorganizasyon7.com.tr"),
   alternates: {
@@ -56,16 +57,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     url: "https://www.novaorganizasyon7.com.tr",
-    title: "NOVA ORGANİZASYON | Otel & Tesis Saha Operasyonları",
+    title: "NOVA GLOBAL | Otel & Tesis Saha Operasyonları",
     description:
       "Türkiye genelinde 5 yıldızlı oteller, şantiyeler ve sanayi tesisleri için profesyonel departman taşeronluğu ve operasyon desteği.",
-    siteName: "NOVA ORGANİZASYON",
+    siteName: "NOVA GLOBAL",
     images: [
       {
         url: "/images/hotel-housekeeping.png",
         width: 1200,
         height: 630,
-        alt: "NOVA ORGANİZASYON Otel Operasyon Yönetimi",
+        alt: "NOVA GLOBAL Otel Operasyon Yönetimi",
       },
     ],
   },
@@ -77,7 +78,8 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://www.novaorganizasyon7.com.tr/#organization",
-      name: "NOVA ORGANİZASYON",
+      name: "NOVA GLOBAL",
+      legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
       url: "https://www.novaorganizasyon7.com.tr",
       logo: "https://www.novaorganizasyon7.com.tr/images/nova-emblem.jpg",
       contactPoint: {
@@ -91,7 +93,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://www.novaorganizasyon7.com.tr/#website",
       url: "https://www.novaorganizasyon7.com.tr",
-      name: "NOVA ORGANİZASYON",
+      name: "NOVA GLOBAL",
       publisher: {
         "@id": "https://www.novaorganizasyon7.com.tr/#organization",
       },

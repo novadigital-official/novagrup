@@ -86,7 +86,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-black text-xl sm:text-2xl tracking-wider leading-none">
-                  NOVA <span className="text-gold font-semibold text-sm">GRUP</span>
+                  NOVA <span className="text-gold font-semibold text-sm">GLOBAL</span>
                 </span>
                 <span className="text-gold/90 text-[10px] font-bold tracking-[0.2em] uppercase mt-0.5">
                   {language === "tr" ? "Turizm • İnşaat • Sanayi" : "Hospitality • Construction • Industry"}
