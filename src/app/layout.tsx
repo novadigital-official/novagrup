@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "sanayi fabrika iş gücü",
   ],
   authors: [{ name: "NOVA ORGANİZASYON", url: "https://www.novaorganizasyon7.com.tr" }],
-  creator: "NOVA Turizm Organizasyon ve Danışmanlık Hizmetleri Ltd. Şti.",
+  creator: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
   metadataBase: new URL("https://www.novaorganizasyon7.com.tr"),
   alternates: {
     canonical: "https://www.novaorganizasyon7.com.tr",
