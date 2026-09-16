@@ -74,7 +74,7 @@ export default function ContactCTA() {
     name: "",
     hotelName: "",
     phone: "",
-    department: "Tüm Departmanlar (Kombine Taşeronluk)",
+    department: "Tüm Departmanlar (Kombine İşletim)",
     message: "",
   });
 
@@ -113,11 +113,11 @@ export default function ContactCTA() {
 
       // 2. Format Live WhatsApp Message
       const waText = encodeURIComponent(
-        `🏛️ *NOVA GRUP — KURUMSAL TEKLİF TALEBİ*\n\n` +
+        `🏛️ *NOVA GLOBAL — KURUMSAL DANIŞMANLIK TALEBİ*\n\n` +
         `👤 *Yetkili:* ${corpData.name}\n` +
         `🏨 *İşletme / Otel:* ${corpData.hotelName}\n` +
         `📞 *İletişim Tel:* ${corpData.phone}\n` +
-        `🏢 *Departman:* ${corpData.department}\n` +
+        `🏢 *Talep Edilen Alan:* ${corpData.department}\n` +
         (corpData.message ? `📝 *Talep / Not:* ${corpData.message}\n` : "") +
         `\n_novaorganizasyon7.com.tr üzerinden iletildi._`
       );
@@ -131,7 +131,7 @@ export default function ContactCTA() {
           name: "",
           hotelName: "",
           phone: "",
-          department: "Tüm Departmanlar (Kombine Taşeronluk)",
+          department: "Tüm Departmanlar (Kombine İşletim)",
           message: "",
         });
       }, 4000);
@@ -155,12 +155,12 @@ export default function ContactCTA() {
 
       // 2. Format Live WhatsApp Message
       const waText = encodeURIComponent(
-        `👤 *NOVA GRUP — PERSONEL İŞ BAŞVURUSU*\n\n` +
+        `👤 *NOVA GLOBAL — ADAY HAVUZU BAŞVURUSU*\n\n` +
         `📋 *Ad Soyad:* ${jobData.name}\n` +
         `📞 *Telefon:* ${jobData.phone}\n` +
         `📍 *İkamet & Yaş:* ${jobData.ageLocation}\n` +
         `💼 *Çalışmak İstenen Alan:* ${jobData.desiredRole}\n` +
-        `\n_novaorganizasyon7.com.tr iş başvuru masasından iletildi._`
+        `\n_novaorganizasyon7.com.tr aday havuzu masasından iletildi._`
       );
 
       window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
@@ -218,7 +218,7 @@ export default function ContactCTA() {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.18]">
                 {language === "tr" ? "İşletmeniz İçin " : "Request a Proposal "}
                 <span className="text-gradient-gold">
-                  {language === "tr" ? "Canlı İletişim & Teklif" : "Direct Dispatch"}
+                  {language === "tr" ? "Canlı İletişim & Danışmanlık" : "Advisory & Direct Dispatch"}
                 </span>
               </h2>
             </div>
@@ -239,13 +239,13 @@ export default function ContactCTA() {
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
-                    {language === "tr" ? "Saha Koordinasyon WhatsApp" : "Field Coordination Desk"}
+                    {language === "tr" ? "Saha Koordinasyon & Danışma WhatsApp" : "Field Coordination & Advisory"}
                   </p>
                   <p className="text-white font-black text-sm sm:text-base group-hover:text-gold transition-colors">
                     0505 410 48 00
                   </p>
                   <p className="text-white/50 text-xs mt-0.5">
-                    {language === "tr" ? "Hızlı Teklif & Canlı Mesajlaşma" : "Instant Proposal & WhatsApp Chat"}
+                    {language === "tr" ? "Hızlı Danışmanlık & Canlı Mesajlaşma" : "Instant Advisory & WhatsApp Chat"}
                   </p>
                 </div>
               </a>
@@ -266,7 +266,7 @@ export default function ContactCTA() {
                   <p className="text-white font-bold text-xs sm:text-sm group-hover:text-gold transition-colors">
                     iknovaofis@gmail.com
                   </p>
-                  <p className="text-white/50 text-xs mt-0.5">Resmi Teklif & Sözleşmeler</p>
+                  <p className="text-white/50 text-xs mt-0.5">Resmi Danışmanlık & Sözleşmeler</p>
                 </div>
               </a>
 
@@ -315,7 +315,7 @@ export default function ContactCTA() {
                   }`}
                 >
                   <Building2 size={15} />
-                  <span>{language === "tr" ? "Kurumsal Teklif Al" : "Corporate Proposal"}</span>
+                  <span>{language === "tr" ? "Kurumsal Danışmanlık Teklifi Al" : "Corporate Advisory"}</span>
                 </button>
                 <button
                   type="button"
@@ -327,7 +327,7 @@ export default function ContactCTA() {
                   }`}
                 >
                   <UserCheck size={15} />
-                  <span>{language === "tr" ? "Personel İş Başvurusu" : "Job Application"}</span>
+                  <span>{language === "tr" ? "Aday Havuzu Başvurusu" : "Candidate Pool Application"}</span>
                 </button>
               </div>
 
@@ -337,23 +337,23 @@ export default function ContactCTA() {
                   {activeTab === "corporate" ? (
                     <>
                       <Building2 size={18} className="text-gold" />
-                      <span>{language === "tr" ? "Tesisiniz İçin Hızlı Fiyat Teklifi" : "Request an Operational Proposal"}</span>
+                      <span>{language === "tr" ? "Tesisiniz İçin Hızlı Danışmanlık Teklifi" : "Request an Advisory Proposal"}</span>
                     </>
                   ) : (
                     <>
                       <Briefcase size={18} className="text-gold" />
-                      <span>{language === "tr" ? "Personel İş Başvuru Formu" : "Staff Job Application Form"}</span>
+                      <span>{language === "tr" ? "Aday Havuzu Başvuru Formu" : "Candidate Pool Application Form"}</span>
                     </>
                   )}
                 </h3>
                 <p className="text-white/50 text-xs font-light">
                   {activeTab === "corporate"
                     ? (language === "tr"
-                        ? "Bilgilerinizi iletin; teklif talebiniz anında WhatsApp operasyon masamıza düşsün."
-                        : "Submit your details to receive an instant proposal directly via WhatsApp.")
+                        ? "Bilgilerinizi iletin; danışmanlık talebiniz anında WhatsApp operasyon masamıza düşsün."
+                        : "Submit your details to receive an instant advisory proposal directly via WhatsApp.")
                     : (language === "tr"
-                        ? "4 basit adımda bilgilerinizi girin, ekiplerimiz 15 dakika içinde sizinle iletişime geçsin."
-                        : "Enter your 4 details below; our recruitment dispatch will contact you within 15 minutes.")}
+                        ? "Bilgilerinizi girin, saha koordinasyon ekibimiz en kısa sürede sizinle iletişime geçsin."
+                        : "Enter your details below; our coordination team will contact you promptly.")}
                 </p>
               </div>
 
@@ -430,13 +430,15 @@ export default function ContactCTA() {
                         onChange={handleCorpChange}
                         className="w-full pl-9 pr-3 py-2.5 bg-brand-dark border border-white/15 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-gold transition-all cursor-pointer"
                       >
-                        <option value="Tüm Departmanlar (Kombine Taşeronluk)">Tüm Departmanlar (Kombine Hizmet)</option>
+                        <option value="Tüm Departmanlar (Kombine İşletim)">Tüm Departmanlar (Kombine İşletim)</option>
                         <option value="Kat Hizmetleri (Housekeeping & Meydan)">Kat Hizmetleri (Housekeeping & Meydan)</option>
                         <option value="Yiyecek & İçecek (Garson & Komi)">Yiyecek & İçecek (Garson & Komi)</option>
                         <option value="Bulaşıkhane (Steward Ekipleri)">Bulaşıkhane (Steward Ekipleri)</option>
                         <option value="Animasyon & Gösteri Sanatları">Animasyon & Gösteri Sanatları</option>
                         <option value="İnşaat, Tadilat & Tesis Bakımı">İnşaat, Tadilat & Tesis Bakımı</option>
                         <option value="Fabrika, Üretim Hattı & Depo Lojistiği">Fabrika, Üretim Hattı & Depo Lojistiği</option>
+                        <option value="B2B Lead Üretimi & Çağrı Merkezi Yönlendirme">B2B Lead Üretimi & Çağrı Merkezi Yönlendirme</option>
+                        <option value="Devlet Destekleri & Teşvik Danışmanlığı">Devlet Destekleri & Teşvik Danışmanlığı</option>
                       </select>
                     </div>
 
@@ -451,7 +453,7 @@ export default function ContactCTA() {
                         name="message"
                         value={corpData.message}
                         onChange={handleCorpChange}
-                        placeholder={language === "tr" ? "Tahmini kişi sayısı veya belirtmek istediğiniz detaylar (Opsiyonel)..." : "Estimated team size or specific notes (Optional)..."}
+                        placeholder={language === "tr" ? "Tahmini hizmet kapsamı, departman büyüklüğü veya belirtmek istediğiniz detaylar (Opsiyonel)..." : "Estimated scope, department size, or specific notes (Optional)..."}
                         rows={2}
                         className="w-full pl-9 pr-3 py-2 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all resize-none"
                       />
@@ -467,7 +469,7 @@ export default function ContactCTA() {
                     {formState === "idle" && (
                       <>
                         <Send size={15} />
-                        <span>{language === "tr" ? "Teklif Talebini WhatsApp'a İlet" : "Send Proposal Request to WhatsApp"}</span>
+                        <span>{language === "tr" ? "Danışmanlık Talebini WhatsApp'a İlet" : "Send Advisory Request to WhatsApp"}</span>
                       </>
                     )}
                     {formState === "sending" && (
@@ -579,7 +581,7 @@ export default function ContactCTA() {
                     {formState === "idle" && (
                       <>
                         <Send size={15} />
-                        <span>{language === "tr" ? "İş Başvurusunu WhatsApp'a İlet" : "Submit Application via WhatsApp"}</span>
+                        <span>{language === "tr" ? "Aday Başvurusunu WhatsApp'a İlet" : "Submit Application via WhatsApp"}</span>
                       </>
                     )}
                     {formState === "sending" && (

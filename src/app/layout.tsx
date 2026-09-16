@@ -10,23 +10,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NOVA GLOBAL | 5 Yıldızlı Otel & Tesis Departman Yönetimi",
+  title: "NOVA GLOBAL | Otel Departman İşletimi, Saha Koordinasyonu & Danışmanlık",
   description:
-    "Türkiye genelinde 5 yıldızlı oteller ve sanayi tesisleri için kat hizmetleri, F&B servis, mutfak hijyeni ve fabrika operasyonlarında profesyonel kadro ve taşeronluk çözümleri.",
+    "5 yıldızlı oteller ve sanayi tesisleri için kat hizmetleri, F&B servis, mutfak hijyeni ve fabrika hatlarında profesyonel departman işletim hizmeti; kurumsal firmalara B2B lead üretimi ve devlet teşvikleri danışmanlığı.",
   icons: {
     icon: "/images/nova-emblem.jpg",
     apple: "/images/nova-emblem.jpg",
   },
   keywords: [
-    "otel iş ilanları",
-    "antalya otel personeli",
-    "otel personel tedariği",
-    "kat görevlisi iş başvurusu",
-    "otel garson işi",
-    "steward bulaşıkhane kadrosu",
     "otel departman yönetimi",
-    "5 yıldızlı otel taşeronluğu",
-    "sanayi fabrika iş gücü",
+    "departman işletim hizmeti",
+    "kat hizmetleri operasyonu",
+    "restoran servis koordinasyonu",
+    "steward mutfak hijyeni",
+    "tesis ve fabrika saha operasyonları",
+    "b2b lead üretimi",
+    "çağrı merkezi yönlendirme",
+    "devlet teşvikleri danışmanlığı",
+    "kosgeb hibe danışmanlığı",
     "nova global",
   ],
   authors: [{ name: "NOVA GLOBAL", url: "https://www.novaorganizasyon7.com.tr" }],
@@ -57,16 +58,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     url: "https://www.novaorganizasyon7.com.tr",
-    title: "NOVA GLOBAL | Otel & Tesis Saha Operasyonları",
+    title: "NOVA GLOBAL | Saha Koordinasyonu & Kurumsal Danışmanlık",
     description:
-      "Türkiye genelinde 5 yıldızlı oteller, şantiyeler ve sanayi tesisleri için profesyonel departman taşeronluğu ve operasyon desteği.",
+      "5 yıldızlı oteller, şantiyeler ve sanayi tesisleri için profesyonel departman işletim hizmeti, saha koordinasyonu, B2B lead dağıtımı ve kurumsal danışmanlık.",
     siteName: "NOVA GLOBAL",
     images: [
       {
         url: "/images/hotel-housekeeping.png",
         width: 1200,
         height: 630,
-        alt: "NOVA GLOBAL Otel Operasyon Yönetimi",
+        alt: "NOVA GLOBAL Departman İşletimi ve Danışmanlık",
       },
     ],
   },

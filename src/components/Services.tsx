@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BedDouble, UtensilsCrossed, Sparkles, Hotel, Wrench, Factory, Check, ArrowRight } from "lucide-react";
+import { BedDouble, UtensilsCrossed, Sparkles, Hotel, Wrench, Factory, TrendingUp, Award, Check, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -13,9 +13,11 @@ const departmentImages = [
   "/images/hotel-event.png",
   "/images/construction-renovation.jpg",
   "/images/factory-operations.jpg",
+  "/images/hotel-lobby.png",
+  "/images/hotel-event.png",
 ];
 
-const departmentIcons = [BedDouble, UtensilsCrossed, Sparkles, Hotel, Wrench, Factory];
+const departmentIcons = [BedDouble, UtensilsCrossed, Sparkles, Hotel, Wrench, Factory, TrendingUp, Award];
 
 export default function Services() {
   const { t } = useLanguage();

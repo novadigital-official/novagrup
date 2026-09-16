@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { UserCheck, Building2, Send, CheckCircle2, Phone, Briefcase, Users, Calendar } from "lucide-react";
+import { UserCheck, Building2, Send, Briefcase } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export default function ApplicationHub() {
@@ -17,9 +17,9 @@ export default function ApplicationHub() {
     };
     const handleHash = () => {
       const hash = window.location.hash;
-      if (hash === "#is-ariyorum") {
+      if (hash === "#is-ariyorum" || hash === "#kariyer") {
         setActiveTab("jobSeeker");
-      } else if (hash === "#personel-ariyorum") {
+      } else if (hash === "#personel-ariyorum" || hash === "#kurumsal") {
         setActiveTab("corporate");
       }
     };
@@ -35,7 +35,7 @@ export default function ApplicationHub() {
   // Job Seeker Form State
   const [jobName, setJobName] = useState("");
   const [jobPhone, setJobPhone] = useState("");
-  const [jobPosition, setJobPosition] = useState("Garson / Servis Elemanı");
+  const [jobPosition, setJobPosition] = useState("Kat Hizmetleri (Housekeeping & Meydan)");
   const [jobExperience, setJobExperience] = useState("Var (1 Yıl+)");
   const [jobLodging, setJobLodging] = useState("Evet (Lojman İstiyorum)");
 
@@ -43,8 +43,8 @@ export default function ApplicationHub() {
   const [corpName, setCorpName] = useState("");
   const [corpCompany, setCorpCompany] = useState("");
   const [corpPhone, setCorpPhone] = useState("");
-  const [corpDepartment, setCorpDepartment] = useState("Kat Hizmetleri (Meydancı & Kat Görevlisi)");
-  const [corpCount, setCorpCount] = useState("3 - 5 Personel");
+  const [corpDepartment, setCorpDepartment] = useState("Kat Hizmetleri (Housekeeping & Meydan)");
+  const [corpCount, setCorpCount] = useState("1 - 3 Ekip");
   const [corpDate, setCorpDate] = useState("Acil (24-48 Saat)");
 
   const handleJobSubmit = (e: React.FormEvent) => {
@@ -54,13 +54,13 @@ export default function ApplicationHub() {
       return;
     }
 
-    const message = `*📋 NOVA ORGANİZASYON - İŞ BAŞVURU FORMU*\n\n` +
+    const message = `*📋 NOVA GLOBAL - ADAY HAVUZU BAŞVURU FORMU*\n\n` +
       `👤 *Aday Adı Soyadı:* ${jobName}\n` +
       `📱 *Telefon:* ${jobPhone}\n` +
-      `💼 *Başvurulan Departman:* ${jobPosition}\n` +
+      `💼 *İlgilenilen Alan:* ${jobPosition}\n` +
       `⭐ *Deneyim Durumu:* ${jobExperience}\n` +
       `🏠 *Lojman Talebi:* ${jobLodging}\n\n` +
-      `_Antalya otel ve tesislerinde çalışmak üzere başvurumu iletiyorum._`;
+      `_Antalya tesis ve işletmelerinde görev almak üzere aday havuzu başvurumu iletiyorum._`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/${siteConfig.contact.phoneRaw}?text=${encoded}`, "_blank");
@@ -73,14 +73,14 @@ export default function ApplicationHub() {
       return;
     }
 
-    const message = `*🏨 NOVA ORGANİZASYON - KURUMSAL PERSONEL TALEBİ*\n\n` +
+    const message = `*🏛️ NOVA GLOBAL - KURUMSAL DANIŞMANLIK & İŞLETİM TALEBİ*\n\n` +
       `🏢 *Tesis / İşletme Adı:* ${corpCompany}\n` +
       `👤 *Yetkili Adı:* ${corpName}\n` +
       `📱 *İletişim Telefonu:* ${corpPhone}\n` +
-      `🎯 *Talep Edilen Departman:* ${corpDepartment}\n` +
-      `👥 *İhtiyaç Duyulan Kadro:* ${corpCount}\n` +
+      `🎯 *Talep Edilen Hizmet:* ${corpDepartment}\n` +
+      `👥 *Hizmet Kapsamı:* ${corpCount}\n` +
       `⏱️ *İhtiyaç Zamanı:* ${corpDate}\n\n` +
-      `_Tesisimiz için birim fiyatlandırma ve operasyonel şartlar hakkında teklif rica ederiz._`;
+      `_Tesisimiz için departman işletim hizmeti ve danışmanlık teklifi rica ederiz._`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/${siteConfig.contact.phoneRaw}?text=${encoded}`, "_blank");
@@ -100,10 +100,10 @@ export default function ApplicationHub() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-            İş mi Arıyorsunuz, <span className="text-gradient-gold">Personel mi?</span>
+            Kariyer Başvurusu mu, <span className="text-gradient-gold">Danışmanlık Talebi mi?</span>
           </h2>
           <p className="text-slate-400 text-xs sm:text-sm mt-2 font-light">
-            Antalya 5 yıldızlı otelleri, tatil köyleri ve sanayi tesisleri için 30 saniyede doğrudan WhatsApp koordinasyon masasına bağlanın.
+            Antalya 5 yıldızlı otelleri, sanayi tesisleri ve kurumsal işletmeler için doğrudan koordinasyon masamıza bağlanın.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export default function ApplicationHub() {
               }`}
             >
               <UserCheck className="w-4 h-4 flex-shrink-0" />
-              <span>İş Arıyorum</span>
+              <span>Aday Havuzu Başvurusu</span>
             </button>
 
             <button
@@ -133,7 +133,7 @@ export default function ApplicationHub() {
               }`}
             >
               <Building2 className="w-4 h-4 flex-shrink-0" />
-              <span>Personel Arıyorum</span>
+              <span>İK & Danışmanlık Talebi</span>
             </button>
           </div>
         </div>
@@ -155,10 +155,10 @@ export default function ApplicationHub() {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-white">
-                    Antalya Otellerinde Hemen İşe Başlayın
+                    Antalya Tesisleri İçin Aday Havuzumuza Katılın
                   </h3>
                   <p className="text-xs text-slate-400 font-light">
-                    Lojman, servis, SGK ve dolgun yevmiye/maaş imkanıyla 24 saatte işe yerleşim.
+                    Kariyer planlaması, lojman/servis ve tam SGK güvencesiyle uzman ekiplerimize dahil olun.
                   </p>
                 </div>
               </div>
@@ -194,7 +194,7 @@ export default function ApplicationHub() {
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                    Çalışmak İstediğiniz Departman
+                    Çalışmak İstediğiniz Alan
                   </label>
                   <select
                     value={jobPosition}
@@ -205,8 +205,8 @@ export default function ApplicationHub() {
                     <option value="Kat Görevlisi (Maid / Housekeeping)">Kat Görevlisi (Housekeeping)</option>
                     <option value="Meydancı (Genel Alan Temizlik)">Meydancı (Genel Alan)</option>
                     <option value="Steward (Bulaşıkhane & Mutfak)">Steward (Bulaşıkhane & Mutfak)</option>
-                    <option value="Aşçı / Mutfak Destek">Aşçı Yardımcısı / Mutfak</option>
-                    <option value="Fabrika & Sanayi Personeli">Fabrika / Depo Personeli</option>
+                    <option value="Animasyon & Gösteri Sanatları">Animasyon & Sahne Sanatları</option>
+                    <option value="Fabrika & Depo Saha Ekipleri">Fabrika & Depo Saha Ekipleri</option>
                   </select>
                 </div>
 
@@ -231,10 +231,10 @@ export default function ApplicationHub() {
                   className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-emerald-500/20 transition-all cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
-                  <span>WhatsApp ile Başvurumu Hemen İlet (30 Saniye)</span>
+                  <span>WhatsApp ile Aday Başvurumu Hemen İlet</span>
                 </button>
                 <p className="text-center text-[10px] text-slate-400 mt-2">
-                  🔒 Başvurunuz doğrudan İK koordinasyon masamıza şifreli olarak iletilir.
+                  🔒 Başvurunuz doğrudan koordinasyon masamıza şifreli olarak iletilir.
                 </p>
               </div>
             </form>
@@ -247,10 +247,10 @@ export default function ApplicationHub() {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-white">
-                    Tesisiniz İçin Acil veya Sezonluk Personel Tedariği
+                    Tesisiniz İçin Kesintisiz Departman İşletim Hizmeti
                   </h3>
                   <p className="text-xs text-slate-400 font-light">
-                    Resmi bordrolu, SGK güvenceli ve tecrübeli departman ekipleri 24-48 saatte sahada.
+                    Saha koordinatörlü, tam SGK ve yasal güvenceli kurumsal departman işletim çözümleri.
                   </p>
                 </div>
               </div>
@@ -279,7 +279,7 @@ export default function ApplicationHub() {
                     required
                     value={corpName}
                     onChange={(e) => setCorpName(e.target.value)}
-                    placeholder="Örn: Mehmet Bey (İK Müdürü)"
+                    placeholder="Örn: Mehmet Bey (Operasyon Müdürü)"
                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-gold transition-colors"
                   />
                 </div>
@@ -300,7 +300,7 @@ export default function ApplicationHub() {
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                    İhtiyaç Duyulan Departman
+                    İhtiyaç Duyulan Alan / Hizmet
                   </label>
                   <select
                     value={corpDepartment}
@@ -310,24 +310,26 @@ export default function ApplicationHub() {
                     <option value="Kat Hizmetleri (Meydancı & Kat Görevlisi)">Kat Hizmetleri (Meydancı & Kat Görevlisi)</option>
                     <option value="Servis & Bar (Garson, Komi & Runner)">Servis & Bar (Garson, Komi)</option>
                     <option value="Bulaşıkhane & Mutfak (Steward)">Bulaşıkhane (Steward) & Mutfak</option>
-                    <option value="Genel Operasyon (Komple Departman)">Komple Departman Yönetimi</option>
-                    <option value="Sanayi & Fabrika İş Gücü">Fabrika & Depo Saha İş Gücü</option>
+                    <option value="Genel Operasyon (Komple Departman)">Komple Departman İşletimi</option>
+                    <option value="Sanayi & Fabrika Ekipleri">Fabrika & Depo Saha Ekipleri</option>
+                    <option value="B2B Lead Dağıtımı & Çağrı Merkezi">B2B Lead Dağıtımı & Çağrı Merkezi</option>
+                    <option value="Devlet Destekleri & Teşvik Danışmanlığı">Devlet Destekleri & Teşvik Danışmanlığı</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                    Talep Edilen Personel Sayısı
+                    Hizmet Kapsamı / Departman Büyüklüğü
                   </label>
                   <select
                     value={corpCount}
                     onChange={(e) => setCorpCount(e.target.value)}
                     className="w-full px-4 py-3 rounded-xl bg-[#2E0A11] border border-white/15 text-white text-xs focus:outline-none focus:border-gold transition-colors"
                   >
-                    <option value="1 - 3 Personel">1 - 3 Personel</option>
-                    <option value="4 - 8 Personel">4 - 8 Personel</option>
-                    <option value="10 - 20 Personel">10 - 20 Personel</option>
-                    <option value="25+ Personel (Büyük Proje)">25+ Personel (Büyük Proje)</option>
+                    <option value="1 - 3 Departman Ekibi">1 - 3 Departman Ekibi</option>
+                    <option value="4 - 8 Departman Ekibi">4 - 8 Departman Ekibi</option>
+                    <option value="10 - 20 Kişilik Hizmet Kapsamı">10 - 20 Kişilik Hizmet Kapsamı</option>
+                    <option value="Kapsamlı Tesis Projesi">Kapsamlı Tesis Projesi</option>
                   </select>
                 </div>
 
@@ -353,10 +355,10 @@ export default function ApplicationHub() {
                   className="w-full py-4 rounded-xl bg-gradient-to-r from-gold via-amber-400 to-yellow-500 text-black font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-gold/20 hover:brightness-110 transition-all cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Resmi Teklif ve Personel Talebini WhatsApp'tan İlet</span>
+                  <span>Resmi Danışmanlık ve Hizmet Talebini WhatsApp'tan İlet</span>
                 </button>
                 <p className="text-center text-[10px] text-slate-400 mt-2">
-                  💼 Kurumsal talebiniz anında Operasyon Müdürümüzün masasına düşer ve 15 dakikada dönüş yapılır.
+                  💼 Kurumsal danışmanlık talebiniz anında Operasyon ve Danışmanlık Masamıza düşer.
                 </p>
               </div>
             </form>
