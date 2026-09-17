@@ -34,11 +34,7 @@ export const metadata: Metadata = {
   creator: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
   metadataBase: new URL("https://www.novaorganizasyon7.com.tr"),
   alternates: {
-    canonical: "https://www.novaorganizasyon7.com.tr",
-    languages: {
-      "tr-TR": "https://www.novaorganizasyon7.com.tr",
-      "en-US": "https://www.novaorganizasyon7.com.tr/?lang=en",
-    },
+    canonical: "/",
   },
   verification: {
     google: "fR8NTGZT48RtZOrNp-z6DJl1H_eieUF7__6y7cIq4LU",
