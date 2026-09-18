@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   creator: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
   metadataBase: new URL("https://www.novaorganizasyon7.com.tr"),
   alternates: {
-    canonical: "/",
+    canonical: "https://www.novaorganizasyon7.com.tr",
   },
   verification: {
     google: "fR8NTGZT48RtZOrNp-z6DJl1H_eieUF7__6y7cIq4LU",
@@ -66,6 +66,11 @@ export const metadata: Metadata = {
         alt: "NOVA GLOBAL Departman İşletimi ve Danışmanlık",
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NOVA GLOBAL | Otel Departman İşletimi & Danışmanlık',
+    description: '5 yıldızlı oteller ve sanayi tesisleri için profesyonel departman işletimi, saha koordinasyonu ve kurumsal danışmanlık hizmetleri.',
   },
 };
 
