@@ -1,7 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BedDouble, UtensilsCrossed, Sparkles, Hotel, Wrench, Factory, TrendingUp, Award, Check, ArrowRight } from "lucide-react";
+import {
+  BedDouble,
+  UtensilsCrossed,
+  Sparkles,
+  Award,
+  Wrench,
+  Factory,
+  Headphones,
+  Users,
+  Landmark,
+  Hotel,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -10,14 +23,25 @@ const departmentImages = [
   "/images/hotel-housekeeping.png",
   "/images/hotel-waiter.png",
   "/images/hotel-steward.jpg",
-  "/images/hotel-event.png",
+  "/images/hotel-animation-show.jpg",
   "/images/construction-renovation.jpg",
   "/images/factory-operations.jpg",
-  "/images/hotel-lobby.png",
+  "/images/call-center-lead.jpg",
   "/images/hotel-event.png",
+  "/images/grant-incentive-consulting.jpg",
 ];
 
-const departmentIcons = [BedDouble, UtensilsCrossed, Sparkles, Hotel, Wrench, Factory, TrendingUp, Award];
+const departmentIcons = [
+  BedDouble,
+  UtensilsCrossed,
+  Sparkles,
+  Award,
+  Wrench,
+  Factory,
+  Headphones,
+  Users,
+  Landmark,
+];
 
 export default function Services() {
   const { t } = useLanguage();
@@ -119,11 +143,17 @@ export default function Services() {
                 {/* Card Footer Button */}
                 <div className="px-5 sm:px-6 pb-5 pt-1">
                   <Link
-                    href="#iletisim"
+                    href={dept.tag === "Kongre & Fuar" || dept.tag === "Congress & Events" ? "/kongre-fuar-etkinlik" : "#iletisim"}
                     aria-label={`${dept.title} - ${t.services.ctaCard}`}
-                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-surface-warm group-hover:bg-brand-base text-brand-deeper group-hover:text-white font-bold text-xs tracking-wide transition-all duration-300 border border-black/5 group-hover:border-transparent"
+                    className={`w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl font-bold text-xs tracking-wide transition-all duration-300 border ${
+                      dept.tag === "Kongre & Fuar" || dept.tag === "Congress & Events"
+                        ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper border-gold shadow-md hover:shadow-lg hover:brightness-105"
+                        : "bg-surface-warm group-hover:bg-brand-base text-brand-deeper group-hover:text-white border-black/5 group-hover:border-transparent"
+                    }`}
                   >
-                    {t.services.ctaCard}
+                    {dept.tag === "Kongre & Fuar" || dept.tag === "Congress & Events"
+                      ? "2026-2027 Katalog & Fiyat Tarifesi"
+                      : t.services.ctaCard}
                     <ArrowRight size={14} />
                   </Link>
                 </div>

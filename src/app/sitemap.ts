@@ -11,5 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/kongre-fuar-etkinlik`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
   ];
 }

@@ -21,11 +21,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: t.nav.departments, href: "#hizmetler" },
-    { label: t.nav.workflow, href: "#is-akisi" },
-    { label: language === "tr" ? "Kariyer" : "Careers", href: "#iletisim", tab: "jobseeker" as const },
-    { label: language === "tr" ? "İK & Danışmanlık" : "Corporate Advisory", href: "#iletisim", tab: "corporate" as const },
-    { label: t.nav.contact, href: "#iletisim" },
+    { label: t.nav.departments, href: "/#hizmetler" },
+    { label: t.nav.congress || (language === "tr" ? "Kongre & Fuar 2026" : "Congress & Expo"), href: "/kongre-fuar-etkinlik", isSpecial: true },
+    { label: t.nav.workflow, href: "/#is-akisi" },
+    { label: language === "tr" ? "Kariyer" : "Careers", href: "/#iletisim", tab: "jobseeker" as const },
+    { label: language === "tr" ? "İK & Danışmanlık" : "Corporate Advisory", href: "/#iletisim", tab: "corporate" as const },
+    { label: t.nav.contact, href: "/#iletisim" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, tab?: "jobseeker" | "corporate") => {
@@ -33,7 +34,21 @@ export default function Navbar() {
     if (tab) {
       window.dispatchEvent(new CustomEvent("set-contact-tab", { detail: tab }));
     }
-    if (href.startsWith("#")) {
+    if (href.startsWith("/#") && typeof window !== "undefined" && window.location.pathname === "/") {
+      const targetId = href.replace("/#", "");
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const navHeight = 70;
+        const rect = targetEl.getBoundingClientRect();
+        const scrollTarget = window.pageYOffset + rect.top - navHeight;
+        window.scrollTo({
+          top: scrollTarget,
+          behavior: "smooth",
+        });
+        window.history.pushState(null, "", href.replace("/", ""));
+      }
+    } else if (href.startsWith("#")) {
       const targetId = href.replace("#", "");
       const targetEl = document.getElementById(targetId);
       if (targetEl) {
@@ -64,7 +79,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Logo */}
-          <Link href="#hero" onClick={(e) => handleNavClick(e, "#hero")} className="flex items-center gap-3.5 group">
+          <Link href="/#hero" onClick={(e) => handleNavClick(e, "/#hero")} className="flex items-center gap-3.5 group">
             <div className="relative w-12 sm:w-14 h-12 sm:h-14 rounded-xl overflow-hidden shadow-lg shadow-black/50 border-2 border-gold/60 bg-white flex items-center justify-center group-hover:border-gold group-hover:shadow-gold/30 transition-all duration-300">
               <Image
                 src="/images/nova-emblem.jpg"
@@ -92,10 +107,19 @@ export default function Navbar() {
                 key={link.href + (link.tab || "")}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href, link.tab)}
-                className="relative px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group cursor-pointer"
+                className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 group cursor-pointer flex items-center gap-1.5 ${
+                  link.isSpecial
+                    ? "text-gold font-bold bg-gold/10 rounded-lg border border-gold/30 hover:bg-gold/20"
+                    : "text-white/80 hover:text-white"
+                }`}
               >
-                {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent group-hover:w-3/4 transition-all duration-300" />
+                <span>{link.label}</span>
+                {link.isSpecial && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                )}
+                {!link.isSpecial && (
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent group-hover:w-3/4 transition-all duration-300" />
+                )}
               </Link>
             ))}
 

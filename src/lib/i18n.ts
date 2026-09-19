@@ -5,12 +5,13 @@ export const content = {
     nav: {
       home: "Ana Sayfa",
       departments: "Hizmetlerimiz",
+      congress: "Kongre & Fuar 2026",
       workflow: "Nasıl Çalışırız?",
       whyUs: "Neden NOVA?",
       contact: "İletişim & Danışmanlık",
-      phone: "0505 410 48 00",
-      ctaButton: "Danışmanlık Alın",
-      mobileCta: "Danışmanlık Alın",
+      phone: "0507 087 17 89",
+      ctaButton: "Teklif Alın",
+      mobileCta: "Teklif Alın",
     },
     hero: {
       badge: "Antalya & Akdeniz Kurumsal Operasyon & Danışmanlık Çözümleri",
@@ -142,6 +143,18 @@ export const content = {
           ],
         },
         {
+          tag: "Kongre & Fuar",
+          title: "Kongre, Fuar, Zirve ve Event Saha Operasyonları",
+          description:
+            "ANFAŞ Fuar Merkezi ve Belek, Kundu, Kemer kongre otellerinde ulusal/uluslararası zirveler için stand hostesi, kayıt-kabul, salon yönetimi ve VIP karşılama kadroları.",
+          features: [
+            "Stand Host / Hostesi (Tanıtım & Karşılama)",
+            "Yabancı Dilli Fuar/Kongre Hostesi (İngilizce, Rusça, Almanca)",
+            "Kayıt-Kabul, Akreditasyon & Sekretarya Görevlileri",
+            "10 Kişi ve Üzeri Gruplarda Ücretsiz Nova Saha Süpervizörü",
+          ],
+        },
+        {
           tag: "Teşvik & Hibe",
           title: "Devlet Destekleri & Teşvik Danışmanlığı",
           description:
@@ -261,6 +274,7 @@ export const content = {
       deptOption8: "Fabrika, Üretim Hattı & Depo Lojistiği",
       deptOption9: "B2B Lead Üretimi & Çağrı Merkezi Yönlendirme",
       deptOption10: "Devlet Destekleri & Teşvik Danışmanlığı",
+      deptOption11: "Kongre, Fuar, Zirve & Event Saha Kadroları",
       msgPlaceholder: "Tahmini hizmet kapsamı, departman büyüklüğü veya belirtmek istediğiniz notlar...",
       submitIdle: "Danışmanlık Talebini Gönder",
       submitSending: "Gönderiliyor...",
@@ -268,7 +282,7 @@ export const content = {
     },
     footer: {
       description:
-        "5 yıldızlı oteller, inşaat şantiyeleri ve sanayi tesisleri için kat hizmetleri, servis, bulaşıkhane, tadilat ve fabrika üretim desteğinde profesyonel departman işletim hizmeti; kurumsal firmalar için B2B lead üretimi ve devlet teşvikleri danışmanlığı.",
+        "5 yıldızlı oteller, kongre merkezleri ve sanayi tesisleri için kat hizmetleri, servis, bulaşıkhane, kongre/fuar saha operasyonu, tadilat ve fabrika üretim desteğinde profesyonel departman işletim hizmeti; kurumsal firmalar için B2B lead üretimi ve devlet teşvikleri danışmanlığı.",
       col1Title: "Hizmetlerimiz",
       col1Link1: "Kat Hizmetleri & Housekeeping",
       col1Link2: "Restoran Servis & Bar",
@@ -278,6 +292,7 @@ export const content = {
       col1Link6: "Fabrika & Depo Operasyonları",
       col1Link7: "B2B Lead & Çağrı Merkezi",
       col1Link8: "Devlet Teşvikleri Danışmanlığı",
+      col1Link9: "Kongre & Fuar Saha Kadroları",
       col2Title: "Kurumsal",
       col2Link1: "Neden NOVA?",
       col2Link2: "Nasıl Çalışırız?",
@@ -286,11 +301,11 @@ export const content = {
       col3Title: "İletişim",
       col3Link1: "Danışmanlık Al",
       col3Link2: "WhatsApp Danışma Hattı",
-      col3Link3: "Tel: 0505 410 48 00",
+      col3Link3: "Tel: 0507 087 17 89",
       col3Link4: "iknovaofis@gmail.com",
       col3Link5: "Instagram: @novaofisss",
       copyright: "© 2026 Nova Organizasyon. NOVA GLOBAL bünyesinde. NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ.",
-      tagline: "Antalya Otel, İnşaat, Sanayi ve B2B Danışmanlık Çözümleri",
+      tagline: "Antalya Kongre, Otel, İnşaat, Sanayi ve B2B Danışmanlık Çözümleri",
     },
     whatsapp: {
       tooltip: "WhatsApp Danışma Hattı",
@@ -301,12 +316,13 @@ export const content = {
     nav: {
       home: "Home",
       departments: "Services",
+      congress: "Congress & Expo 2026",
       workflow: "How It Works",
       whyUs: "Why NOVA?",
       contact: "Contact & Advisory",
-      phone: "+90 505 410 48 00",
-      ctaButton: "Get Consultation",
-      mobileCta: "Get Consultation",
+      phone: "+90 507 087 17 89",
+      ctaButton: "Get Proposal",
+      mobileCta: "Get Proposal",
     },
     hero: {
       badge: "Antalya & Mediterranean Operations & Advisory",
@@ -438,6 +454,18 @@ export const content = {
           ],
         },
         {
+          tag: "Congress & Events",
+          title: "Congress, Expo, Summit & Event Field Operations",
+          description:
+            "Professional stand hostesses, registration desk, hall attendants, and VIP airport greeting crews across ANFAS Expo Center and Belek congress resorts.",
+          features: [
+            "Presentable Stand Hosts & Hostesses",
+            "Multilingual Reception Staff (English, Russian, German)",
+            "Registration, Badging & Accreditation Desk",
+            "Dedicated Field Supervisor Included for 10+ Crews",
+          ],
+        },
+        {
           tag: "Grants & Subsidies",
           title: "Government Incentives & Growth Advisory",
           description:
@@ -557,6 +585,7 @@ export const content = {
       deptOption8: "Factory, Assembly Line & Warehouse Logistics",
       deptOption9: "B2B Lead Generation & Call Center Routing",
       deptOption10: "Government Incentives & Subsidies Advisory",
+      deptOption11: "Congress, Expo, Summit & Event Field Staff",
       msgPlaceholder: "Estimated scope, department size, or specific notes...",
       submitIdle: "Submit Request",
       submitSending: "Sending...",
@@ -564,7 +593,7 @@ export const content = {
     },
     footer: {
       description:
-        "Professional operational department management for 5-star resorts, construction projects, and industrial manufacturing plants in Antalya and across the Mediterranean; high-intent B2B lead generation and corporate subsidies advisory.",
+        "Professional operational department management for 5-star resorts, expo convention centers, construction projects, and industrial manufacturing plants in Antalya and across the Mediterranean; high-intent B2B lead generation and corporate subsidies advisory.",
       col1Title: "Services",
       col1Link1: "Housekeeping & Public Areas",
       col1Link2: "Restaurant & Bar Teams",
@@ -574,6 +603,7 @@ export const content = {
       col1Link6: "Factory & Warehouse Operations",
       col1Link7: "B2B Lead & Call Center",
       col1Link8: "Government Incentives Advisory",
+      col1Link9: "Congress & Expo Field Staff",
       col2Title: "Corporate",
       col2Link1: "Why NOVA?",
       col2Link2: "How It Works",
@@ -582,11 +612,11 @@ export const content = {
       col3Title: "Contact",
       col3Link1: "Get Consultation",
       col3Link2: "WhatsApp Line",
-      col3Link3: "Tel: +90 505 410 48 00",
+      col3Link3: "Tel: +90 507 087 17 89",
       col3Link4: "iknovaofis@gmail.com",
       col3Link5: "Instagram: @novaofisss",
       copyright: "© 2026 Nova Organizasyon. Part of NOVA GLOBAL. NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ.",
-      tagline: "Antalya Hospitality, Construction, Industrial & B2B Advisory Solutions",
+      tagline: "Antalya Congress, Hospitality, Industrial & B2B Advisory Solutions",
     },
     whatsapp: {
       tooltip: "Quick Chat on WhatsApp",

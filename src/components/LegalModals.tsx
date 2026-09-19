@@ -81,16 +81,18 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
         <div className="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
           <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2">
             <p><strong>Resmi Şirket Ünvanı:</strong> NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ</p>
-            <p><strong>Ticari Marka & Çatı:</strong> NOVA ORGANİZASYON & TURİZM YÖNETİMİ (NOVA GRUP)</p>
+            <p><strong>MERSİS No:</strong> 0632159982000001</p>
+            <p><strong>Vergi Dairesi & No:</strong> Antalya Kurumlar V.D. | 632 159 9820 | Kepez / ANTALYA</p>
+            <p><strong>Ticari Marka & Çatı:</strong> NOVA ORGANİZASYON & TURİZM YÖNETİMİ (NOVA GLOBAL)</p>
             <p><strong>Ticaret Sicil Tescili:</strong> Antalya Ticaret Sicili Müdürlüğü | TTSG: 11.09.2026, Sayı: 11164</p>
             <p><strong>İmza Sirküleri:</strong> Antalya 5. Noterliği (14.09.2026)</p>
             <p><strong>Sermaye Yapısı:</strong> 500.000 TL Tescilli ve Taahhüt Edilmiş Esas Sermaye</p>
             <p><strong>Kurucu & Şirket Müdürü:</strong> Çelebi Asal (MEB Onaylı Bilişim Usta Öğreticisi | KOSGEB No: KSB01UGE0115123591)</p>
             <p><strong>Resmi Alan Adı:</strong> www.novaorganizasyon7.com.tr</p>
             <p><strong>Kurumsal E-Posta:</strong> iknovaofis@gmail.com</p>
-            <p><strong>Kurumsal İletişim / WhatsApp:</strong> +90 505 410 48 00</p>
-            <p><strong>Hizmet Bölgesi:</strong> Türkiye Geneli (Antalya, Muğla, İzmir, İstanbul & Tüm Tesisler)</p>
-            <p><strong>Faaliyet Alanı:</strong> Turizm, Otelcilik Destek, Etkinlik, Kongre & B2B Tesis Departman Yönetimi</p>
+            <p><strong>İletişim & Saha Operasyon:</strong> 0507 087 17 89 (Alternatif: 0505 410 48 00)</p>
+            <p><strong>Hizmet Bölgesi:</strong> Antalya Geneli (ANFAŞ Fuar Merkezi, Belek, Kundu, Kemer Kongre Otelleri & Tüm Tesisler)</p>
+            <p><strong>Faaliyet Alanı:</strong> Kongre, Fuar, Zirve Saha Operasyonları, Stand Hostesi & Otel Departman İşletimi</p>
           </div>
         </div>
       ),
