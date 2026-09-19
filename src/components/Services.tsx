@@ -71,90 +71,81 @@ export default function Services() {
         </motion.div>
 
         {/* Department Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {t.services.departments.map((dept, index) => {
             const Icon = departmentIcons[index] || Hotel;
             const imageSrc = departmentImages[index] || "/images/hotel-housekeeping.png";
+            const isCongress = dept.tag === "Kongre & Fuar" || dept.tag === "Congress & Events";
 
             return (
               <motion.div
                 key={dept.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="group bg-white rounded-2xl overflow-hidden border border-black/5 hover:border-gold/40 shadow-md hover:shadow-xl hover:shadow-brand-base/10 transition-all duration-300 flex flex-col justify-between"
+                transition={{ duration: 0.35, delay: index * 0.05 }}
+                className="group bg-white rounded-3xl p-3 sm:p-3.5 border border-black/[0.06] hover:border-gold/40 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Visual Image Header */}
-                  <div className="relative h-44 sm:h-48 w-full overflow-hidden">
+                  <div className="relative h-40 sm:h-44 w-full rounded-2xl overflow-hidden mb-3.5 bg-black/5">
                     <Image
                       src={imageSrc}
                       alt={dept.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
                     
-                    {/* Tag & Icon */}
-                    <div className="absolute top-3 left-3 flex items-center gap-2">
-                      <span className="px-2.5 py-0.5 rounded-full bg-brand-base/90 backdrop-blur-md text-white text-[11px] font-bold tracking-wide border border-gold/30">
+                    {/* Top Tag & Floating Icon */}
+                    <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
+                      <span className="px-2.5 py-1 rounded-full bg-black/45 backdrop-blur-md text-white text-[10px] font-bold tracking-wider uppercase border border-white/15 shadow-sm">
                         {dept.tag}
                       </span>
-                    </div>
-
-                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
-                      <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-lg bg-gold text-brand-deeper flex items-center justify-center font-bold">
-                          <Icon size={16} />
-                        </div>
-                        <span className="text-xs font-semibold tracking-wide text-white/90">
-                          {t.services.cardBadge}
-                        </span>
+                      <div className="w-7 h-7 rounded-full bg-white/95 backdrop-blur-md text-brand-deeper flex items-center justify-center shadow-md">
+                        <Icon size={14} className="text-brand-base" />
                       </div>
                     </div>
                   </div>
 
-                  {/* Body Content */}
-                  <div className="p-5 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold text-brand-deeper mb-2 group-hover:text-brand-base transition-colors leading-snug">
+                  {/* Content Area */}
+                  <div className="px-2 pb-2">
+                    <h3 className="text-base sm:text-[17px] font-bold text-brand-deeper group-hover:text-brand-base transition-colors leading-snug tracking-tight">
                       {dept.title}
                     </h3>
                     
-                    <p className="text-black/65 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
+                    <p className="text-black/60 text-xs leading-relaxed mt-1 mb-3 font-normal line-clamp-2 min-h-[34px]">
                       {dept.description}
                     </p>
 
-                    {/* Bullet features */}
-                    <div className="space-y-1.5 pt-2 border-t border-black/5">
+                    {/* Compact Apple-style Feature Pills */}
+                    <div className="flex flex-wrap gap-1.5 pt-2 border-t border-black/[0.04]">
                       {dept.features.map((feat) => (
-                        <div key={feat} className="flex items-center gap-2 text-xs text-black/75 font-medium">
-                          <div className="w-4 h-4 rounded-full bg-brand-base/10 flex items-center justify-center flex-shrink-0 text-brand-base">
-                            <Check size={11} className="stroke-[3]" />
-                          </div>
-                          <span>{feat}</span>
-                        </div>
+                        <span
+                          key={feat}
+                          className="inline-flex items-center px-2.5 py-1 rounded-lg bg-surface-warm text-black/75 text-[11px] font-medium border border-black/[0.04] group-hover:border-gold/30 transition-colors"
+                        >
+                          {feat}
+                        </span>
                       ))}
                     </div>
                   </div>
                 </div>
 
-                {/* Card Footer Button */}
-                <div className="px-5 sm:px-6 pb-5 pt-1">
+                {/* Compact Footer Button */}
+                <div className="px-2 pt-2">
                   <Link
-                    href={dept.tag === "Kongre & Fuar" || dept.tag === "Congress & Events" ? "/kongre-fuar-etkinlik" : "#iletisim"}
+                    href={isCongress ? "/kongre-fuar-etkinlik" : "#iletisim"}
                     aria-label={`${dept.title} - ${t.services.ctaCard}`}
-                    className={`w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl font-bold text-xs tracking-wide transition-all duration-300 border ${
-                      dept.tag === "Kongre & Fuar" || dept.tag === "Congress & Events"
-                        ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper border-gold shadow-md hover:shadow-lg hover:brightness-105"
-                        : "bg-surface-warm group-hover:bg-brand-base text-brand-deeper group-hover:text-white border-black/5 group-hover:border-transparent"
+                    className={`w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs tracking-wide transition-all duration-300 ${
+                      isCongress
+                        ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper shadow-sm hover:shadow-md hover:brightness-105 border border-gold"
+                        : "bg-surface-warm hover:bg-brand-base text-brand-deeper hover:text-white border border-black/5 hover:border-transparent"
                     }`}
                   >
-                    {dept.tag === "Kongre & Fuar" || dept.tag === "Congress & Events"
-                      ? "2026-2027 Katalog & Fiyat Tarifesi"
-                      : t.services.ctaCard}
-                    <ArrowRight size={14} />
+                    <span>{isCongress ? "2026-2027 Katalog & Fiyat Tarifesi" : t.services.ctaCard}</span>
+                    <ArrowRight size={13} />
                   </Link>
                 </div>
               </motion.div>

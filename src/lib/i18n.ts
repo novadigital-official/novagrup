@@ -60,111 +60,57 @@ export const content = {
       departments: [
         {
           tag: "Housekeeping",
-          title: "Kat Hizmetleri ve Genel Alan Temizliği",
-          description:
-            "Oda temizliği, kat koridorları, çamaşırhane ve genel alanların 5 yıldızlı otel standartlarında eksiksiz işletimi.",
-          features: [
-            "Deneyimli Kat Görevlileri (Maid)",
-            "Meydancı & Genel Alan Ekipleri",
-            "Çamaşırhane ve Keten Düzeni",
-            "NOVA Koordinatörleri ile Günlük Kalite Kontrol",
-          ],
+          title: "Kat Hizmetleri & Housekeeping",
+          description: "5 yıldızlı otel standartlarında oda temizliği, kat koridorları ve çamaşırhane yönetimi.",
+          features: ["Oda Temizliği", "Meydancı", "Çamaşırhane", "Saha Amiri"],
         },
         {
           tag: "F&B Servis",
-          title: "Restoran Servis ve Bar Hizmetleri",
-          description:
-            "Ana restoran, alakart mekanlar ve barlarda misafir memnuniyeti odaklı profesyonel servis operasyonları.",
-          features: [
-            "Garson, Komi ve Bar Ekipleri",
-            "Açık Büfe ve Ziyafet (Banquet) Servisi",
-            "Havuz ve Plaj Servis Ekipleri",
-            "Koordinatör Eşliğinde Vardiya Yönetimi",
-          ],
+          title: "Restoran Servis & Bar",
+          description: "Restoran, açık büfe, ziyafet ve barlarda misafir odaklı profesyonel servis kadroları.",
+          features: ["Garson & Komi", "Barmen / Barista", "Ziyafet (Banquet)", "Vardiya Lideri"],
         },
         {
           tag: "Mutfak Hijyeni",
-          title: "Bulaşıkhane (Steward) ve Mutfak Destek",
-          description:
-            "Otel mutfaklarının arka planında hijyen standartlarını koruyan, hızlı ve düzenli operasyon ekipleri.",
-          features: [
-            "Bulaşıkhane (Steward) Ekipleri",
-            "Mutfak Ön Hazırlık ve Temizlik",
-            "Gece Vardiyası Ağır Hijyen Desteği",
-            "Hızlı ve Planlı Ekip Koordinasyonu",
-          ],
+          title: "Bulaşıkhane (Steward) & Mutfak",
+          description: "Otel mutfaklarında kesintisiz hijyen, hızlı ön hazırlık ve gece sanitasyon ekipleri.",
+          features: ["Steward Kadrosu", "Mutfak Ön Hazırlık", "Gece Sanitasyonu", "Kesintisiz Vardiya"],
         },
         {
           tag: "Sahne & Şov",
-          title: "Animasyon ve Gösteri Ekipleri",
-          description:
-            "Misafirlerinize unutulmaz anlar yaşatacak gündüz aktiviteleri, çocuk kulübü ve akşam sahne şovları koordinasyonu.",
-          features: [
-            "Gündüz ve Gece Animatörleri",
-            "Dans, Akrobasi ve Sahne Gösterileri",
-            "Mini Club ve Spor Aktiviteleri",
-            "Sezon Boyu Canlı Etkinlik Desteği",
-          ],
+          title: "Animasyon & Sahne Gösterileri",
+          description: "Gündüz aktiviteleri, çocuk kulübü ve akşam profesyonel sahne şovları koordinasyonu.",
+          features: ["Animatör Kadrosu", "Dans & Akrobasi", "Mini Club", "Canlı Performans"],
         },
         {
           tag: "İnşaat & Bakım",
           title: "İnşaat, Tadilat & Tesis Bakımı",
-          description:
-            "Otellerin ve ticari tesislerin sezon öncesi tadilat, boya, alçı, inşaat sonrası ince temizlik ve periyodik teknik bakım işletimi.",
-          features: [
-            "Bina & Oda Tadilat / Yenileme",
-            "İnşaat Sonrası Detaylı Temizlik",
-            "Boya, Alçı & İnce İşçilik Ekipleri",
-            "Periyodik Tesis & Teknik Bakım",
-          ],
+          description: "Sezon öncesi oda yenileme, boya/alçı, inşaat sonrası ince temizlik ve teknik bakım.",
+          features: ["Oda Yenileme", "Boya & Alçı", "İnce Temizlik", "Periyodik Bakım"],
         },
         {
           tag: "Sanayi & Lojistik",
-          title: "Fabrika, Üretim Hattı & Depo Desteği",
-          description:
-            "Üretim tesisleri, fabrikalar ve lojistik depolar için paketleme, montaj hattı, yükleme-boşaltma ve endüstriyel saha ekipleri koordinasyonu.",
-          features: [
-            "Üretim & Montaj Hattı Destek Ekipleri",
-            "Paketleme, Kolileme & Etiketleme",
-            "Depo, Forklift & Lojistik Destek",
-            "Endüstriyel Tesis & Saha Hijyen Ekipleri",
-          ],
+          title: "Fabrika, Üretim Hattı & Depo",
+          description: "Sanayi tesisleri için montaj hattı, paketleme, etiketleme ve depo yükleme ekipleri.",
+          features: ["Montaj Hattı", "Paketleme & Koli", "Depo & Forklift", "Endüstriyel Hijyen"],
         },
         {
           tag: "Lead & Çağrı Dağıtımı",
-          title: "B2B Lead Üretimi & Çağrı Merkezi Çözüm Ortaklığı",
-          description:
-            "Finans, sigorta brokerliği, gayrimenkul ve özel sağlık klinikleri için dijital kanallardan doğrulanmış müşteri adayları (lead) üretimi ve partner çağrı merkezi ağımızla ön teyitli yönlendirme altyapısı.",
-          features: [
-            "KVKK Uyumlu Sıcak Müşteri (Lead) Kampanyaları",
-            "Çağrı Merkezi Ön Filtreleme & Teyit Aşaması",
-            "Lisanslı Kurumlara Canlı Çağrı & CRM Transferi",
-            "Performans Odaklı (CPL & Rev-Share) Büyüme Modeli",
-          ],
+          title: "B2B Lead & Çağrı Merkezi",
+          description: "Klinik, finans ve gayrimenkul için ön teyitli sıcak müşteri adayları ve çağrı transferi.",
+          features: ["Doğrulanmış Lead", "Çağrı Filtreleme", "Canlı CRM Transferi", "KVKK Uyumlu"],
         },
         {
           tag: "Kongre & Fuar",
-          title: "Kongre, Fuar, Zirve ve Event Saha Operasyonları",
-          description:
-            "ANFAŞ Fuar Merkezi ve Belek, Kundu, Kemer kongre otellerinde ulusal/uluslararası zirveler için stand hostesi, kayıt-kabul, salon yönetimi ve VIP karşılama kadroları.",
-          features: [
-            "Stand Host / Hostesi (Tanıtım & Karşılama)",
-            "Yabancı Dilli Fuar/Kongre Hostesi (İngilizce, Rusça, Almanca)",
-            "Kayıt-Kabul, Akreditasyon & Sekretarya Görevlileri",
-            "10 Kişi ve Üzeri Gruplarda Ücretsiz Nova Saha Süpervizörü",
-          ],
+          title: "Kongre, Fuar & Event Kadroları",
+          description: "ANFAŞ ve kongre otellerinde stand hostesi, kayıt-kabul, salon yönetimi ve VIP karşılama.",
+          features: ["Stand Hostesi", "Yabancı Dilli Ekip", "Kayıt & Akreditasyon", "Ücretsiz Süpervizör*"],
         },
         {
           tag: "Teşvik & Hibe",
-          title: "Devlet Destekleri & Teşvik Danışmanlığı",
-          description:
-            "İşletmenizin SGK istihdam teşvikleri, KOSGEB İleri Girişimci & kapasite destekleri ve Ticaret Bakanlığı hibelerine tam uyumla erişim danışmanlığı.",
-          features: [
-            "KOSGEB İleri Girişimci & Kapasite Destekleri",
-            "İŞKUR İstihdam & SGK Prim Teşvik Yönetimi",
-            "Ticaret Bakanlığı Turizm & Hizmet Sektörü Destekleri",
-            "Uçtan Uca Hibe Dosyası ve Resmi Süreç Takibi",
-          ],
+          title: "Devlet Destekleri & Teşvik",
+          description: "SGK istihdam prim teşvikleri, KOSGEB hibeleri ve Ticaret Bakanlığı destekleri danışmanlığı.",
+          features: ["SGK Prim Teşviki", "KOSGEB Hibe", "Bakanlık Desteği", "Resmi Dosya Takibi"],
         },
       ],
     },
@@ -371,111 +317,57 @@ export const content = {
       departments: [
         {
           tag: "Housekeeping",
-          title: "Housekeeping & Public Area Cleaning",
-          description:
-            "Complete room cleaning, floor maintenance, laundry logistics, and public area sanitation up to 5-star hotel standards.",
-          features: [
-            "Experienced Room Attendants (Maids)",
-            "Public Area Cleaners & Porters",
-            "Laundry & Linen Flow Management",
-            "Daily Inspections by NOVA Coordinators",
-          ],
+          title: "Housekeeping & Public Areas",
+          description: "5-star hotel standard room cleaning, public area care, and laundry flow management.",
+          features: ["Room Attendants", "Public Areas", "Laundry Flow", "Quality Audit"],
         },
         {
           tag: "F&B Service",
           title: "Restaurant & Bar Staffing",
-          description:
-            "Guest-focused, courteous, and energetic waitstaff and commis teams for main buffets, à la carte restaurants, and bars.",
-          features: [
-            "Waiters, Bartenders & Commis Waiters",
-            "Buffet & Banquet Service Teams",
-            "Pool & Beach Club Service Staff",
-            "Shift Coordination under Team Leads",
-          ],
+          description: "Courteous, guest-oriented service staff for buffets, à la carte venues, and bars.",
+          features: ["Waiters & Bussers", "Bartenders", "Banquet Teams", "Shift Leads"],
         },
         {
           tag: "Kitchen Hygiene",
-          title: "Stewarding & Kitchen Sanitation",
-          description:
-            "Fast, reliable dishwashing and kitchen support teams keeping back-of-house areas clean and compliant.",
-          features: [
-            "Kitchen Stewarding & Dishwashers",
-            "Kitchen Prep & Sanitation Support",
-            "Night Shift Deep Cleaning Crews",
-            "Reliable and Planned Team Coordination",
-          ],
+          title: "Stewarding & Sanitation",
+          description: "Uninterrupted dishwashing, prep support, and night shift deep kitchen sanitation.",
+          features: ["Stewarding Crews", "Kitchen Prep", "Deep Cleaning", "Fast Dispatch"],
         },
         {
           tag: "Entertainment",
           title: "Animation & Stage Shows",
-          description:
-            "Energetic daytime activities, kids club coordinators, and evening stage entertainment that elevate guest satisfaction.",
-          features: [
-            "Day & Night Animation Coordinators",
-            "Dance, Circus & Stage Show Performers",
-            "Mini Club & Sports Activities",
-            "Full Seasonal Entertainment Support",
-          ],
+          description: "Daytime activities, kids club, and high-energy evening stage performances.",
+          features: ["Animators", "Dance & Acrobatics", "Mini Club", "Live Shows"],
         },
         {
           tag: "Renovation & Care",
-          title: "Construction, Renovation & Maintenance",
-          description:
-            "Turnkey departmental management for hotel pre-season renovations, finishing works, post-construction deep cleaning, and technical maintenance.",
-          features: [
-            "Facility & Room Renovation",
-            "Post-Construction Deep Cleaning",
-            "Painting, Drywall & Finishing Crews",
-            "Routine Facility & Technical Care",
-          ],
+          title: "Renovation & Facility Care",
+          description: "Turnkey hotel room overhaul, painting, post-construction deep cleaning and care.",
+          features: ["Room Renovation", "Finishing Works", "Deep Clean", "Facility Care"],
         },
         {
           tag: "Industry & Logistics",
-          title: "Factory, Assembly Line & Warehouse Support",
-          description:
-            "Skilled workforce for manufacturing plants, production assembly lines, packaging, warehouse logistics, and industrial facility sanitation.",
-          features: [
-            "Production & Assembly Line Operators",
-            "Packaging, Sorting & Labeling Teams",
-            "Warehouse, Logistics & Material Handling",
-            "Industrial Plant Deep Sanitation Crews",
-          ],
+          title: "Factory & Warehouse Support",
+          description: "Assembly line, packaging, sorting, and warehouse material handling crews.",
+          features: ["Assembly Lines", "Packing & Sorting", "Warehouse Logistics", "Plant Sanitation"],
         },
         {
           tag: "Lead & Call Center",
-          title: "B2B Lead Generation & Call Center Routing",
-          description:
-            "High-intent digital lead generation and pre-qualification call center infrastructure for insurance brokers, financial institutions, and specialized clinics.",
-          features: [
-            "GDPR/KVKK-Compliant Inbound Lead Funnels",
-            "Call Center Pre-Qualification & Verification",
-            "Instant CRM & Live Call Transfer to Licensed Partners",
-            "Performance & CPL-Driven Growth Model",
-          ],
+          title: "B2B Lead & Call Center",
+          description: "High-intent lead generation and pre-qualified call transfer infrastructure.",
+          features: ["Verified Leads", "Pre-Screening", "Live CRM Transfer", "GDPR/KVKK"],
         },
         {
           tag: "Congress & Events",
-          title: "Congress, Expo, Summit & Event Field Operations",
-          description:
-            "Professional stand hostesses, registration desk, hall attendants, and VIP airport greeting crews across ANFAS Expo Center and Belek congress resorts.",
-          features: [
-            "Presentable Stand Hosts & Hostesses",
-            "Multilingual Reception Staff (English, Russian, German)",
-            "Registration, Badging & Accreditation Desk",
-            "Dedicated Field Supervisor Included for 10+ Crews",
-          ],
+          title: "Congress & Event Staffing",
+          description: "Stand hostesses, registration desk, hall attendants, and VIP airport greeting.",
+          features: ["Stand Hostesses", "Multilingual Crew", "Badging Desk", "Free Supervisor*"],
         },
         {
           tag: "Grants & Subsidies",
-          title: "Government Incentives & Growth Advisory",
-          description:
-            "Comprehensive advisory for accessing government employment subsidies, KOSGEB advanced entrepreneur grants, and Ministry of Trade export programs.",
-          features: [
-            "KOSGEB Advanced Entrepreneurship Grants",
-            "Labor Agency Employment Incentive Management",
-            "Ministry of Trade Hospitality & Service Subsidies",
-            "End-to-End Application & Compliance Oversight",
-          ],
+          title: "Government Incentives Advisory",
+          description: "Corporate advisory for labor employment subsidies and government grants.",
+          features: ["Employment Subsidies", "Enterprise Grants", "Trade Programs", "Turnkey Audit"],
         },
       ],
     },

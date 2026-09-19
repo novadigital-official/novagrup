@@ -14,8 +14,16 @@ export const metadata: Metadata = {
   description:
     "5 yıldızlı oteller ve sanayi tesisleri için kat hizmetleri, F&B servis, mutfak hijyeni ve fabrika hatlarında profesyonel departman işletim hizmeti; kurumsal firmalara B2B lead üretimi ve devlet teşvikleri danışmanlığı.",
   icons: {
-    icon: "/images/nova-emblem.jpg",
-    apple: "/images/nova-emblem.jpg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
   },
   keywords: [
     "otel departman yönetimi",
