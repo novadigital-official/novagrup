@@ -80,13 +80,21 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://www.novaorganizasyon7.com.tr/#organization",
-      name: "NOVA GLOBAL",
+      name: "NOVA ORGANİZASYON",
       legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
       url: "https://www.novaorganizasyon7.com.tr",
       logo: "https://www.novaorganizasyon7.com.tr/images/nova-emblem.jpg",
+      telephone: "+905070871789",
+      parentOrganization: {
+        "@type": "Organization",
+        "@id": "https://novadigital.com.tr/#organization",
+        name: "NOVA GLOBAL",
+        legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
+        url: "https://novadigital.com.tr"
+      },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+90-505-410-48-00",
+        telephone: "+905070871789",
         contactType: "customer service",
         availableLanguage: ["Turkish", "English"],
       },

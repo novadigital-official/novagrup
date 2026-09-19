@@ -289,7 +289,7 @@ export const content = {
       col3Link3: "Tel: 0505 410 48 00",
       col3Link4: "iknovaofis@gmail.com",
       col3Link5: "Instagram: @novaofisss",
-      copyright: "© 2026 NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ. Tüm hakları saklıdır.",
+      copyright: "© 2026 Nova Organizasyon. NOVA GLOBAL bünyesinde. NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ.",
       tagline: "Antalya Otel, İnşaat, Sanayi ve B2B Danışmanlık Çözümleri",
     },
     whatsapp: {
@@ -585,7 +585,7 @@ export const content = {
       col3Link3: "Tel: +90 505 410 48 00",
       col3Link4: "iknovaofis@gmail.com",
       col3Link5: "Instagram: @novaofisss",
-      copyright: "© 2026 NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ. All rights reserved.",
+      copyright: "© 2026 Nova Organizasyon. Part of NOVA GLOBAL. NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ.",
       tagline: "Antalya Hospitality, Construction, Industrial & B2B Advisory Solutions",
     },
     whatsapp: {
