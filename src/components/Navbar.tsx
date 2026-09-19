@@ -22,7 +22,6 @@ export default function Navbar() {
 
   const navLinks = [
     { label: t.nav.departments, href: "/#hizmetler" },
-    { label: t.nav.congress || (language === "tr" ? "Kongre & Fuar 2026" : "Congress & Expo"), href: "/kongre-fuar-etkinlik", isSpecial: true },
     { label: t.nav.workflow, href: "/#is-akisi" },
     { label: language === "tr" ? "Kariyer" : "Careers", href: "/#iletisim", tab: "jobseeker" as const },
     { label: language === "tr" ? "İK & Danışmanlık" : "Corporate Advisory", href: "/#iletisim", tab: "corporate" as const },
@@ -107,19 +106,10 @@ export default function Navbar() {
                 key={link.href + (link.tab || "")}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href, link.tab)}
-                className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 group cursor-pointer flex items-center gap-1.5 ${
-                  link.isSpecial
-                    ? "text-gold font-bold bg-gold/10 rounded-lg border border-gold/30 hover:bg-gold/20"
-                    : "text-white/80 hover:text-white"
-                }`}
+                className="relative px-3.5 py-2 text-sm font-medium transition-all duration-300 group cursor-pointer flex items-center gap-1.5 text-white/80 hover:text-white"
               >
                 <span>{link.label}</span>
-                {link.isSpecial && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                )}
-                {!link.isSpecial && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent group-hover:w-3/4 transition-all duration-300" />
-                )}
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent group-hover:w-3/4 transition-all duration-300" />
               </Link>
             ))}
 

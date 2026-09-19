@@ -75,7 +75,6 @@ export default function Services() {
           {t.services.departments.map((dept, index) => {
             const Icon = departmentIcons[index] || Hotel;
             const imageSrc = departmentImages[index] || "/images/hotel-housekeeping.png";
-            const isCongress = dept.tag === "Kongre & Fuar" || dept.tag === "Congress & Events";
 
             return (
               <motion.div
@@ -115,36 +114,20 @@ export default function Services() {
                       {dept.title}
                     </h3>
                     
-                    <p className="text-black/60 text-xs leading-relaxed mt-1 mb-3 font-normal line-clamp-2 min-h-[34px]">
+                    <p className="text-black/60 text-xs leading-relaxed mt-1 font-normal line-clamp-2">
                       {dept.description}
                     </p>
-
-                    {/* Compact Apple-style Feature Pills */}
-                    <div className="flex flex-wrap gap-1.5 pt-2 border-t border-black/[0.04]">
-                      {dept.features.map((feat) => (
-                        <span
-                          key={feat}
-                          className="inline-flex items-center px-2.5 py-1 rounded-lg bg-surface-warm text-black/75 text-[11px] font-medium border border-black/[0.04] group-hover:border-gold/30 transition-colors"
-                        >
-                          {feat}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
 
                 {/* Compact Footer Button */}
                 <div className="px-2 pt-2">
                   <Link
-                    href={isCongress ? "/kongre-fuar-etkinlik" : "#iletisim"}
+                    href="#iletisim"
                     aria-label={`${dept.title} - ${t.services.ctaCard}`}
-                    className={`w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs tracking-wide transition-all duration-300 ${
-                      isCongress
-                        ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper shadow-sm hover:shadow-md hover:brightness-105 border border-gold"
-                        : "bg-surface-warm hover:bg-brand-base text-brand-deeper hover:text-white border border-black/5 hover:border-transparent"
-                    }`}
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs tracking-wide transition-all duration-300 bg-surface-warm hover:bg-brand-base text-brand-deeper hover:text-white border border-black/5 hover:border-transparent"
                   >
-                    <span>{isCongress ? "2026-2027 Katalog & Fiyat Tarifesi" : t.services.ctaCard}</span>
+                    <span>{t.services.ctaCard}</span>
                     <ArrowRight size={13} />
                   </Link>
                 </div>
