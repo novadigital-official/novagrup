@@ -3,7 +3,7 @@ export const siteConfig = {
   url: "https://novaorganizasyon7.com.tr",
   company: {
     name: "NOVA ORGANİZASYON",
-    legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
+    legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ",
     mersis: "0632159982000001",
     taxOffice: "Antalya Kurumlar V.D.",
     taxNo: "632 159 9820",
@@ -14,7 +14,7 @@ export const siteConfig = {
     phoneIntl: "+90 505 410 48 00",
     phoneRaw: "905054104800",
     secondaryPhone: "0505 410 48 00",
-    email: "info@novaorganizasyon7.com.tr",
+    email: "iknovaofis@gmail.com",
     department: "Saha Operasyon & Danışmanlık Masası",
     titleTR: "Saha Operasyon Masası",
     titleEN: "Field Operations Dispatch",

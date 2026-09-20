@@ -180,7 +180,7 @@ export default function ContactCTA() {
 
               {/* Email Card */}
               <a
-                href="mailto:info@novaorganizasyon7.com.tr"
+                href={`mailto:${siteConfig.contact.email}`}
                 aria-label="Email"
                 className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
               >
@@ -192,7 +192,7 @@ export default function ContactCTA() {
                     {language === "tr" ? "Kurumsal E-Posta" : "Corporate Email"}
                   </p>
                   <p className="text-white font-black text-sm sm:text-base group-hover:text-gold transition-colors">
-                    info@novaorganizasyon7.com.tr
+                    iknovaofis@gmail.com
                   </p>
                   <p className="text-white/50 text-xs mt-0.5">
                     {language === "tr" ? "Resmi Hizmet Teklifleri & Sözleşmeler" : "Official Service Proposals & Contracts"}

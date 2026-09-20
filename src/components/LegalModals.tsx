@@ -31,7 +31,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           </p>
           <h4 className="text-gold font-semibold text-sm">3. KVKK 11. Madde Kapsamındaki Haklarınız</h4>
           <p>
-            KVKK’nın 11. maddesi uyarınca dilediğiniz zaman tarafımıza başvurarak verilerinizin işlenip işlenmediğini öğrenme, silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz. Başvurularınızı <strong>info@novaorganizasyon7.com.tr</strong> adresine iletebilirsiniz.
+            KVKK’nın 11. maddesi uyarınca dilediğiniz zaman tarafımıza başvurarak verilerinizin işlenip işlenmediğini öğrenme, silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz. Başvurularınızı <strong>iknovaofis@gmail.com</strong> adresine iletebilirsiniz.
           </p>
         </div>
       ),
@@ -94,7 +94,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
             <p><strong>Sermaye Yapısı:</strong> 500.000 TL Tescilli ve Taahhüt Edilmiş Esas Sermaye</p>
             <p><strong>Kurucu & Şirket Müdürü:</strong> Çelebi ASAL</p>
             <p><strong>Resmi Web Sitesi:</strong> www.novaorganizasyon7.com.tr</p>
-            <p><strong>Kurumsal E-Posta:</strong> info@novaorganizasyon7.com.tr</p>
+            <p><strong>Kurumsal E-Posta:</strong> iknovaofis@gmail.com</p>
             <p><strong>Kurumsal İletişim & Saha:</strong> 0505 410 48 00</p>
             <p><strong>Hizmet Bölgesi:</strong> Antalya Geneli (Belek, Kundu, Kemer, Lara, Manavgat, Alanya & Tüm Akdeniz)</p>
             <p><strong>Faaliyet Alanı:</strong> Anahtar Teslim Departman İşletimi, Tesis Hizmet Alım Çözümleri & Saha Operasyonları</p>

@@ -59,7 +59,7 @@ export default function Footer() {
         { label: t.footer.col3Link1, href: "#iletisim" },
         { label: t.footer.col3Link2, href: "https://wa.me/905054104800" },
         { label: t.footer.col3Link3, href: "tel:05054104800" },
-        { label: t.footer.col3Link4, href: "mailto:info@novaorganizasyon7.com.tr" },
+        { label: t.footer.col3Link4, href: `mailto:${siteConfig.contact.email}` },
         { label: t.footer.col3Link5, href: "https://instagram.com/novaofisss" },
       ],
     },
@@ -116,7 +116,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={13} className="text-gold flex-shrink-0" />
-                <span>info@novaorganizasyon7.com.tr</span>
+                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-gold transition-colors">
+                  iknovaofis@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <InstagramIcon size={13} className="text-gold flex-shrink-0" />
