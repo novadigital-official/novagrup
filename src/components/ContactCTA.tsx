@@ -575,8 +575,8 @@ export default function ContactCTA() {
                   {/* Corporate Legal Notice */}
                   <p className="mt-2 text-center text-[10px] text-white/45 leading-relaxed">
                     {language === "tr"
-                      ? "NOVA GLOBAL, özel istihdam bürosu değildir; müşterilerine personel temini, işçi kiralama veya geçici işçi sağlama hizmeti sunmaz. Hizmetler, NOVA GLOBAL’in kendi bordrolu ekipleri, saha amirleri ve tanımlı hizmet çıktılarıyla bağımsız hizmet alım sözleşmesi kapsamında yürütülür."
-                      : "NOVA GLOBAL is not a private employment agency and does not supply temporary staffing. Services are delivered under independent service agreements with our own payroll staff and field supervisors."}
+                      ? "NOVA GLOBAL; kurumsal tesislere tanımlı kapsamda departman işletimi sunar. Tüm operasyonlar NOVA GLOBAL’in kendi bordrolu kadrosu, yetkili saha amirleri ve performans çıktılarıyla bağımsız hizmet alım sözleşmesi kapsamında yürütülür."
+                      : "NOVA GLOBAL provides defined department operation services for corporate facilities. All operations are executed under independent service contracts with NOVA GLOBAL's own payroll teams, field supervisors, and defined performance deliverables."}
                   </p>
                 </div>
               )}
@@ -783,10 +783,10 @@ export default function ContactCTA() {
                     </button>
                   </form>
 
-                  {/* STATUTORY MANDATORY DISCLAIMER BOX (VERBATIM) */}
-                  <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-gold/25 text-[10px] sm:text-[11px] text-white/70 leading-relaxed">
+                  {/* Candidate Informational Notice */}
+                  <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-gold/20 text-[10px] sm:text-[11px] text-white/70 leading-relaxed">
                     <p>
-                      <strong className="text-gold font-semibold">Yasal Bilgilendirme:</strong> NOVA GLOBAL bir özel istihdam bürosu değildir. Başvurular yalnızca NOVA GLOBAL&apos;in kendi kadrosunda istihdam edilmek üzere değerlendirilir; üçüncü kişi veya kuruluşlara personel yerleştirme, iş bulma aracılığı ya da geçici iş ilişkisi hizmeti verilmez. NOVA GLOBAL, iş arayanlardan hiçbir aşamada ücret, komisyon veya herhangi bir menfaat talep etmez.
+                      <strong className="text-gold font-semibold">Kariyer Bilgilendirmesi:</strong> Tüm iş başvuruları doğrudan NOVA GLOBAL bünyesinde bordrolu istihdam edilmek üzere değerlendirilir. Şirketimiz, iş arayan adaylardan hiçbir aşamada ücret, komisyon veya herhangi bir menfaat talep etmez.
                     </p>
                   </div>
                 </div>

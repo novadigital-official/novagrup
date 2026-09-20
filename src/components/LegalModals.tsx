@@ -19,7 +19,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
       body: (
         <div className="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
           <p>
-            <strong>NOVA ORGANİZASYON</strong> (“Nova Grup”) olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) ve ilgili mevzuat uyarınca, veri sorumlusu sıfatıyla kişisel verilerinizin güvenliğine ve gizliliğine azami hassasiyet göstermekteyiz.
+            <strong>NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ</strong> (“NOVA GLOBAL”) olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) ve ilgili mevzuat uyarınca, veri sorumlusu sıfatıyla kişisel verilerinizin güvenliğine ve gizliliğine azami hassasiyet göstermekteyiz.
           </p>
           <h4 className="text-gold font-semibold text-sm">1. Kişisel Verilerin İşlenme Amacı</h4>
           <p>
@@ -65,7 +65,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           </p>
           <h4 className="text-gold font-semibold text-sm">1. Sorumluluk Reddi (Disclaimer)</h4>
           <p>
-            Web sitemizde yer alan bilgiler genel tanıtım ve bilgilendirme mahiyetindedir. Hizmet kapsamı, resmi sözleşme ve yazılı mutabakatlar çerçevesinde kesinleşir. Web sitesinde yer alan üçüncü taraf dış bağlantıların (WhatsApp, Instagram vb.) içeriklerinden Nova Organizasyon sorumlu tutulamaz.
+            Web sitemizde yer alan bilgiler genel tanıtım ve bilgilendirme mahiyetindedir. Hizmet kapsamı, resmi sözleşme ve yazılı mutabakatlar çerçevesinde kesinleşir. Web sitesinde yer alan üçüncü taraf dış bağlantıların (WhatsApp, Instagram vb.) içeriklerinden NOVA GLOBAL sorumlu tutulamaz.
           </p>
           <h4 className="text-gold font-semibold text-sm">2. 5651 Sayılı Bilişim Mevzuatı Uyumu</h4>
           <p>
@@ -73,7 +73,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           </p>
           <h4 className="text-gold font-semibold text-sm">3. Hizmet Modeli ve Hukuki Çerçeve Beyanı</h4>
           <p>
-            NOVA GLOBAL, müşterilerine personel temini, işçi kiralama veya geçici işçi sağlama hizmeti sunmaz. Hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, bordrolu çalışanları, saha sorumluları, gerekli ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. Her proje için hizmet kapsamı, çıktı ve kalite kriterleri, yönetim sorumlulukları, iş sağlığı ve güvenliği görevleri, raporlama düzeni ve ücretlendirme yöntemi yazılı olarak belirlenir. İlişkinin hukuki niteliği yalnızca sözleşme başlığına değil, fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Doğru sözleşme tasarımı ve tutarlı fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
+            NOVA GLOBAL, kurumsal tesislere ve otellere bağımsız hizmet alım sözleşmeleri kapsamında departman işletimi ve saha operasyonları sunan bir tüzel kişiliktir. Tüm hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, bordrolu çalışanları, yetkili saha amirleri, teknik ekipmanları ve tanımlı performans çıktılarıyla yürütülür. Her proje için hizmet kapsamı, kalite standartları, iş sağlığı ve güvenliği sorumlulukları, raporlama düzeni ve götürü bedelli ücretlendirme modeli yazılı sözleşmelerle belirlenir. Taraflar arasındaki iş ilişkisi bağımsız hizmet alımı esasına dayanmakta olup, operasyonel sevk ve idare bizzat NOVA GLOBAL saha yönetimi tarafından gerçekleştirilir.
           </p>
         </div>
       ),
@@ -88,7 +88,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
             <p><strong>MERSİS No:</strong> 0632159982000001</p>
             <p><strong>Vergi Dairesi & No:</strong> Antalya Kurumlar V.D. | 632 159 9820 | Kepez / ANTALYA</p>
             <p><strong>Adres:</strong> Kültür Mah. 3856 Sk. 1. Yeşil Yayla Apt. No:2 İç Kapı No:1 Kepez / Antalya</p>
-            <p><strong>Ticari Marka:</strong> NOVA GLOBAL / NOVA ORGANİZASYON</p>
+            <p><strong>Ticari Marka:</strong> NOVA GLOBAL</p>
             <p><strong>Ticaret Sicil Tescili:</strong> Antalya Ticaret Sicili Müdürlüğü | TTSG: 11.09.2026, Sayı: 11164</p>
             <p><strong>İmza Sirküleri:</strong> Antalya 5. Noterliği (14.09.2026)</p>
             <p><strong>Sermaye Yapısı:</strong> 500.000 TL Tescilli ve Taahhüt Edilmiş Esas Sermaye</p>
@@ -96,8 +96,8 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
             <p><strong>Resmi Web Sitesi:</strong> www.novaorganizasyon7.com.tr</p>
             <p><strong>Kurumsal E-Posta:</strong> iknovaofis@gmail.com</p>
             <p><strong>Kurumsal İletişim & Saha:</strong> 0505 410 48 00</p>
-            <p><strong>Hizmet Bölgesi:</strong> Antalya Geneli (Belek, Kundu, Kemer, Lara, Manavgat, Alanya & Tüm Akdeniz)</p>
-            <p><strong>Faaliyet Alanı:</strong> Anahtar Teslim Departman İşletimi, Tesis Hizmet Alım Çözümleri & Saha Operasyonları</p>
+            <p><strong>Hizmet Bölgesi:</strong> Türkiye Geneli (Otel, Tesis ve Kurumsal İşletmeler)</p>
+            <p><strong>Faaliyet Alanı:</strong> Tanımlı Kapsamda Departman İşletimi, Tesis Hizmet Alım Çözümleri & Saha Operasyonları</p>
           </div>
         </div>
       ),

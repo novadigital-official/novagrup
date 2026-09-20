@@ -189,8 +189,8 @@ export default function Footer() {
 
           <p className="text-[10px] text-white/40 text-center sm:text-right max-w-md">
             {language === "tr"
-              ? "NOVA GLOBAL, özel istihdam bürosu değildir; müşterilerine personel temini yapmaz. Hizmetler, kendi bordrolu ekipleriyle bağımsız hizmet alım sözleşmesi kapsamında sunulur."
-              : "NOVA GLOBAL is not a private employment agency and does not supply temporary staffing. Services are delivered under independent service contracts."}
+              ? "NOVA GLOBAL; tesis yönetimi ve operasyonel departman işletimi alanında kendi bordrolu ekipleri, saha amirleri ve tanımlı hizmet çıktılarıyla bağımsız hizmet alım çözümleri sunar."
+              : "NOVA GLOBAL provides independent facility management and operational department services with its own payroll teams, field supervisors, and defined quality deliverables."}
           </p>
         </div>
 
