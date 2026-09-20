@@ -92,7 +92,7 @@ const jsonLd = {
       legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
       url: "https://www.novaorganizasyon7.com.tr",
       logo: "https://www.novaorganizasyon7.com.tr/images/nova-emblem.jpg",
-      telephone: "+905070871789",
+      telephone: "+905054104800",
       parentOrganization: {
         "@type": "Organization",
         "@id": "https://novadigital.com.tr/#organization",
@@ -102,7 +102,7 @@ const jsonLd = {
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+905070871789",
+        telephone: "+905054104800",
         contactType: "customer service",
         availableLanguage: ["Turkish", "English"],
       },

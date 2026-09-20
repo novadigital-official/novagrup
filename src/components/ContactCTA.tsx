@@ -155,12 +155,12 @@ export default function ContactCTA() {
 
       // 2. Format Live WhatsApp Message
       const waText = encodeURIComponent(
-        `👤 *NOVA GLOBAL — ADAY HAVUZU BAŞVURUSU*\n\n` +
+        `👤 *NOVA GLOBAL — KARİYER VE İSTİHDAM BAŞVURUSU*\n\n` +
         `📋 *Ad Soyad:* ${jobData.name}\n` +
         `📞 *Telefon:* ${jobData.phone}\n` +
         `📍 *İkamet & Yaş:* ${jobData.ageLocation}\n` +
-        `💼 *Çalışmak İstenen Alan:* ${jobData.desiredRole}\n` +
-        `\n_novaorganizasyon7.com.tr aday havuzu masasından iletildi._`
+        `💼 *Çalışmak İstenen Operasyon Alanı:* ${jobData.desiredRole}\n` +
+        `\n_novaorganizasyon7.com.tr doğrudan kariyer masasından iletildi._`
       );
 
       window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
@@ -327,7 +327,7 @@ export default function ContactCTA() {
                   }`}
                 >
                   <UserCheck size={15} />
-                  <span>{language === "tr" ? "Aday Havuzu Başvurusu" : "Candidate Pool Application"}</span>
+                  <span>{language === "tr" ? "NOVA Kariyer Başvurusu" : "NOVA Career Application"}</span>
                 </button>
               </div>
 
@@ -342,7 +342,7 @@ export default function ContactCTA() {
                   ) : (
                     <>
                       <Briefcase size={18} className="text-gold" />
-                      <span>{language === "tr" ? "Aday Havuzu Başvuru Formu" : "Candidate Pool Application Form"}</span>
+                      <span>{language === "tr" ? "NOVA Bünyesinde İstihdam / Kariyer Başvurusu" : "NOVA Career & Employment Application"}</span>
                     </>
                   )}
                 </h3>
@@ -352,8 +352,8 @@ export default function ContactCTA() {
                         ? "Bilgilerinizi iletin; danışmanlık talebiniz anında WhatsApp operasyon masamıza düşsün."
                         : "Submit your details to receive an instant advisory proposal directly via WhatsApp.")
                     : (language === "tr"
-                        ? "Bilgilerinizi girin, saha koordinasyon ekibimiz en kısa sürede sizinle iletişime geçsin."
-                        : "Enter your details below; our coordination team will contact you promptly.")}
+                        ? "Bilgilerinizi girin, NOVA operasyon ve insan kaynakları ekibimiz başvurunuzu değerlendirsin."
+                        : "Submit your details; our operations and recruitment team will review your application.")}
                 </p>
               </div>
 

@@ -54,13 +54,13 @@ export default function ApplicationHub() {
       return;
     }
 
-    const message = `*📋 NOVA GLOBAL - ADAY HAVUZU BAŞVURU FORMU*\n\n` +
+    const message = `*📋 NOVA GLOBAL - KARİYER VE İSTİHDAM BAŞVURUSU*\n\n` +
       `👤 *Aday Adı Soyadı:* ${jobName}\n` +
       `📱 *Telefon:* ${jobPhone}\n` +
-      `💼 *İlgilenilen Alan:* ${jobPosition}\n` +
+      `💼 *İlgilenilen Operasyon Alanı:* ${jobPosition}\n` +
       `⭐ *Deneyim Durumu:* ${jobExperience}\n` +
       `🏠 *Lojman Talebi:* ${jobLodging}\n\n` +
-      `_Antalya tesis ve işletmelerinde görev almak üzere aday havuzu başvurumu iletiyorum._`;
+      `_NOVA GLOBAL operasyon ve saha kadrolarında görev almak üzere kariyer başvurumu iletiyorum._`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/${siteConfig.contact.phoneRaw}?text=${encoded}`, "_blank");
@@ -120,7 +120,7 @@ export default function ApplicationHub() {
               }`}
             >
               <UserCheck className="w-4 h-4 flex-shrink-0" />
-              <span>Aday Havuzu Başvurusu</span>
+              <span>NOVA Kariyer Başvurusu</span>
             </button>
 
             <button
@@ -155,10 +155,10 @@ export default function ApplicationHub() {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-white">
-                    Antalya Tesisleri İçin Aday Havuzumuza Katılın
+                    NOVA Bünyesinde İstihdam / Kariyer Başvurusu
                   </h3>
                   <p className="text-xs text-slate-400 font-light">
-                    Kariyer planlaması, lojman/servis ve tam SGK güvencesiyle uzman ekiplerimize dahil olun.
+                    NOVA GLOBAL saha operasyon ve departman yönetim kadrolarında yer almak için başvurunuzu iletin.
                   </p>
                 </div>
               </div>

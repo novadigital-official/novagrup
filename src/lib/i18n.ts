@@ -9,7 +9,7 @@ export const content = {
       workflow: "Nasıl Çalışırız?",
       whyUs: "Neden NOVA?",
       contact: "İletişim & Danışmanlık",
-      phone: "0507 087 17 89",
+      phone: "0505 410 48 00",
       ctaButton: "Teklif Alın",
       mobileCta: "Teklif Alın",
     },
@@ -19,10 +19,10 @@ export const content = {
       headlineGold: "Saha Koordinasyonu & ",
       headlinePart2: "Departman İşletim Hizmeti.",
       subheadline:
-        "Kat hizmetleri, F&B servis, mutfak hijyeni, tesis bakımı, üretim hatları, B2B lead üretimi ve devlet teşvikleri danışmanlığında; tecrübeli saha koordinatörlerimiz ve uzman ekiplerimizle eksiksiz kurumsal hizmet sunuyoruz.",
+        "Kat hizmetleri, F&B servis, mutfak hijyeni, tesis bakımı, üretim ve saha operasyonlarında; NOVA tarafından planlanan ve koordine edilen kurumsal hizmetler sunuyoruz.",
       badge1: "Saha Koordinasyonu",
       badge2: "Planlı ve Kesintisiz Operasyon",
-      badge3: "Yasal Mevzuat & SGK Güvencesi",
+      badge3: "Mevzuata Uyum & Operasyon Standartları",
       primaryCta: "Birlikte Çalışalım",
       secondaryCta: "Hizmet Alanlarımız",
       photo1Tag: "Housekeeping",
@@ -38,13 +38,13 @@ export const content = {
     stats: {
       stat1Value: "Saha Koordinasyonu",
       stat1Label: "Uzman Takım Liderleri",
-      stat1Sub: "Her vardiyanın başında NOVA koordinatörü",
+      stat1Sub: "Saha operasyonlarının başında NOVA koordinatörü",
       stat2Value: "Planlı Operasyon",
       stat2Label: "Esnek Kapasite Planlaması",
       stat2Sub: "Yoğunluk dönemlerinde planlı takviye",
       stat3Value: "Kesintisiz Hizmet",
       stat3Label: "Yıl Boyu Koordinasyon Güvencesi",
-      stat3Sub: "Yüksek sezonda sıfır operasyonel aksama",
+      stat3Sub: "Yüksek sezonda kesintisiz operasyonel süreklilik",
       stat4Value: "Antalya Geneli",
       stat4Label: "Hızlı Koordinasyon & Yönetim",
       stat4Sub: "Otel, Tesis ve Kurumsal İşletmeler",
@@ -67,13 +67,13 @@ export const content = {
         {
           tag: "F&B Servis",
           title: "Restoran Servis & Bar",
-          description: "Restoran, açık büfe, ziyafet ve barlarda misafir odaklı profesyonel servis kadroları.",
+          description: "Restoran, açık büfe, ziyafet ve bar operasyonlarında hizmet standardına uygun servis organizasyonu.",
           features: ["Garson & Komi", "Barmen / Barista", "Ziyafet (Banquet)", "Vardiya Lideri"],
         },
         {
           tag: "Mutfak Hijyeni",
           title: "Bulaşıkhane (Steward) & Mutfak",
-          description: "Otel mutfaklarında kesintisiz hijyen, hızlı ön hazırlık ve gece sanitasyon ekipleri.",
+          description: "Otel mutfaklarında bulaşıkhane, sanitasyon ve ön hazırlık operasyonlarının planlı şekilde yürütülmesi.",
           features: ["Steward Kadrosu", "Mutfak Ön Hazırlık", "Gece Sanitasyonu", "Kesintisiz Vardiya"],
         },
         {
@@ -91,7 +91,7 @@ export const content = {
         {
           tag: "Sanayi & Lojistik",
           title: "Fabrika, Üretim Hattı & Depo",
-          description: "Sanayi tesisleri için montaj hattı, paketleme, etiketleme ve depo yükleme ekipleri.",
+          description: "Sanayi tesislerinde montaj, paketleme, etiketleme ve depo operasyon hizmetleri.",
           features: ["Montaj Hattı", "Paketleme & Koli", "Depo & Forklift", "Endüstriyel Hijyen"],
         },
         {
@@ -102,9 +102,9 @@ export const content = {
         },
         {
           tag: "Kongre & Fuar",
-          title: "Kongre, Fuar & Event Kadroları",
-          description: "ANFAŞ ve kongre otellerinde stand hostesi, kayıt-kabul, salon yönetimi ve VIP karşılama.",
-          features: ["Stand Hostesi", "Yabancı Dilli Ekip", "Kayıt & Akreditasyon", "Ücretsiz Süpervizör*"],
+          title: "Kongre, Fuar & Etkinlik Operasyonları",
+          description: "ANFAŞ ve kongre otellerinde stand, kayıt-kabul, salon yönetimi ve VIP karşılama operasyonlarının organizasyonu.",
+          features: ["Stand Yönetimi", "Yabancı Dilli Ekip", "Kayıt & Akreditasyon", "Saha Süpervizörü"],
         },
         {
           tag: "Teşvik & Hibe",
@@ -119,65 +119,65 @@ export const content = {
       titlePart1: "4 Aşamada Planlı ve ",
       titleGold: "Kesintisiz Süreç",
       subtitle:
-        "Tesis yönetimlerini operasyonel koordinasyon ve vardiya planlaması yükünden kurtaran kurumsal hizmet modeli.",
+        "Tesis yönetimlerinin operasyon planlama ve koordinasyon yükünü azaltan kurumsal hizmet modeli.",
       stage: "Aşama",
       steps: [
         {
           number: "01",
           title: "İhtiyaç Analizi & Planlama",
           description:
-            "Tesisinizin departman bazlı operasyonel gereksinimleri ve vardiya düzeni detaylandırılarak net hizmet planı çıkarılır.",
+            "Tesisinizin departman bazlı operasyonel gereksinimleri ve hizmet programı değerlendirilerek kapsamı belirlenmiş operasyon planı oluşturulur.",
         },
         {
           number: "02",
-          title: "Saha Koordinatörü ve Ekip Planlaması",
+          title: "Saha Koordinasyonu ve Operasyon Planlaması",
           description:
-            "Operasyonların başına tecrübeli NOVA saha koordinatörleri atanır. Günlük iş takibi, kılık-kıyafet ve disiplin doğrudan koordinatörlerimizce yürütülür.",
+            "NOVA saha koordinatörleri, üstlenilen hizmetin saha akışını, hizmet standartlarını ve kalite kontrol süreçlerini takip eder.",
         },
         {
           number: "03",
-          title: "Vardiya ve Görev Planlaması",
+          title: "Hizmet Programı ve Operasyon Planlaması",
           description:
-            "Ekiplerin vardiya çizelgesi, görev dağılımı, kılık-kıyafet ve iş başı hazırlıkları NOVA saha koordinatörleri tarafından planlanır.",
+            "Hizmetin günlük operasyon planı, iş akışı ve kalite standartları NOVA saha koordinatörleri tarafından koordine edilir.",
         },
         {
           number: "04",
-          title: "Düzenli Denetim & Kesintisiz İşleyiş",
+          title: "Düzenli Denetim & Operasyonel Süreklilik",
           description:
-            "Tüm yasal mevzuat ve SGK süreçleri eksiksiz yürütülür; yedek uzman havuzumuz sayesinde operasyonlarda sıfır aksama yaşanır.",
+            "Hizmet süreçleri ilgili mevzuat ve sözleşme kapsamı doğrultusunda yürütülür; operasyon sürekliliği için NOVA tarafından uygun planlama yapılır.",
         },
       ],
       bannerTitle: "İşletmeniz İçin Hızlı Bir Saha ve Operasyon Analizi Yapalım",
       bannerDesc:
-        "Antalya ve çevresindeki tesisiniz için 24 saat içinde yerinde görüşüp en uygun danışmanlık teklifini sunalım.",
+        "Antalya ve çevresindeki tesisiniz için operasyon kapsamını değerlendirelim ve ihtiyacınıza uygun hizmet teklifini hazırlayalım.",
       bannerBtn: "Hemen Danışmanlık Teklifi Alın",
     },
     whyUs: {
       badge: "Kurumsal Standartlarımız",
-      titlePart1: "Tesisinizde Sıfır Operasyonel Risk, ",
-      titlePart2: "Tam Hizmet Güvencesi.",
+      titlePart1: "Tesisiniz İçin Kontrollü ve ",
+      titlePart2: "Planlı Operasyon Hizmeti.",
       subtitle:
         "Operasyonel koordinasyon yükü ve mevzuat karmaşasını geride bırakın. NOVA ile tüm departmanlarınız düzenli ve denetimli ilerlesin.",
       visualTag: "Kurumsal Güvence",
       visualHeading: "5 Yıldızlı Hizmet Standardı",
       visualSub: "Housekeeping, F&B, Steward, İnşaat ve Sanayi operasyonlarında titiz denetim.",
       visualBadge1Title: "Saha Koordinasyonu",
-      visualBadge1Sub: "Vardiya Başı Takip",
+      visualBadge1Sub: "Operasyon Süreç Takibi",
       advantages: [
         {
           title: "Saha Koordinatörleri ile Birebir Takip",
           description:
-            "Ekiplerimizin başında daima NOVA takım koordinatörleri bulunur. İş dağılımı, kılık-kıyafet ve disiplin koordinatörlerimiz tarafından denetlenir.",
+            "NOVA saha koordinatörleri, üstlenilen hizmetin saha akışını ve hizmet standartlarına uygunluğunu takip eder.",
         },
         {
-          title: "Esnek Kadro Planlaması ve Hızlı Operasyon",
+          title: "Esnek Operasyon Planlaması ve Hızlı Uygulama",
           description:
-            "Tesisinizin sezonluk ve anlık yoğunluğuna göre esnek planlama yapılır; operasyonlarda aksama oluşmasına izin verilmez.",
+            "Tesisinizin dönemsel operasyon yoğunluğuna göre hizmet kapsamı ve operasyon planı yeniden düzenlenebilir.",
         },
         {
-          title: "%100 Yasal ve Düzenli Süreç",
+          title: "Mevzuata Uyumlu Süreç Yönetimi",
           description:
-            "Tüm süreçlerimiz mevzuata tam uyumlu yürütülür; idari ve hukuki riskler sıfıra indirilir.",
+            "Hizmet süreçleri ilgili mevzuat, sözleşme şartları ve NOVA operasyon standartları çerçevesinde yürütülür.",
         },
         {
           title: "Net ve Şeffaf Hizmet Bedeli",
@@ -220,7 +220,7 @@ export const content = {
       deptOption8: "Fabrika, Üretim Hattı & Depo Lojistiği",
       deptOption9: "B2B Lead Üretimi & Çağrı Merkezi Yönlendirme",
       deptOption10: "Devlet Destekleri & Teşvik Danışmanlığı",
-      deptOption11: "Kongre, Fuar, Zirve & Event Saha Kadroları",
+      deptOption11: "Kongre, Fuar, Zirve & Etkinlik Saha Operasyonu",
       msgPlaceholder: "Tahmini hizmet kapsamı, departman büyüklüğü veya belirtmek istediğiniz notlar...",
       submitIdle: "Danışmanlık Talebini Gönder",
       submitSending: "Gönderiliyor...",
@@ -233,12 +233,12 @@ export const content = {
       col1Link1: "Kat Hizmetleri & Housekeeping",
       col1Link2: "Restoran Servis & Bar",
       col1Link3: "Bulaşıkhane (Steward) Hizmeti",
-      col1Link4: "Animasyon & Gösteri Ekipleri",
+      col1Link4: "Animasyon & Gösteri Operasyonu",
       col1Link5: "İnşaat, Tadilat & Bakım",
       col1Link6: "Fabrika & Depo Operasyonları",
       col1Link7: "B2B Lead & Çağrı Merkezi",
       col1Link8: "Devlet Teşvikleri Danışmanlığı",
-      col1Link9: "Kongre & Fuar Saha Kadroları",
+      col1Link9: "Kongre & Fuar Saha Operasyonları",
       col2Title: "Kurumsal",
       col2Link1: "Neden NOVA?",
       col2Link2: "Nasıl Çalışırız?",
@@ -247,7 +247,7 @@ export const content = {
       col3Title: "İletişim",
       col3Link1: "Danışmanlık Al",
       col3Link2: "WhatsApp Danışma Hattı",
-      col3Link3: "Tel: 0507 087 17 89",
+      col3Link3: "Tel: 0505 410 48 00",
       col3Link4: "iknovaofis@gmail.com",
       col3Link5: "Instagram: @novaofisss",
       copyright: "© 2026 Nova Organizasyon. NOVA GLOBAL bünyesinde. NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ.",

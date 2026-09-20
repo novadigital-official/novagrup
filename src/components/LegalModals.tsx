@@ -71,6 +71,10 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           <p>
             Web sitemiz, 5651 sayılı “İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanun” hükümlerine tam uyumlu olarak işletilmektedir.
           </p>
+          <h4 className="text-gold font-semibold text-sm">3. Hizmet Modeli ve Hukuki Çerçeve Beyanı</h4>
+          <p>
+            NOVA GLOBAL, işletmelere bağımsız operasyon, saha koordinasyonu ve departman hizmetleri sunar. Hizmet kapsamında gerçekleştirilen organizasyon, planlama, kalite kontrol ve operasyon koordinasyonu NOVA tarafından kendi organizasyon yapısı içerisinde yürütülür. NOVA’nın hizmet modeli, iş ve işçi bulmaya aracılık veya işgücünün işletmelere münhasıran temini amacı taşımaz. Personel istihdamı gerektiren durumlarda çalışanların işverenlik süreçleri NOVA tarafından, kendi organizasyon yapısı içerisinde yürütülür. Sunulan hizmetlerin kapsamı, taraflar arasında akdedilen hizmet sözleşmesinde belirlenen operasyonel çıktı ve standartlara tabidir.
+          </p>
         </div>
       ),
     },
@@ -90,9 +94,9 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
             <p><strong>Kurucu & Şirket Müdürü:</strong> Çelebi Asal (MEB Onaylı Bilişim Usta Öğreticisi | KOSGEB No: KSB01UGE0115123591)</p>
             <p><strong>Resmi Alan Adı:</strong> www.novaorganizasyon7.com.tr</p>
             <p><strong>Kurumsal E-Posta:</strong> iknovaofis@gmail.com</p>
-            <p><strong>İletişim & Saha Operasyon:</strong> 0507 087 17 89 (Alternatif: 0505 410 48 00)</p>
+            <p><strong>İletişim & Saha Operasyon:</strong> 0505 410 48 00</p>
             <p><strong>Hizmet Bölgesi:</strong> Antalya Geneli (ANFAŞ Fuar Merkezi, Belek, Kundu, Kemer Kongre Otelleri & Tüm Tesisler)</p>
-            <p><strong>Faaliyet Alanı:</strong> Kongre, Fuar, Zirve Saha Operasyonları, Stand Hostesi & Otel Departman İşletimi</p>
+            <p><strong>Faaliyet Alanı:</strong> Kongre, Fuar, Zirve Saha Operasyonları, Etkinlik Yönetimi & Tesis Departman İşletimi</p>
           </div>
         </div>
       ),
