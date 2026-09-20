@@ -13,22 +13,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (type === 'jobseeker') {
-      const { ageLocation, desiredRole } = body;
-      console.log('👤 Yeni Personel İş Başvurusu:', {
-        type: 'JOB_APPLICATION',
-        name,
-        phone,
-        ageLocation: ageLocation || 'Belirtilmedi',
-        desiredRole: desiredRole || 'Genel Başvuru',
-        timestamp: new Date().toISOString(),
-      });
 
-      return NextResponse.json(
-        { success: true, message: 'İş başvurunuz başarıyla alındı.' },
-        { status: 200 }
-      );
-    }
 
     // Corporate Proposal Request
     const { hotel, hotelName, email, department, message } = body;

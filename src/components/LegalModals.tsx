@@ -23,7 +23,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           </p>
           <h4 className="text-gold font-semibold text-sm">1. Kişisel Verilerin İşlenme Amacı</h4>
           <p>
-            Web sitemizdeki iletişim formları, WhatsApp bağlantıları veya e-posta yoluyla iletilen ad, soyad, telefon numarası ve e-posta adresiniz; yalnızca talep ettiğiniz organizasyon, etkinlik ve personel destek hizmetlerine ilişkin tekliflerin sunulması, sözleşme süreçlerinin yürütülmesi ve kurumsal iletişim amacıyla işlenmektedir.
+            Web sitemizdeki iletişim formları, WhatsApp bağlantıları veya e-posta yoluyla iletilen ad, soyad, telefon numarası ve e-posta adresiniz; yalnızca talep ettiğiniz departman işletim ve kurumsal hizmet alım çözümlerine ilişkin tekliflerin sunulması, sözleşme süreçlerinin yürütülmesi ve kurumsal iletişim amacıyla işlenmektedir.
           </p>
           <h4 className="text-gold font-semibold text-sm">2. Verilerin Aktarılması</h4>
           <p>
@@ -31,7 +31,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           </p>
           <h4 className="text-gold font-semibold text-sm">3. KVKK 11. Madde Kapsamındaki Haklarınız</h4>
           <p>
-            KVKK’nın 11. maddesi uyarınca dilediğiniz zaman tarafımıza başvurarak verilerinizin işlenip işlenmediğini öğrenme, silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz. Başvurularınızı <strong>iknovaofis@gmail.com</strong> adresine iletebilirsiniz.
+            KVKK’nın 11. maddesi uyarınca dilediğiniz zaman tarafımıza başvurarak verilerinizin işlenip işlenmediğini öğrenme, silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz. Başvurularınızı <strong>info@novaorganizasyon7.com.tr</strong> adresine iletebilirsiniz.
           </p>
         </div>
       ),
@@ -61,7 +61,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
       body: (
         <div className="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
           <p>
-            Bu web sitesinde yer alan tüm görsel, metin, marka ve tasarım materyalleri <strong>NOVA ORGANİZASYON</strong>’a aittir ve 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile korunmaktadır. İzinsiz kopyalanamaz ve ticari amaçla çoğaltılamaz.
+            Bu web sitesinde yer alan tüm görsel, metin, marka ve tasarım materyalleri <strong>NOVA GLOBAL</strong>’e aittir ve 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile korunmaktadır. İzinsiz kopyalanamaz ve ticari amaçla çoğaltılamaz.
           </p>
           <h4 className="text-gold font-semibold text-sm">1. Sorumluluk Reddi (Disclaimer)</h4>
           <p>
@@ -73,7 +73,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           </p>
           <h4 className="text-gold font-semibold text-sm">3. Hizmet Modeli ve Hukuki Çerçeve Beyanı</h4>
           <p>
-            NOVA GLOBAL, işletmelere bağımsız operasyon, saha koordinasyonu ve departman hizmetleri sunar. Hizmet kapsamında gerçekleştirilen organizasyon, planlama, kalite kontrol ve operasyon koordinasyonu NOVA tarafından kendi organizasyon yapısı içerisinde yürütülür. NOVA’nın hizmet modeli, iş ve işçi bulmaya aracılık veya işgücünün işletmelere münhasıran temini amacı taşımaz. Personel istihdamı gerektiren durumlarda çalışanların işverenlik süreçleri NOVA tarafından, kendi organizasyon yapısı içerisinde yürütülür. Sunulan hizmetlerin kapsamı, taraflar arasında akdedilen hizmet sözleşmesinde belirlenen operasyonel çıktı ve standartlara tabidir.
+            NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ, 4857 sayılı İş Kanunu çerçevesinde tesis, bina ve işletmelere tanımlı kapsamda ve götürü bedel karşılığı anahtar teslim departman işletimi ve hizmet alım çözümleri sunan bir hizmet taahhüt firmasıdır. Şirketimiz bir özel istihdam bürosu değildir; üçüncü kişilere personel tedariki, işçi kiralama veya geçici iş ilişkisi hizmeti verilmemektedir. Sitede yer alan tüm hizmetler, şirketimizin kendi SGK&apos;lı kadrosu ve kendi denetim organizasyonuyla yürütülmektedir.
           </p>
         </div>
       ),
@@ -84,19 +84,20 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
       body: (
         <div className="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
           <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2">
-            <p><strong>Resmi Şirket Ünvanı:</strong> NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ</p>
+            <p><strong>Resmi Şirket Ünvanı:</strong> NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ</p>
             <p><strong>MERSİS No:</strong> 0632159982000001</p>
             <p><strong>Vergi Dairesi & No:</strong> Antalya Kurumlar V.D. | 632 159 9820 | Kepez / ANTALYA</p>
-            <p><strong>Ticari Marka & Çatı:</strong> NOVA ORGANİZASYON & TURİZM YÖNETİMİ (NOVA GLOBAL)</p>
+            <p><strong>Adres:</strong> Kültür Mah. 3856 Sk. 1. Yeşil Yayla Apt. No:2 İç Kapı No:1 Kepez / Antalya</p>
+            <p><strong>Ticari Marka:</strong> NOVA GLOBAL / NOVA ORGANİZASYON</p>
             <p><strong>Ticaret Sicil Tescili:</strong> Antalya Ticaret Sicili Müdürlüğü | TTSG: 11.09.2026, Sayı: 11164</p>
             <p><strong>İmza Sirküleri:</strong> Antalya 5. Noterliği (14.09.2026)</p>
             <p><strong>Sermaye Yapısı:</strong> 500.000 TL Tescilli ve Taahhüt Edilmiş Esas Sermaye</p>
-            <p><strong>Kurucu & Şirket Müdürü:</strong> Çelebi Asal (MEB Onaylı Bilişim Usta Öğreticisi | KOSGEB No: KSB01UGE0115123591)</p>
-            <p><strong>Resmi Alan Adı:</strong> www.novaorganizasyon7.com.tr</p>
-            <p><strong>Kurumsal E-Posta:</strong> iknovaofis@gmail.com</p>
-            <p><strong>İletişim & Saha Operasyon:</strong> 0505 410 48 00</p>
-            <p><strong>Hizmet Bölgesi:</strong> Antalya Geneli (ANFAŞ Fuar Merkezi, Belek, Kundu, Kemer Kongre Otelleri & Tüm Tesisler)</p>
-            <p><strong>Faaliyet Alanı:</strong> Kongre, Fuar, Zirve Saha Operasyonları, Etkinlik Yönetimi & Tesis Departman İşletimi</p>
+            <p><strong>Kurucu & Şirket Müdürü:</strong> Çelebi ASAL</p>
+            <p><strong>Resmi Web Sitesi:</strong> www.novaorganizasyon7.com.tr</p>
+            <p><strong>Kurumsal E-Posta:</strong> info@novaorganizasyon7.com.tr</p>
+            <p><strong>Kurumsal İletişim & Saha:</strong> 0505 410 48 00</p>
+            <p><strong>Hizmet Bölgesi:</strong> Antalya Geneli (Belek, Kundu, Kemer, Lara, Manavgat, Alanya & Tüm Akdeniz)</p>
+            <p><strong>Faaliyet Alanı:</strong> Anahtar Teslim Departman İşletimi, Tesis Hizmet Alım Çözümleri & Saha Operasyonları</p>
           </div>
         </div>
       ),

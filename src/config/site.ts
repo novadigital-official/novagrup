@@ -14,7 +14,7 @@ export const siteConfig = {
     phoneIntl: "+90 505 410 48 00",
     phoneRaw: "905054104800",
     secondaryPhone: "0505 410 48 00",
-    email: "iknovaofis@gmail.com",
+    email: "info@novaorganizasyon7.com.tr",
     department: "Saha Operasyon & Danışmanlık Masası",
     titleTR: "Saha Operasyon Masası",
     titleEN: "Field Operations Dispatch",

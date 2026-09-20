@@ -23,16 +23,13 @@ export default function Navbar() {
   const navLinks = [
     { label: t.nav.departments, href: "/#hizmetler" },
     { label: t.nav.workflow, href: "/#is-akisi" },
-    { label: language === "tr" ? "Kariyer" : "Careers", href: "/#iletisim", tab: "jobseeker" as const },
-    { label: language === "tr" ? "İK & Danışmanlık" : "Corporate Advisory", href: "/#iletisim", tab: "corporate" as const },
+    { label: t.nav.whyUs, href: "/#neden-nova" },
+    { label: t.nav.advisory, href: "/#iletisim" },
     { label: t.nav.contact, href: "/#iletisim" },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, tab?: "jobseeker" | "corporate") => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setIsMobileMenuOpen(false);
-    if (tab) {
-      window.dispatchEvent(new CustomEvent("set-contact-tab", { detail: tab }));
-    }
     if (href.startsWith("/#") && typeof window !== "undefined" && window.location.pathname === "/") {
       const targetId = href.replace("/#", "");
       const targetEl = document.getElementById(targetId);
@@ -103,9 +100,9 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
-                key={link.href + (link.tab || "")}
+                key={link.href + link.label}
                 href={link.href}
-                onClick={(e) => handleNavClick(e, link.href, link.tab)}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="relative px-3.5 py-2 text-sm font-medium transition-all duration-300 group cursor-pointer flex items-center gap-1.5 text-white/80 hover:text-white"
               >
                 <span>{link.label}</span>
@@ -200,14 +197,14 @@ export default function Navbar() {
             <nav aria-label="Mobile navigation" className="px-4 py-5 space-y-1">
               {navLinks.map((link, index) => (
                 <motion.div
-                  key={link.href + (link.tab || "")}
+                  key={link.href + link.label}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.06 }}
                 >
                   <Link
                     href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href, link.tab)}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="flex items-center justify-between px-4 py-2.5 text-white/85 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 cursor-pointer"
                   >
                     <span className="font-medium">{link.label}</span>

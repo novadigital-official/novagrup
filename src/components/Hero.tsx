@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Zap, Users2 } from "lucide-react";
+import { ShieldCheck, Zap, Users2, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Hero() {
@@ -91,6 +92,28 @@ export default function Hero() {
                 <ShieldCheck size={16} className="text-gold flex-shrink-0" />
                 <span className="text-xs text-white/90 font-medium break-words">{t.hero.badge3}</span>
               </div>
+            </motion.div>
+
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 max-w-lg mx-auto lg:mx-0"
+            >
+              <Link
+                href="#iletisim"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-gold via-gold-bright to-gold text-brand-deeper font-black text-xs sm:text-sm hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <span>{t.hero.primaryCta}</span>
+                <ArrowRight size={15} />
+              </Link>
+              <Link
+                href="#hizmetler"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs sm:text-sm border border-white/15 hover:border-gold/40 transition-all duration-300"
+              >
+                <span>{t.hero.secondaryCta}</span>
+              </Link>
             </motion.div>
           </div>
 

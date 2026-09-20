@@ -7,11 +7,12 @@ import {
   Users2,
   Receipt,
   CheckCircle2,
+  Scale,
 } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
-const advantageIcons = [Users2, Zap, ShieldCheck, Receipt];
+const advantageIcons = [Users2, ShieldCheck, Receipt, Scale, Zap];
 
 export default function WhyUs() {
   const { t } = useLanguage();

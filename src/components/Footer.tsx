@@ -59,7 +59,7 @@ export default function Footer() {
         { label: t.footer.col3Link1, href: "#iletisim" },
         { label: t.footer.col3Link2, href: "https://wa.me/905054104800" },
         { label: t.footer.col3Link3, href: "tel:05054104800" },
-        { label: t.footer.col3Link4, href: "mailto:iknovaofis@gmail.com" },
+        { label: t.footer.col3Link4, href: "mailto:info@novaorganizasyon7.com.tr" },
         { label: t.footer.col3Link5, href: "https://instagram.com/novaofisss" },
       ],
     },
@@ -116,7 +116,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={13} className="text-gold flex-shrink-0" />
-                <span>iknovaofis@gmail.com</span>
+                <span>info@novaorganizasyon7.com.tr</span>
               </div>
               <div className="flex items-center gap-2">
                 <InstagramIcon size={13} className="text-gold flex-shrink-0" />
@@ -139,14 +139,12 @@ export default function Footer() {
               <h4 className="text-white font-bold text-xs mb-3 tracking-wide text-gold">
                 {group.title}
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-xs text-white/60">
                 {group.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      target={link.href.startsWith("http") ? "_blank" : undefined}
-                      rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="text-white/60 hover:text-white hover:underline text-xs transition-colors duration-200"
+                      className="hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -185,6 +183,13 @@ export default function Footer() {
           >
             Resmi Künye
           </button>
+        </div>
+
+        {/* Official Statutory Disclaimer Bar */}
+        <div className="py-3.5 px-4 rounded-xl bg-white/[0.03] border border-gold/20 text-[11px] text-white/60 leading-relaxed my-3 text-center sm:text-left">
+          <p>
+            <strong className="text-gold font-semibold">Hukuki Bilgilendirme:</strong> NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ, 4857 sayılı İş Kanunu çerçevesinde tesis, bina ve işletmelere tanımlı kapsamda ve götürü bedel karşılığı anahtar teslim departman işletimi ve hizmet alım çözümleri sunan bir hizmet taahhüt firmasıdır. Şirketimiz bir özel istihdam bürosu değildir; üçüncü kişilere personel tedariki, işçi kiralama veya geçici iş ilişkisi hizmeti verilmemektedir. Sitede yer alan tüm hizmetler, şirketimizin kendi SGK&apos;lı kadrosu ve kendi denetim organizasyonuyla yürütülmektedir.
+          </p>
         </div>
 
         {/* Bottom Bar */}
