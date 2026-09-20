@@ -84,34 +84,15 @@ export default function Navbar() {
             ))}
 
             {/* Language Switcher Toggle */}
-            <div className="flex items-center ml-2 mr-2 p-1 rounded-xl bg-white/5 border border-white/15 backdrop-blur-md">
-              <button
-                type="button"
-                onClick={() => setLanguage("tr")}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold transition-all duration-200 ${
-                  language === "tr"
-                    ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper shadow-md"
-                    : "text-white/70 hover:text-white"
-                }`}
-                aria-label="Türkçe Dili Seçin"
-              >
-                <span>TR</span>
-              </button>
-              <span className="text-white/20 text-xs px-1 select-none" aria-hidden="true">|</span>
-              <button
-                type="button"
-                onClick={() => setLanguage("en")}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold transition-all duration-200 ${
-                  language === "en"
-                    ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper shadow-md"
-                    : "text-white/70 hover:text-white"
-                }`}
-                aria-label="Switch to English"
-              >
-                <Globe size={11} />
-                <span>EN</span>
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => setLanguage(language === "tr" ? "en" : "tr")}
+              className="flex items-center gap-1.5 ml-2 mr-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-xs font-bold text-white transition-all duration-200 cursor-pointer"
+              aria-label={language === "tr" ? "Switch to English" : "Türkçe Diline Geç"}
+            >
+              <Globe size={13} className="text-gold" />
+              <span>{language === "tr" ? "EN" : "TR"}</span>
+            </button>
 
             {/* CTA Button */}
             <div className="flex items-center">
@@ -128,25 +109,15 @@ export default function Navbar() {
           {/* Mobile Actions: Language & Hamburger */}
           <div className="flex md:hidden items-center gap-2">
             {/* Mobile Language Switcher */}
-            <div className="flex items-center p-0.5 rounded-lg bg-white/10 border border-white/20">
-              <button
-                onClick={() => setLanguage("tr")}
-                className={`px-2 py-1 rounded text-xs font-bold ${
-                  language === "tr" ? "bg-gold text-brand-deeper" : "text-white/80"
-                }`}
-              >
-                TR
-              </button>
-              <span className="text-white/20 text-xs px-1 select-none" aria-hidden="true">|</span>
-              <button
-                onClick={() => setLanguage("en")}
-                className={`px-2 py-1 rounded text-xs font-bold ${
-                  language === "en" ? "bg-gold text-brand-deeper" : "text-white/80"
-                }`}
-              >
-                EN
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => setLanguage(language === "tr" ? "en" : "tr")}
+              className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/10 border border-white/20 text-xs font-bold text-white"
+              aria-label={language === "tr" ? "Switch to English" : "Türkçe Diline Geç"}
+            >
+              <Globe size={11} className="text-gold" />
+              <span>{language === "tr" ? "EN" : "TR"}</span>
+            </button>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

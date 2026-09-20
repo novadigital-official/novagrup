@@ -97,8 +97,8 @@ export default function Footer() {
 
             <p className="text-white/60 text-xs leading-relaxed max-w-sm font-light">
               {language === "tr"
-                ? "Antalya ve Akdeniz bölgesinde 5 yıldızlı otel ve kurumsal tesisler için anahtar teslim departman işletimi ve götürü bedelli hizmet ortaklığı."
-                : "Turnkey department management and lump-sum service contracting for 5-star hotels and facilities across Antalya."}
+                ? "Antalya ve Akdeniz bölgesinde 5 yıldızlı otel ve kurumsal tesisler için tanımlı kapsamda departman işletimi ve götürü bedelli hizmet ortaklığı."
+                : "Defined-scope department management and lump-sum service contracting for 5-star hotels and facilities across Antalya and the Mediterranean."}
             </p>
 
             {/* Quick Contact Links */}
@@ -189,8 +189,8 @@ export default function Footer() {
 
           <p className="text-[10px] text-white/40 text-center sm:text-right max-w-md">
             {language === "tr"
-              ? "NOVA GLOBAL, personel temini yapmaz; hizmetler kendi bordrolu kadrosuyla götürü bedelli hizmet sözleşmesi kapsamında sunulur."
-              : "NOVA GLOBAL provides turnkey facility management under lump-sum service contracts with its own payroll staff."}
+              ? "NOVA GLOBAL, özel istihdam bürosu değildir; müşterilerine personel temini yapmaz. Hizmetler, kendi bordrolu ekipleriyle bağımsız hizmet alım sözleşmesi kapsamında sunulur."
+              : "NOVA GLOBAL is not a private employment agency and does not supply temporary staffing. Services are delivered under independent service contracts."}
           </p>
         </div>
 

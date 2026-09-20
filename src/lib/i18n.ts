@@ -19,7 +19,7 @@ export const content = {
       headlineGold: "Departman İşletim ve ",
       headlinePart2: "Hizmet Alım Çözümleri.",
       subheadline:
-        "Antalya genelindeki otel ve kurumsal tesislerde; NOVA saha amirleri gözetiminde, tanımlı kapsam ve götürü bedelli anahtar teslim operasyonel çözümler.",
+        "Antalya ve Akdeniz bölgesindeki otel ve kurumsal tesisler için tanımlı kapsamda departman işletimi ve götürü bedelli operasyon hizmetleri.",
       badge1: "Kendi SGK'lı Kadromuz",
       badge2: "Götürü Bedelli Sözleşme",
       badge3: "Saha Amiri Koordinasyonu",
@@ -44,17 +44,17 @@ export const content = {
       stat2Sub: "Oda, kuver veya metraj bazlı net bütçe",
       stat3Value: "Kendi Kadromuz",
       stat3Label: "Doğrudan SGK Bordrolu",
-      stat3Sub: "Tüm yasal ve işçilik sorumluluğu NOVA'da",
+      stat3Sub: "Bordro ve işçilik süreçleri NOVA sorumluluğunda",
       stat4Value: "7/24 Kesintisiz",
       stat4Label: "Hızlı Koordinasyon & Yönetim",
-      stat4Sub: "Antalya genelinde operasyonel süreklilik",
+      stat4Sub: "Antalya ve Akdeniz bölgesinde operasyonel süreklilik",
     },
     services: {
       badge: "Hizmetlerimiz",
       titlePart1: "Tesisiniz İçin ",
       titlePart2: "Tanımlı Hizmet Çözümleri",
       subtitle:
-        "NOVA saha amirleri yönetiminde, götürü bedelli anahtar teslim hizmet modelleri.",
+        "NOVA saha amirleri yönetiminde, tanımlı kapsam ve götürü bedelli hizmet modelleri.",
       ctaCard: "Teklif Alın",
       cardBadge: "Götürü Bedel",
       departments: [
@@ -74,7 +74,7 @@ export const content = {
           tag: "F&B Servis",
           title: "Restoran & Ziyafet Servisi",
           description:
-            "A la carte restoranlar, açık büfe, banket ve gala etkinliklerinde servis akış yönetimi.",
+            "Alakart restoranlar, açık büfe, banket ve gala etkinliklerinde servis akış yönetimi.",
           features: [
             "Masa Düzeni & Kuver Açım Yönetimi",
             "Banket, Kokteyl & Gala Desteği",
@@ -84,9 +84,9 @@ export const content = {
         },
         {
           tag: "Mutfak Hijyeni",
-          title: "Mutfak Hijyeni & Steward",
+          title: "Mutfak Hijyeni & Sanitasyon",
           description:
-            "HACCP kurallarına uygun endüstriyel mutfak sanitasyonu, bulaşıkhane ve atık yönetimi.",
+            "Tesisinizin hijyen prosedürleri ve tanımlı sanitasyon kriterleri doğrultusunda endüstriyel mutfak sanitasyonu, bulaşıkhane ve atık yönetimi.",
           features: [
             "Steward Operasyonu & Kimyasal Takibi",
             "Gece Derin Temizlik & Dezenfeksiyon",
@@ -190,9 +190,9 @@ export const content = {
         },
         {
           number: "03",
-          title: "NOVA Saha Ekipleri & Amiriyle Başlangıç",
+          title: "Ekip Organizasyonu & Saha Amiriyle Başlangıç",
           description:
-            "Tüm yasal yükümlülükleri (SGK, İSG, sağlık raporları) NOVA GLOBAL tarafından karşılanan eğitimli ekiplerimiz, NOVA saha amiri yönetiminde göreve başlar.",
+            "SGK, özlük ve NOVA’nın sorumluluğundaki İSG süreçleri tamamlanan ekiplerimiz, kadrolu saha amirimiz koordinasyonunda göreve başlar.",
         },
         {
           number: "04",
@@ -203,7 +203,7 @@ export const content = {
       ],
       bannerTitle: "Tesisiniz İçin Yerinde Saha Keşfi ve Operasyon Analizi İsteyin",
       bannerDesc:
-        "Antalya ve Akdeniz genelindeki tesisinizi inceleyelim, en geç 24 saat içinde kapsamı netleştirilmiş yazılı hizmet teklifimizi sunalım.",
+        "Antalya ve Akdeniz bölgesindeki tesisinizi inceleyelim, en geç 24 saat içinde kapsamı netleştirilmiş yazılı hizmet teklifimizi sunalım.",
       bannerBtn: "Hizmet Teklifi İsteyin",
     },
     whyUs: {
@@ -220,9 +220,9 @@ export const content = {
       visualBadge1Sub: "İşverenlik Sorumluluğu NOVA'da",
       advantages: [
         {
-          title: "Kendi SGK'lı Kadromuz",
+          title: "Bordro ve İşçilik Süreçleri NOVA Sorumluluğundadır",
           description:
-            "Sahanızdaki tüm ekipler NOVA GLOBAL bordroludur. SGK primleri, maaş ve tüm işçilik hakları şirketimiz sorumluluğundadır.",
+            "Sahanızdaki tüm ekipler NOVA GLOBAL bordrosundadır. SGK primleri, maaş ve tüm işçilik hakları şirketimizce yönetilir.",
         },
         {
           title: "Saha Amirleriyle Birebir Takip",
@@ -232,7 +232,7 @@ export const content = {
         {
           title: "Götürü Bedel, Sürprizsiz Fiyat",
           description:
-            "Kişi/gün değil; oda, kuver veya m² çıktısı bazlı sabit götürü bedelle faturalandırılır. Bütçeniz dönemin başında nettir.",
+            "Kişi/gün değil; hizmete göre oda, kuver, alan veya tanımlı servis paketi bazında sabit götürü bedelle faturalandırılır. Bütçeniz dönemin başında nettir.",
         },
         {
           title: "Mevzuata Uyumlu Süreç Yönetimi",
@@ -364,14 +364,14 @@ export const content = {
       stat3Sub: "Full labor & legal liability borne by NOVA",
       stat4Value: "24/7 Continuity",
       stat4Label: "Rapid Response & Management",
-      stat4Sub: "Operational continuity across Antalya",
+      stat4Sub: "Operational continuity across Antalya and the Mediterranean",
     },
     services: {
       badge: "Services",
       titlePart1: "Defined Service Solutions ",
       titlePart2: "For Your Facility",
       subtitle:
-        "Turnkey lump-sum operational solutions managed directly by NOVA field supervisors.",
+        "Defined-scope, lump-sum operational solutions managed directly by NOVA field supervisors.",
       ctaCard: "Request Quote",
       cardBadge: "Lump-Sum",
       departments: [
@@ -403,7 +403,7 @@ export const content = {
           tag: "Kitchen Hygiene",
           title: "Stewarding & Kitchen Sanitation",
           description:
-            "Turnkey dishwashing, kitchen prep sanitation, and HACCP-compliant nightly deep cleaning.",
+            "Turnkey dishwashing, kitchen prep sanitation, and deep cleaning aligned with your facility hygiene criteria.",
           features: [
             "Steward Operations & Chemical Controls",
             "Nightly Deep Clean & Sanitation",
@@ -507,9 +507,9 @@ export const content = {
         },
         {
           number: "03",
-          title: "Deployment Under NOVA Field Supervisor",
+          title: "Team Deployment Under Field Supervisor",
           description:
-            "Trained crews—with all labor liabilities, social security, and health records fully borne by NOVA—commence work under our dedicated supervisor.",
+            "Trained crews—with social security, HR, and NOVA’s statutory OHS obligations fulfilled—commence work under our dedicated supervisor.",
         },
         {
           number: "04",
@@ -537,9 +537,9 @@ export const content = {
       visualBadge1Sub: "Employer Liabilities on NOVA",
       advantages: [
         {
-          title: "Directly Employed Payroll Staff",
+          title: "Direct Payroll & Labor Liabilities on NOVA",
           description:
-            "All personnel are on NOVA GLOBAL payroll. Social security, wages, and severance rights are fully our liability.",
+            "All operational staff are directly employed on NOVA GLOBAL payroll. Social security and statutory labor liabilities are fully our responsibility.",
         },
         {
           title: "Dedicated On-Site Field Supervisors",
@@ -549,7 +549,7 @@ export const content = {
         {
           title: "Fixed Lump-Sum, Predictable Pricing",
           description:
-            "Invoicing by defined deliverables—such as rooms, covers, or square meters—never unpredictable daily man-rates.",
+            "Invoiced by defined deliverables—such as rooms, covers, areas, or service packages—never unpredictable daily man-rates.",
         },
         {
           title: "Strict Labor & OHS Compliance",

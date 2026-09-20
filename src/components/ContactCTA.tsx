@@ -206,7 +206,7 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="iletisim" className="scroll-mt-20 relative py-8 sm:py-10 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
+    <section id="iletisim" className="scroll-mt-20 relative py-6 sm:py-8 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
       {/* Anchor for Candidate jump */}
       <div id="kadro-basvuru" className="absolute -top-20" />
 
@@ -224,7 +224,7 @@ export default function ContactCTA() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
           
           {/* LEFT COLUMN: Fast Info & Direct Contact Channels (5 Cols) */}
           <motion.div
@@ -232,24 +232,24 @@ export default function ContactCTA() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-30px" }}
             transition={{ duration: 0.4 }}
-            className="lg:col-span-5 flex flex-col justify-between space-y-4"
+            className="lg:col-span-5 flex flex-col justify-between space-y-3"
           >
             <div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-gold/10 text-gold border border-gold/30 mb-2">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-gold/10 text-gold border border-gold/30 mb-1.5">
                 {activeTab === "corporate" ? (
                   <>
-                    <Clock size={12} className="text-gold" />
+                    <Clock size={11} className="text-gold" />
                     <span>{language === "tr" ? "Hızlı İletişim & Teklif" : "Direct Advisory & Proposal"}</span>
                   </>
                 ) : (
                   <>
-                    <Users size={12} className="text-gold" />
+                    <Users size={11} className="text-gold" />
                     <span>{language === "tr" ? "Kariyer & İşe Alım" : "Careers & Hiring"}</span>
                   </>
                 )}
               </span>
 
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-snug">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-black text-white tracking-tight leading-snug">
                 {activeTab === "corporate" ? (
                   language === "tr" ? (
                     <>
@@ -273,31 +273,31 @@ export default function ContactCTA() {
                 )}
               </h2>
 
-              <p className="mt-2 text-white/70 text-xs sm:text-sm font-light leading-relaxed">
+              <p className="mt-1.5 text-white/70 text-xs font-light leading-relaxed">
                 {activeTab === "corporate" ? (
                   language === "tr"
-                    ? "Antalya genelindeki otel ve kurumsal tesisler için anahtar teslim departman işletimi sunuyoruz. Detayları iletin, en geç 24 saat içinde teklifimizi hazırlayalım."
-                    : "Turnkey department management and facility operations across Antalya. Submit your scope to receive a tailored proposal within 24 hours."
+                    ? "Antalya ve Akdeniz bölgesindeki otel ve kurumsal tesisler için tanımlı kapsamda departman işletimi sunuyoruz. Detayları iletin, en geç 24 saat içinde teklifimizi hazırlayalım."
+                    : "Turnkey department management and facility operations across Antalya and the Mediterranean. Submit your scope to receive a tailored proposal within 24 hours."
                 ) : (
                   language === "tr"
-                    ? "Antalya genelindeki otel operasyonlarımızda, NOVA GLOBAL bordrosunda tam SGK, servis ve yemek olanaklarıyla görev alacak çalışma arkadaşları arıyoruz."
-                    : "Join our dedicated operational teams across Antalya, directly employed under NOVA GLOBAL payroll with full statutory benefits."
+                    ? "Antalya ve Akdeniz bölgesindeki otel operasyonlarımızda, NOVA GLOBAL bordrosunda tam SGK, servis ve yemek olanaklarıyla görev alacak çalışma arkadaşları arıyoruz."
+                    : "Join our dedicated operational teams across Antalya and the Mediterranean, directly employed under NOVA GLOBAL payroll with statutory benefits."
                 )}
               </p>
             </div>
 
             {/* Direct Contact Cards */}
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               {/* WhatsApp Card */}
               <a
                 href={siteConfig.social.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Saha Koordinasyon WhatsApp"
-                className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
+                className="flex items-center gap-3 p-2.5 rounded-xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
               >
-                <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
-                  <MessageCircle size={18} />
+                <div className="w-9 h-9 rounded-lg bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
+                  <MessageCircle size={17} />
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
@@ -315,10 +315,10 @@ export default function ContactCTA() {
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 aria-label="Email"
-                className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
+                className="flex items-center gap-3 p-2.5 rounded-xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
               >
-                <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
-                  <Mail size={18} />
+                <div className="w-9 h-9 rounded-lg bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
+                  <Mail size={17} />
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
@@ -338,10 +338,10 @@ export default function ContactCTA() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
+                className="flex items-center gap-3 p-2.5 rounded-xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
               >
-                <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
-                  <InstagramIcon size={18} />
+                <div className="w-9 h-9 rounded-lg bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
+                  <InstagramIcon size={17} />
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
@@ -363,17 +363,17 @@ export default function ContactCTA() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="lg:col-span-7 flex flex-col justify-between"
           >
-            <div className="bg-white/[0.04] backdrop-blur-2xl rounded-2xl p-4 sm:p-6 border border-white/15 shadow-xl relative h-full flex flex-col justify-between">
+            <div className="bg-white/[0.04] backdrop-blur-2xl rounded-2xl p-3.5 sm:p-5 border border-white/15 shadow-xl relative h-full flex flex-col justify-between">
               
-              {/* Apple-style Segmented Tab Switcher */}
-              <div className="flex p-1 mb-3.5 rounded-xl bg-black/40 border border-white/15">
+              {/* Apple-style Segmented Tab Switcher with Clear Gap and Separation */}
+              <div className="grid grid-cols-2 gap-2 p-1 mb-3 rounded-xl bg-black/50 border border-white/15">
                 <button
                   type="button"
                   onClick={() => setActiveTab("corporate")}
-                  className={`flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                  className={`py-2 px-2.5 rounded-lg text-xs sm:text-sm font-bold text-center transition-all cursor-pointer ${
                     activeTab === "corporate"
                       ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper shadow-md"
-                      : "text-white/60 hover:text-white"
+                      : "text-white/65 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {language === "tr" ? "Kurumsal Hizmet Teklifi (B2B)" : "Corporate Proposal (B2B)"}
@@ -381,10 +381,10 @@ export default function ContactCTA() {
                 <button
                   type="button"
                   onClick={() => setActiveTab("candidate")}
-                  className={`flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                  className={`py-2 px-2.5 rounded-lg text-xs sm:text-sm font-bold text-center transition-all cursor-pointer ${
                     activeTab === "candidate"
                       ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper shadow-md"
-                      : "text-white/60 hover:text-white"
+                      : "text-white/65 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {language === "tr" ? "Kadromuza Katılın (İş)" : "Join Our Payroll"}
@@ -518,11 +518,11 @@ export default function ContactCTA() {
                         <span>
                           {language === "tr" ? (
                             <>
-                              <strong className="text-white">KVKK Aydınlatma Metni’ni</strong> okudum. Kurumsal iletişim bilgilerimin hizmet keşfi, teklif hazırlanması ve tarafıma geri dönüş yapılması amacıyla işlenebileceği konusunda bilgilendirildim.
+                              <strong className="text-white">KVKK Aydınlatma Metni’ni</strong> okudum ve bilgilendirildim.
                             </>
                           ) : (
                             <>
-                              I acknowledge the <strong className="text-white">Privacy Notice</strong> for proposal preparation and corporate follow-up.
+                              I acknowledge and accept the <strong className="text-white">Privacy Notice</strong>.
                             </>
                           )}
                         </span>
@@ -539,8 +539,8 @@ export default function ContactCTA() {
                         />
                         <span>
                           {language === "tr"
-                            ? "Hizmet talebimin ve bu kapsamda paylaştığım iletişim bilgilerimin hızlı teklif ve iletişim amacıyla WhatsApp operasyon masasına aktarılmasını kabul ediyorum."
-                            : "I consent to transferring my request details to the WhatsApp operations desk for direct communications."}
+                            ? "Hizmet talebimin teklif ve iletişim amacıyla WhatsApp operasyon hattına aktarılmasını kabul ediyorum."
+                            : "I consent to transmitting my inquiry to the WhatsApp operations channel."}
                         </span>
                       </label>
                     </div>
@@ -575,8 +575,8 @@ export default function ContactCTA() {
                   {/* Corporate Legal Notice */}
                   <p className="mt-2 text-center text-[10px] text-white/45 leading-relaxed">
                     {language === "tr"
-                      ? "NOVA GLOBAL iş/personel temin bürosu değildir. Hizmetler, kendi bordrolu ekiplerimiz ve saha amirlerimizle götürü bedelli hizmet alım sözleşmesiyle yürütülür."
-                      : "NOVA GLOBAL is not a staffing agency. Services are delivered under lump-sum service contracts with our own payroll staff and field supervisors."}
+                      ? "NOVA GLOBAL, özel istihdam bürosu değildir; müşterilerine personel temini, işçi kiralama veya geçici işçi sağlama hizmeti sunmaz. Hizmetler, NOVA GLOBAL’in kendi bordrolu ekipleri, saha amirleri ve tanımlı hizmet çıktılarıyla bağımsız hizmet alım sözleşmesi kapsamında yürütülür."
+                      : "NOVA GLOBAL is not a private employment agency and does not supply temporary staffing. Services are delivered under independent service agreements with our own payroll staff and field supervisors."}
                   </p>
                 </div>
               )}
@@ -733,11 +733,11 @@ export default function ContactCTA() {
                         <span>
                           {language === "tr" ? (
                             <>
-                              <strong className="text-white">KVKK Çalışan Adayı Aydınlatma Metni’ni</strong> okudum. Başvuru ve iletişim bilgilerimin NOVA bünyesinde istihdam değerlendirmesi amacıyla işlenmesi konusunda bilgilendirildim.
+                              <strong className="text-white">Çalışan Adayı KVKK Aydınlatma Metni’ni</strong> okudum ve bilgilendirildim.
                             </>
                           ) : (
                             <>
-                              I acknowledge the <strong className="text-white">Candidate Privacy Notice</strong> for employment evaluation purposes.
+                              I acknowledge and accept the <strong className="text-white">Candidate Privacy Notice</strong>.
                             </>
                           )}
                         </span>
@@ -754,7 +754,7 @@ export default function ContactCTA() {
                         />
                         <span>
                           {language === "tr"
-                            ? "Başvuru özetimin ve iletişim bilgilerimin hızlı İK değerlendirmesi amacıyla WhatsApp hattına aktarılmasını kabul ediyorum."
+                            ? "Başvuru özetimin İK değerlendirmesi amacıyla WhatsApp hattına aktarılmasını kabul ediyorum."
                             : "I consent to the transmission of my application details to the WhatsApp recruitment channel."}
                         </span>
                       </label>
