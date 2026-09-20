@@ -14,12 +14,12 @@ export const content = {
       mobileCta: "Teklif Alın",
     },
     hero: {
-      badge: "Antalya & Akdeniz Bölgesi Kurumsal Operasyon Çözümleri",
+      badge: "Kurumsal Tesis Operasyon Çözümleri",
       headlinePart1: "Otel, Tesis ve Kurumsal İşletmeler İçin ",
       headlineGold: "Departman İşletim ve ",
       headlinePart2: "Hizmet Alım Çözümleri.",
       subheadline:
-        "Antalya ve Akdeniz bölgesindeki otel ve kurumsal tesisler için tanımlı kapsamda departman işletimi ve götürü bedelli operasyon hizmetleri.",
+        "Otel ve kurumsal tesisler için tanımlı kapsamda departman işletimi ve götürü bedelli operasyon hizmetleri.",
       badge1: "Kendi SGK'lı Kadromuz",
       badge2: "Götürü Bedelli Sözleşme",
       badge3: "Saha Amiri Koordinasyonu",
@@ -47,7 +47,7 @@ export const content = {
       stat3Sub: "Bordro ve işçilik süreçleri NOVA sorumluluğunda",
       stat4Value: "7/24 Kesintisiz",
       stat4Label: "Hızlı Koordinasyon & Yönetim",
-      stat4Sub: "Antalya ve Akdeniz bölgesinde operasyonel süreklilik",
+      stat4Sub: "Tüm operasyonlarımızda kesintisiz süreklilik",
     },
     services: {
       badge: "Hizmetlerimiz",
@@ -203,7 +203,7 @@ export const content = {
       ],
       bannerTitle: "Tesisiniz İçin Yerinde Saha Keşfi ve Operasyon Analizi İsteyin",
       bannerDesc:
-        "Antalya ve Akdeniz bölgesindeki tesisinizi inceleyelim, en geç 24 saat içinde kapsamı netleştirilmiş yazılı hizmet teklifimizi sunalım.",
+        "Tesisinizi yerinde inceleyelim, en geç 24 saat içinde kapsamı netleştirilmiş yazılı hizmet teklifimizi sunalım.",
       bannerBtn: "Hizmet Teklifi İsteyin",
     },
     whyUs: {
@@ -311,7 +311,7 @@ export const content = {
       col3Link4: "iknovaofis@gmail.com",
       col3Link5: "Instagram: @novaofisss",
       copyright: "© 2026 NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ. Tüm hakları saklıdır.",
-      tagline: "Antalya & Akdeniz Tesis Departman İşletimi & Hizmet Alım Çözümleri",
+      tagline: "Kurumsal Tesis Departman İşletimi & Hizmet Alım Çözümleri",
     },
     whatsapp: {
       tooltip: "WhatsApp Danışma Hattı",
@@ -331,12 +331,12 @@ export const content = {
       mobileCta: "Get Proposal",
     },
     hero: {
-      badge: "Antalya & Mediterranean Turnkey Operations & Advisory",
+      badge: "Enterprise Facility Operations & Advisory",
       headlinePart1: "Turnkey Department Operations & ",
       headlineGold: "Outsource Solutions ",
       headlinePart2: "For Hotels & Facilities.",
       subheadline:
-        "Delivering turnkey departmental management across housekeeping, F&B service, stewarding, facility maintenance, and warehouse logistics under fixed-scope lump-sum contracts with dedicated NOVA field supervisors.",
+        "Delivering defined-scope department management across housekeeping, F&B service, kitchen sanitation, facility maintenance, and logistics under fixed-scope lump-sum contracts with dedicated NOVA field supervisors.",
       badge1: "Directly Employed Payroll",
       badge2: "Lump-Sum Service Contracts",
       badge3: "SLA Standards & Daily Audits",
@@ -364,7 +364,7 @@ export const content = {
       stat3Sub: "Full labor & legal liability borne by NOVA",
       stat4Value: "24/7 Continuity",
       stat4Label: "Rapid Response & Management",
-      stat4Sub: "Operational continuity across Antalya and the Mediterranean",
+      stat4Sub: "Operational continuity across all partner facilities",
     },
     services: {
       badge: "Services",
@@ -520,7 +520,7 @@ export const content = {
       ],
       bannerTitle: "Request an On-Site Operational Assessment for Your Facility",
       bannerDesc:
-        "We evaluate your property across Antalya within 24 hours to present a transparent, customized service proposal.",
+        "We evaluate your property within 24 hours to present a transparent, customized service proposal.",
       bannerBtn: "Request a Proposal",
     },
     whyUs: {
@@ -577,8 +577,8 @@ export const content = {
       instagramLabel: "Social Media",
       instagram: "@novaofisss",
       locationLabel: "Service Area",
-      locationMain: "Antalya Central / Turkey",
-      locationSub: "Belek, Kemer, Lara, Kundu, Manavgat, Side, Alanya",
+      locationMain: "Turkey",
+      locationSub: "Turnkey Nationwide Operational Deployment",
       formTitle: "Turnkey Operations & Service Proposal Request",
       formSubtitle:
         "Submit your facility operational scope to receive a tailored proposal directly via WhatsApp.",
@@ -604,7 +604,7 @@ export const content = {
     },
     footer: {
       description:
-        "NOVA GLOBAL is a premier corporate facility management and service contracting company providing turnkey department operations and defined-scope outsourcing solutions across Antalya and the Mediterranean under Turkish Labor Law No. 4857.",
+        "NOVA GLOBAL is a premier corporate facility management and service contracting company providing defined-scope department operations under Turkish Labor Law No. 4857.",
       col1Title: "Services",
       col1Link1: "Housekeeping & Public Areas",
       col1Link2: "Restaurant & Banquet Operations",
@@ -628,7 +628,7 @@ export const content = {
       col3Link4: "iknovaofis@gmail.com",
       col3Link5: "Instagram: @novaofisss",
       copyright: "© 2026 NOVA GLOBAL LIMITED. All rights reserved.",
-      tagline: "Antalya & Mediterranean Facility Operations & Outsource Contracting",
+      tagline: "Corporate Facility Operations & Outsource Contracting",
     },
     whatsapp: {
       tooltip: "Quick Chat on WhatsApp",

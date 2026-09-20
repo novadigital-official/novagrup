@@ -276,12 +276,12 @@ export default function ContactCTA() {
               <p className="mt-1.5 text-white/70 text-xs font-light leading-relaxed">
                 {activeTab === "corporate" ? (
                   language === "tr"
-                    ? "Antalya ve Akdeniz bölgesindeki otel ve kurumsal tesisler için tanımlı kapsamda departman işletimi sunuyoruz. Detayları iletin, en geç 24 saat içinde teklifimizi hazırlayalım."
-                    : "Turnkey department management and facility operations across Antalya and the Mediterranean. Submit your scope to receive a tailored proposal within 24 hours."
+                    ? "Otel ve kurumsal tesisler için tanımlı kapsamda departman işletimi sunuyoruz. Detayları iletin, en geç 24 saat içinde teklifimizi hazırlayalım."
+                    : "Defined-scope department management and facility operations. Submit your scope to receive a tailored proposal within 24 hours."
                 ) : (
                   language === "tr"
-                    ? "Antalya ve Akdeniz bölgesindeki otel operasyonlarımızda, NOVA GLOBAL bordrosunda tam SGK, servis ve yemek olanaklarıyla görev alacak çalışma arkadaşları arıyoruz."
-                    : "Join our dedicated operational teams across Antalya and the Mediterranean, directly employed under NOVA GLOBAL payroll with statutory benefits."
+                    ? "Otel ve tesis departman operasyonlarımızda, NOVA GLOBAL bordrosunda tam SGK, servis ve yemek olanaklarıyla görev alacak çalışma arkadaşları arıyoruz."
+                    : "Join our dedicated operational teams across our partner facilities, directly employed under NOVA GLOBAL payroll with statutory benefits."
                 )}
               </p>
             </div>
@@ -592,8 +592,8 @@ export default function ContactCTA() {
                     </h3>
                     <p className="text-white/50 text-xs font-light">
                       {language === "tr"
-                        ? "Antalya genelinde yürüttüğümüz tesis operasyonlarımızda NOVA GLOBAL bordrosunda görev alacak çalışma arkadaşları arıyoruz."
-                        : "Apply to join NOVA GLOBAL's direct operational payroll across Antalya resorts and facilities."}
+                        ? "Yürüttüğümüz tesis operasyonlarımızda NOVA GLOBAL bordrosunda görev alacak çalışma arkadaşları arıyoruz."
+                        : "Apply to join NOVA GLOBAL's direct operational payroll across our partner facilities."}
                     </p>
                   </div>
 
@@ -639,7 +639,7 @@ export default function ContactCTA() {
                       {/* District & Availability Grid */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <div className="relative">
-                          <label htmlFor="cand-district" className="sr-only">İkamet İlçesi</label>
+                          <label htmlFor="cand-district" className="sr-only">Çalışma / İkamet Bölgesi</label>
                           <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none">
                             <MapPin size={14} />
                           </div>
@@ -650,14 +650,10 @@ export default function ContactCTA() {
                             onChange={handleCandidateChange}
                             className="w-full pl-9 pr-3 py-2 bg-brand-dark border border-white/15 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-gold transition-all cursor-pointer"
                           >
-                            <option value="Kepez / Antalya">Kepez / Antalya</option>
-                            <option value="Muratpaşa / Antalya">Muratpaşa / Antalya</option>
-                            <option value="Konyaaltı / Antalya">Konyaaltı / Antalya</option>
-                            <option value="Serik / Belek">Serik / Belek</option>
-                            <option value="Manavgat / Side">Manavgat / Side</option>
-                            <option value="Kemer / Göynük">Kemer / Göynük</option>
-                            <option value="Alanya">Alanya</option>
-                            <option value="Diğer (Antalya Dışı / Taşınabilir)">Diğer (Taşınabilir / Lojman)</option>
+                            <option value="Merkez / Şehir İçi Tesisler">Merkez / Şehir İçi Tesisler</option>
+                            <option value="Sahil / Resort Oteller">Sahil / Resort Oteller</option>
+                            <option value="Tüm Bölgeler (Lojmanlı / Seyahat Edebilir)">Tüm Bölgeler (Lojmanlı / Seyahat Edebilir)</option>
+                            <option value="Diğer / Belirtilecek">Diğer / Belirtilecek</option>
                           </select>
                         </div>
 
