@@ -55,6 +55,7 @@ export default function ContactCTA() {
     department: "Tüm Operasyon Alanları (Entegre Tesis İşletimi)",
     message: "",
     corpKvkkConsent: true,
+    corpWhatsAppConsent: true,
   });
 
   // Candidate Form Data
@@ -65,7 +66,8 @@ export default function ContactCTA() {
     department: "Kat Hizmetleri & Housekeeping Ekipleri",
     availability: "Hemen Başlayabilirim",
     notes: "",
-    kvkkConsent: true,
+    candKvkkConsent: true,
+    candWhatsAppConsent: true,
   });
 
   // URL Hash Listener for smooth direct jumps
@@ -111,7 +113,7 @@ export default function ContactCTA() {
   const handleCorpSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!corpData.corpKvkkConsent) {
-      alert(language === "tr" ? "Lütfen kurumsal iletişim ve teklif aydınlatmasını onaylayın." : "Please agree to the privacy statement.");
+      alert(language === "tr" ? "Lütfen KVKK Aydınlatma Metni'ni onaylayın." : "Please agree to the privacy statement.");
       return;
     }
     setFormState("sending");
@@ -123,17 +125,18 @@ export default function ContactCTA() {
         body: JSON.stringify({ type: "corporate", ...corpData }),
       });
 
-      const waText = encodeURIComponent(
-        `🏛️ *NOVA GLOBAL — KURUMSAL OPERASYON VE HİZMET TALEBİ*\n\n` +
-        `👤 *Yetkili:* ${corpData.name}\n` +
-        `🏨 *İşletme / Otel / Tesis:* ${corpData.hotelName}\n` +
-        `📞 *İletişim Tel:* ${corpData.phone}\n` +
-        `🏢 *Talep Edilen Hizmet Alanı:* ${corpData.department}\n` +
-        (corpData.message ? `📝 *Talep / Operasyon Notu:* ${corpData.message}\n` : "") +
-        `\n_novaorganizasyon7.com.tr kurumsal operasyon masası üzerinden iletildi._`
-      );
-
-      window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
+      if (corpData.corpWhatsAppConsent) {
+        const waText = encodeURIComponent(
+          `🏛️ *NOVA GLOBAL — KURUMSAL OPERASYON VE HİZMET TALEBİ*\n\n` +
+          `👤 *Yetkili:* ${corpData.name}\n` +
+          `🏨 *İşletme / Otel / Tesis:* ${corpData.hotelName}\n` +
+          `📞 *İletişim Tel:* ${corpData.phone}\n` +
+          `🏢 *Talep Edilen Hizmet Alanı:* ${corpData.department}\n` +
+          (corpData.message ? `📝 *Talep / Operasyon Notu:* ${corpData.message}\n` : "") +
+          `\n_novaorganizasyon7.com.tr kurumsal operasyon masası üzerinden iletildi._`
+        );
+        window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
+      }
 
       setFormState("sent");
       setTimeout(() => {
@@ -145,6 +148,7 @@ export default function ContactCTA() {
           department: "Tüm Operasyon Alanları (Entegre Tesis İşletimi)",
           message: "",
           corpKvkkConsent: true,
+          corpWhatsAppConsent: true,
         });
       }, 4000);
     } catch {
@@ -155,8 +159,8 @@ export default function ContactCTA() {
   // Submit Candidate Application
   const handleCandidateSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!candidateData.kvkkConsent) {
-      alert(language === "tr" ? "Lütfen KVKK aydınlatma metnini onaylayın." : "Please agree to the privacy statement.");
+    if (!candidateData.candKvkkConsent) {
+      alert(language === "tr" ? "Lütfen Çalışan Adayı KVKK Aydınlatma Metni'ni onaylayın." : "Please agree to the candidate privacy statement.");
       return;
     }
     setFormState("sending");
@@ -168,18 +172,19 @@ export default function ContactCTA() {
         body: JSON.stringify({ type: "candidate", ...candidateData }),
       });
 
-      const waText = encodeURIComponent(
-        `👷 *NOVA GLOBAL — KADRO İSTİHDAM VE İŞ BAŞVURUSU*\n\n` +
-        `👤 *Aday Adı Soyadı:* ${candidateData.name}\n` +
-        `📞 *İletişim Tel:* ${candidateData.phone}\n` +
-        `📍 *İkamet İlçesi:* ${candidateData.district}\n` +
-        `🏢 *Çalışmak İstenen Alan:* ${candidateData.department}\n` +
-        `⏱️ *İşe Başlama Durumu:* ${candidateData.availability}\n` +
-        (candidateData.notes ? `📝 *Deneyim / Not:* ${candidateData.notes}\n` : "") +
-        `\n_NOVA GLOBAL kendi bünyesinde SGK'lı istihdam değerlendirmesi için iletilmiştir._`
-      );
-
-      window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
+      if (candidateData.candWhatsAppConsent) {
+        const waText = encodeURIComponent(
+          `👷 *NOVA GLOBAL — KADRO İSTİHDAM VE İŞ BAŞVURUSU*\n\n` +
+          `👤 *Aday Adı Soyadı:* ${candidateData.name}\n` +
+          `📞 *İletişim Tel:* ${candidateData.phone}\n` +
+          `📍 *İkamet İlçesi:* ${candidateData.district}\n` +
+          `🏢 *Çalışmak İstenen Alan:* ${candidateData.department}\n` +
+          `⏱️ *İşe Başlama Durumu:* ${candidateData.availability}\n` +
+          (candidateData.notes ? `📝 *Deneyim / Not:* ${candidateData.notes}\n` : "") +
+          `\n_NOVA GLOBAL kendi bünyesinde SGK'lı istihdam değerlendirmesi için iletilmiştir._`
+        );
+        window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
+      }
 
       setFormState("sent");
       setTimeout(() => {
@@ -191,7 +196,8 @@ export default function ContactCTA() {
           department: "Kat Hizmetleri & Housekeeping Ekipleri",
           availability: "Hemen Başlayabilirim",
           notes: "",
-          kvkkConsent: true,
+          candKvkkConsent: true,
+          candWhatsAppConsent: true,
         });
       }, 4000);
     } catch {
@@ -523,7 +529,7 @@ export default function ContactCTA() {
                           className="w-full pl-9 pr-3 py-1.5 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all resize-none"
                         />
                       </div>
-                      {/* KVKK & Data Transfer Notice */}
+                      {/* 1. KVKK Aydınlatma Onayı (Zorunlu) */}
                       <label className="flex items-start gap-2 text-[10px] text-white/70 cursor-pointer pt-0.5">
                         <input
                           type="checkbox"
@@ -533,9 +539,31 @@ export default function ContactCTA() {
                           className="mt-0.5 accent-gold cursor-pointer"
                         />
                         <span>
+                          {language === "tr" ? (
+                            <>
+                              <strong className="text-white">KVKK Aydınlatma Metni’ni</strong> okudum. Kurumsal iletişim bilgilerimin hizmet keşfi, teklif hazırlanması ve tarafıma geri dönüş yapılması amacıyla işlenebileceği konusunda bilgilendirildim.
+                            </>
+                          ) : (
+                            <>
+                              I acknowledge the <strong className="text-white">Privacy Notice</strong> for proposal preparation and corporate follow-up.
+                            </>
+                          )}
+                        </span>
+                      </label>
+
+                      {/* 2. WhatsApp Aktarım Onayı (Açık Rıza) */}
+                      <label className="flex items-start gap-2 text-[10px] text-white/60 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          name="corpWhatsAppConsent"
+                          checked={corpData.corpWhatsAppConsent}
+                          onChange={handleCorpChange}
+                          className="mt-0.5 accent-gold cursor-pointer"
+                        />
+                        <span>
                           {language === "tr"
-                            ? "Kurumsal iletişim bilgilerimin, hizmet keşfi ve teklif hazırlığı amacıyla işlenmesini ve doğrudan WhatsApp operasyon masasına iletilmesini onaylıyorum."
-                            : "I consent to the processing of contact details for proposal preparation and direct transmission to WhatsApp operations desk."}
+                            ? "Hizmet talebimin ve bu kapsamda paylaştığım iletişim bilgilerimin hızlı teklif ve iletişim amacıyla WhatsApp operasyon masasına aktarılmasını kabul ediyorum."
+                            : "I consent to transferring my request details to the WhatsApp operations desk for direct communications."}
                         </span>
                       </label>
                     </div>
@@ -570,7 +598,7 @@ export default function ContactCTA() {
                   {/* Corporate Legal Disclaimer */}
                   <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-[10px] sm:text-[11px] text-white/60 leading-relaxed">
                     <p>
-                      <strong className="text-gold font-semibold">Hukuki Güvence & Bilgilendirme:</strong> NOVA GLOBAL, müşterilerine personel temini veya geçici işçi kiralama hizmeti sunmaz. Hizmetler; NOVA GLOBAL&apos;in kendi iş organizasyonu, kendi bordrolu çalışanları, saha amirleri ve tanımlı hizmet çıktılarıyla bağımsız hizmet alım sözleşmeleri kapsamında götürü bedelle sunulur. Doğru sözleşme tasarımı ve fiili uygulama ile muvazaa ve mevzuat risklerinin azaltılması hedeflenir.
+                      <strong className="text-gold font-semibold">Hukuki Bilgilendirme:</strong> NOVA GLOBAL, müşterilerine personel temini, işçi kiralama veya geçici işçi sağlama hizmeti sunmaz. Hizmetler; NOVA GLOBAL&apos;in kendi iş organizasyonu, bordrolu çalışanları, saha sorumluları, gerekli ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. Her proje için hizmet kapsamı, çıktı ve kalite kriterleri, yönetim sorumlulukları, iş sağlığı ve güvenliği görevleri, raporlama düzeni ve ücretlendirme yöntemi yazılı olarak belirlenir. İlişkinin hukuki niteliği yalnızca sözleşme başlığına değil, fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Doğru sözleşme tasarımı ve tutarlı fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
                     </p>
                   </div>
                 </div>
@@ -716,19 +744,41 @@ export default function ContactCTA() {
                         />
                       </div>
 
-                      {/* KVKK Consent Checkbox */}
+                      {/* 1. KVKK Çalışan Adayı Aydınlatma Onayı (Zorunlu) */}
                       <label className="flex items-start gap-2 text-[10px] text-white/70 cursor-pointer pt-0.5">
                         <input
                           type="checkbox"
-                          name="kvkkConsent"
-                          checked={candidateData.kvkkConsent}
+                          name="candKvkkConsent"
+                          checked={candidateData.candKvkkConsent}
+                          onChange={handleCandidateChange}
+                          className="mt-0.5 accent-gold cursor-pointer"
+                        />
+                        <span>
+                          {language === "tr" ? (
+                            <>
+                              <strong className="text-white">KVKK Çalışan Adayı Aydınlatma Metni’ni</strong> okudum. Başvuru ve iletişim bilgilerimin NOVA bünyesinde istihdam değerlendirmesi amacıyla işlenmesi konusunda bilgilendirildim.
+                            </>
+                          ) : (
+                            <>
+                              I acknowledge the <strong className="text-white">Candidate Privacy Notice</strong> for employment evaluation purposes.
+                            </>
+                          )}
+                        </span>
+                      </label>
+
+                      {/* 2. WhatsApp Aktarım Onayı (Açık Rıza) */}
+                      <label className="flex items-start gap-2 text-[10px] text-white/60 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          name="candWhatsAppConsent"
+                          checked={candidateData.candWhatsAppConsent}
                           onChange={handleCandidateChange}
                           className="mt-0.5 accent-gold cursor-pointer"
                         />
                         <span>
                           {language === "tr"
-                            ? "Kişisel verilerimin KVKK Aydınlatma Metni kapsamında şirketiniz bünyesinde işe alım ve istihdam değerlendirmesi amacıyla işlenmesini onaylıyorum."
-                            : "I consent to the processing of my data for internal employment consideration under privacy regulations."}
+                            ? "Başvuru özetimin ve iletişim bilgilerimin hızlı İK değerlendirmesi amacıyla WhatsApp hattına aktarılmasını kabul ediyorum."
+                            : "I consent to the transmission of my application details to the WhatsApp recruitment channel."}
                         </span>
                       </label>
                     </div>

@@ -73,7 +73,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           </p>
           <h4 className="text-gold font-semibold text-sm">3. Hizmet Modeli ve Hukuki Çerçeve Beyanı</h4>
           <p>
-            NOVA GLOBAL, müşterilerine personel temini veya geçici işçi kiralama hizmeti sunmaz. Hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, kendi bordrolu çalışanları, saha amirleri, hizmet ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. İş ilişkisinin hukuki niteliği yalnızca sözleşme metnine değil, tarafların fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Bu nedenle her proje için hizmet kapsamı, yönetim sorumlulukları, kalite kriterleri, iş sağlığı ve güvenliği görevleri ve raporlama düzeni yazılı sözleşmeyle ayrıca belirlenir. Doğru sözleşme tasarımı ve fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
+            NOVA GLOBAL, müşterilerine personel temini, işçi kiralama veya geçici işçi sağlama hizmeti sunmaz. Hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, bordrolu çalışanları, saha sorumluları, gerekli ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. Her proje için hizmet kapsamı, çıktı ve kalite kriterleri, yönetim sorumlulukları, iş sağlığı ve güvenliği görevleri, raporlama düzeni ve ücretlendirme yöntemi yazılı olarak belirlenir. İlişkinin hukuki niteliği yalnızca sözleşme başlığına değil, fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Doğru sözleşme tasarımı ve tutarlı fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
           </p>
         </div>
       ),

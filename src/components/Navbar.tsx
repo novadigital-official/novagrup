@@ -97,6 +97,7 @@ export default function Navbar() {
               >
                 <span>TR</span>
               </button>
+              <span className="text-white/20 text-xs px-1 select-none" aria-hidden="true">|</span>
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
@@ -136,6 +137,7 @@ export default function Navbar() {
               >
                 TR
               </button>
+              <span className="text-white/20 text-xs px-1 select-none" aria-hidden="true">|</span>
               <button
                 onClick={() => setLanguage("en")}
                 className={`px-2 py-1 rounded text-xs font-bold ${

@@ -123,7 +123,7 @@ export default function Footer() {
             <div className="pt-1 space-y-1.5 text-xs text-white/60">
               <div className="flex items-center gap-2">
                 <MapPin size={13} className="text-gold flex-shrink-0" />
-                <span>Kültür Mah. 3856 Sk. No:2/1 Kepez / Antalya</span>
+                <span>Kültür Mah. 3856 Sk. 1. Yeşil Yayla Apt. No:2 İç Kapı No:1 Kepez / Antalya</span>
               </div>
               <div className="flex items-center gap-2">
                 <MessageCircle size={13} className="text-gold flex-shrink-0" />
@@ -212,7 +212,7 @@ export default function Footer() {
         {/* Official Statutory Disclaimer Bar */}
         <div className="py-3.5 px-4 rounded-xl bg-white/[0.03] border border-gold/20 text-[11px] text-white/60 leading-relaxed my-3 text-center sm:text-left">
           <p>
-            <strong className="text-gold font-semibold">Hukuki Bilgilendirme:</strong> NOVA GLOBAL, müşterilerine personel temini veya geçici işçi kiralama hizmeti sunmaz. Hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, kendi bordrolu çalışanları, saha sorumluları, hizmet ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. İş ilişkisinin hukuki niteliği yalnızca sözleşme metnine değil, tarafların fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Bu nedenle her proje için hizmet kapsamı, yönetim sorumlulukları, kalite kriterleri, iş sağlığı ve güvenliği görevleri ve raporlama düzeni yazılı sözleşmeyle ayrıca belirlenir. Doğru sözleşme tasarımı ve fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
+            <strong className="text-gold font-semibold">Hukuki Bilgilendirme:</strong> NOVA GLOBAL, müşterilerine personel temini, işçi kiralama veya geçici işçi sağlama hizmeti sunmaz. Hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, bordrolu çalışanları, saha sorumluları, gerekli ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. Her proje için hizmet kapsamı, çıktı ve kalite kriterleri, yönetim sorumlulukları, iş sağlığı ve güvenliği görevleri, raporlama düzeni ve ücretlendirme yöntemi yazılı olarak belirlenir. İlişkinin hukuki niteliği yalnızca sözleşme başlığına değil, fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Doğru sözleşme tasarımı ve tutarlı fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
           </p>
         </div>
 

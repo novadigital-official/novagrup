@@ -232,12 +232,12 @@ export const content = {
         {
           title: "Götürü Bedel, Sürprizsiz Fiyatlama",
           description:
-            "Kişi/gün değil; oda, kuver, alan veya proje bazlı sabit hizmet bedeliyle faturalandırma yapılır. Bütçeniz baştan nettir.",
+            "Kişi/gün değil; housekeeping'de oda, genel alan ve çamaşırhane çıktıları; F&B'de kuver ve tanımlı servis paketi bazlı sabit götürü bedelle faturalama yapılır. Bütçeniz baştan nettir.",
         },
         {
           title: "Mevzuata Uyumlu Süreç Yönetimi",
           description:
-            "4857 sayılı İş Kanunu ve İSG şartları eksiksiz karşılanır. Alt işverenlik ve hizmet alımı süreçleri yazılı sözleşme ve ilgili mevzuat çerçevesinde yürütülür.",
+            "4857 sayılı İş Kanunu ve 6331 sayılı İş Sağlığı ve Güvenliği Kanunu çerçevesinde süreçlerin mevzuata uygun yürütülmesi hedeflenir. Alt işverenlik ve hizmet alımı süreçleri yazılı sözleşmeyle yapılandırılır.",
         },
         {
           title: "Esnek Kapsam Düzenlemesi",
@@ -549,12 +549,12 @@ export const content = {
         {
           title: "Fixed Lump-Sum, Predictable Pricing",
           description:
-            "Invoicing by room, cover, or project—never daily man-rates. Your budget is predictable from day one.",
+            "Invoicing by defined deliverables (rooms/common areas in housekeeping, covers/service packages in F&B)—never daily man-rates. Your budget is predictable.",
         },
         {
-          title: "Strict Legal & Labor Compliance",
+          title: "Strict Labor & OHS Compliance",
           description:
-            "Statutory obligations under Turkish Labor Law No. 4857 and OHS regulations are fulfilled. Contracting processes are governed strictly under written agreements and legislation.",
+            "Processes are structured to align with Labor Law No. 4857 and Occupational Health & Safety Law No. 6331. Service outsourcing agreements are governed under written contracts.",
         },
         {
           title: "Flexible Scope & Peak Scalability",

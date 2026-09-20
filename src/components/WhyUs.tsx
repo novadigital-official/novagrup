@@ -15,6 +15,22 @@ import { scrollToSection } from "@/lib/scroll";
 
 const advantageIcons = [Users2, ShieldCheck, Receipt, Scale, Sliders];
 
+const advantageBadgesTR = [
+  "Bordrolu NOVA Ekipleri",
+  "Tek Saha Amiri Koordinasyonu",
+  "Çıktı Bazlı Götürü Bedel",
+  "Mevzuata Uyumlu Tasarım",
+  "Sezonluk Kapsam Revizyonu",
+];
+
+const advantageBadgesEN = [
+  "Direct NOVA Payroll Staff",
+  "Single Field Supervisor",
+  "Output-Based Lump Sum",
+  "Legally Compliant Framework",
+  "Seasonal Scope Revision",
+];
+
 export default function WhyUs() {
   const { t, language } = useLanguage();
 
@@ -81,7 +97,7 @@ export default function WhyUs() {
                 {/* Bottom verified badge */}
                 <div className="mt-3 pt-2 border-t border-black/[0.04] flex items-center gap-1.5 text-[10px] font-semibold text-brand-base/80">
                   <CheckCircle2 size={12} className="text-emerald-600" />
-                  <span>{language === "tr" ? "Tanımlı Hizmet Seviyesi" : "Contractual SLA"}</span>
+                  <span>{language === "tr" ? advantageBadgesTR[index] : advantageBadgesEN[index]}</span>
                 </div>
               </motion.div>
             );
