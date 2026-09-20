@@ -7,7 +7,7 @@ export const content = {
       departments: "Hizmetlerimiz",
       workflow: "Nasıl Çalışırız?",
       whyUs: "Neden NOVA?",
-      advisory: "Operasyon Danışmanlığı",
+      advisory: "Kadroya Katıl",
       contact: "İletişim",
       phone: "0505 410 48 00",
       ctaButton: "Teklif Alın",
@@ -62,7 +62,7 @@ export const content = {
           tag: "Housekeeping",
           title: "Kat Hizmetleri & Housekeeping Operasyonu",
           description:
-            "5 yıldızlı otel ve tatil köylerinde; kat temizliği, genel alan (meydan) hijyeni ve çamaşırhane süreçlerinin uluslararası standartlarda yürütülmesi.",
+            "5 yıldızlı otel ve tatil köylerinde; kat temizliği, genel alan (meydan) hijyeni ve çamaşırhane süreçlerinin 5 yıldızlı otel operasyon standartlarında yürütülmesi.",
           features: [
             "Oda ve Kat Hijyen Standartları",
             "Meydan & Genel Alan Hijyen Planı",
@@ -203,7 +203,7 @@ export const content = {
       ],
       bannerTitle: "Tesisiniz İçin Yerinde Saha Keşfi ve Operasyon Analizi İsteyin",
       bannerDesc:
-        "Antalya ve Akdeniz genelindeki tesisinizi inceleyelim, 24 saat içinde kapsamı netleştirilmiş hizmet teklifimizi sunalım.",
+        "Antalya ve Akdeniz genelindeki tesisinizi inceleyelim, en geç 24 saat içinde kapsamı netleştirilmiş yazılı hizmet teklifimizi sunalım.",
       bannerBtn: "Hizmet Teklifi İsteyin",
     },
     whyUs: {
@@ -211,13 +211,13 @@ export const content = {
       titlePart1: "Tesisiniz İçin Güvenli, Şeffaf ve ",
       titlePart2: "Götürü Bedelli Hizmet Ortaklığı",
       subtitle:
-        "İş gücü belirsizliği ve mevzuat riskini geride bırakın; sözleşmeli, amir denetimli ve garantili ilerleyin.",
+        "İş gücü belirsizliği ve mevzuat riskini geride bırakın; yazılı sözleşmeli, amir denetimli ve tanımlı hizmet seviyesiyle ilerleyin.",
       visualTag: "Kurumsal Güvence",
-      visualHeading: "SLA Standartlarında Çıktı",
+      visualHeading: "Sözleşmeye Bağlı Hizmet Seviyesi (SLA)",
       visualSub:
         "Tüm departmanlarda NOVA saha amirleri gözetiminde kesintisiz operasyon.",
       visualBadge1Title: "Kendi SGK'lı Kadromuz",
-      visualBadge1Sub: "Tam Yasal Sorumluluk",
+      visualBadge1Sub: "İşverenlik Sorumluluğu NOVA'da",
       advantages: [
         {
           title: "Kendi SGK'lı Kadromuzla Çalışırız",
@@ -237,7 +237,7 @@ export const content = {
         {
           title: "Mevzuata Uyumlu Süreç Yönetimi",
           description:
-            "4857 sayılı İş Kanunu ve İSG şartları eksiksiz karşılanır. Tesisiniz alt işverenlik ve muvazaa risklerinden tam korunur.",
+            "4857 sayılı İş Kanunu ve İSG şartları eksiksiz karşılanır. Alt işverenlik ve hizmet alımı süreçleri yazılı sözleşme ve ilgili mevzuat çerçevesinde yürütülür.",
         },
         {
           title: "Esnek Kapsam Düzenlemesi",
@@ -303,6 +303,7 @@ export const content = {
       col2Link2: "Nasıl Çalışırız?",
       col2Link3: "SLA & Hizmet Standartları",
       col2Link4: "Hizmet Teklifi Al",
+      col2Link5: "Kadromuza Katılın (Kariyer)",
       col3Title: "İletişim",
       col3Link1: "Yazılı Hizmet Teklifi",
       col3Link2: "WhatsApp Danışma Masası",
@@ -323,7 +324,7 @@ export const content = {
       departments: "Services",
       workflow: "How It Works",
       whyUs: "Why NOVA?",
-      advisory: "Operations Advisory",
+      advisory: "Join Our Team",
       contact: "Contact",
       phone: "+90 505 410 48 00",
       ctaButton: "Get Proposal",
@@ -529,11 +530,11 @@ export const content = {
       subtitle:
         "Eliminate labor friction and legal liabilities. Everything runs under written contracts and active supervision.",
       visualTag: "Corporate SLA",
-      visualHeading: "Guaranteed Deliverables",
+      visualHeading: "Contractual Service Level (SLA)",
       visualSub:
         "Flawless operations overseen directly by on-site NOVA field supervisors.",
       visualBadge1Title: "Own Payroll Staff",
-      visualBadge1Sub: "Full Legal Responsibility",
+      visualBadge1Sub: "Employer Liabilities on NOVA",
       advantages: [
         {
           title: "Directly Employed Payroll Staff",
@@ -553,7 +554,7 @@ export const content = {
         {
           title: "Strict Legal & Labor Compliance",
           description:
-            "Full compliance with Turkish Labor Law No. 4857 and OHS regulations, shielding your enterprise completely.",
+            "Statutory obligations under Turkish Labor Law No. 4857 and OHS regulations are fulfilled. Contracting processes are governed strictly under written agreements and legislation.",
         },
         {
           title: "Flexible Scope & Peak Scalability",
@@ -619,6 +620,7 @@ export const content = {
       col2Link2: "How It Works",
       col2Link3: "SLA & Standards",
       col2Link4: "Request Proposal",
+      col2Link5: "Join Our Team (Careers)",
       col3Title: "Contact",
       col3Link1: "Service Proposal",
       col3Link2: "WhatsApp Desk",

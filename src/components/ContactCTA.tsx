@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Send,
@@ -16,6 +16,8 @@ import {
   Clock,
   MapPin,
   Layers,
+  Briefcase,
+  Users,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -42,6 +44,7 @@ function InstagramIcon({ size = 20, className = "" }: { size?: number; className
 
 export default function ContactCTA() {
   const { language } = useLanguage();
+  const [activeTab, setActiveTab] = useState<"corporate" | "candidate">("corporate");
   const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle");
 
   // Corporate Form Data
@@ -51,28 +54,75 @@ export default function ContactCTA() {
     phone: "",
     department: "Tüm Operasyon Alanları (Entegre Tesis İşletimi)",
     message: "",
+    corpKvkkConsent: true,
   });
+
+  // Candidate Form Data
+  const [candidateData, setCandidateData] = useState({
+    name: "",
+    phone: "",
+    district: "Kepez / Antalya",
+    department: "Kat Hizmetleri & Housekeeping Ekipleri",
+    availability: "Hemen Başlayabilirim",
+    notes: "",
+    kvkkConsent: true,
+  });
+
+  // URL Hash Listener for smooth direct jumps
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash;
+      if (hash === "#kadro-basvuru" || hash === "#kariyer") {
+        setActiveTab("candidate");
+      } else if (hash === "#iletisim" || hash === "#teklif") {
+        setActiveTab("corporate");
+      }
+    };
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
 
   const handleCorpChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
-    setCorpData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value, type } = e.target;
+    if (type === "checkbox") {
+      const { checked } = e.target as HTMLInputElement;
+      setCorpData((prev) => ({ ...prev, [name]: checked }));
+    } else {
+      setCorpData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
-  // Submit Corporate Proposal Request (Saves to API + Direct WhatsApp Launch)
+  const handleCandidateChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value, type } = e.target;
+    if (type === "checkbox") {
+      const { checked } = e.target as HTMLInputElement;
+      setCandidateData((prev) => ({ ...prev, [name]: checked }));
+    } else {
+      setCandidateData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
+
+  // Submit Corporate Proposal Request
   const handleCorpSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!corpData.corpKvkkConsent) {
+      alert(language === "tr" ? "Lütfen kurumsal iletişim ve teklif aydınlatmasını onaylayın." : "Please agree to the privacy statement.");
+      return;
+    }
     setFormState("sending");
 
     try {
-      // 1. Save to internal API
       await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ type: "corporate", ...corpData }),
       });
 
-      // 2. Format Live WhatsApp Message
       const waText = encodeURIComponent(
         `🏛️ *NOVA GLOBAL — KURUMSAL OPERASYON VE HİZMET TALEBİ*\n\n` +
         `👤 *Yetkili:* ${corpData.name}\n` +
@@ -94,6 +144,54 @@ export default function ContactCTA() {
           phone: "",
           department: "Tüm Operasyon Alanları (Entegre Tesis İşletimi)",
           message: "",
+          corpKvkkConsent: true,
+        });
+      }, 4000);
+    } catch {
+      setFormState("idle");
+    }
+  };
+
+  // Submit Candidate Application
+  const handleCandidateSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!candidateData.kvkkConsent) {
+      alert(language === "tr" ? "Lütfen KVKK aydınlatma metnini onaylayın." : "Please agree to the privacy statement.");
+      return;
+    }
+    setFormState("sending");
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "candidate", ...candidateData }),
+      });
+
+      const waText = encodeURIComponent(
+        `👷 *NOVA GLOBAL — KADRO İSTİHDAM VE İŞ BAŞVURUSU*\n\n` +
+        `👤 *Aday Adı Soyadı:* ${candidateData.name}\n` +
+        `📞 *İletişim Tel:* ${candidateData.phone}\n` +
+        `📍 *İkamet İlçesi:* ${candidateData.district}\n` +
+        `🏢 *Çalışmak İstenen Alan:* ${candidateData.department}\n` +
+        `⏱️ *İşe Başlama Durumu:* ${candidateData.availability}\n` +
+        (candidateData.notes ? `📝 *Deneyim / Not:* ${candidateData.notes}\n` : "") +
+        `\n_NOVA GLOBAL kendi bünyesinde SGK'lı istihdam değerlendirmesi için iletilmiştir._`
+      );
+
+      window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
+
+      setFormState("sent");
+      setTimeout(() => {
+        setFormState("idle");
+        setCandidateData({
+          name: "",
+          phone: "",
+          district: "Kepez / Antalya",
+          department: "Kat Hizmetleri & Housekeeping Ekipleri",
+          availability: "Hemen Başlayabilirim",
+          notes: "",
+          kvkkConsent: true,
         });
       }, 4000);
     } catch {
@@ -103,6 +201,9 @@ export default function ContactCTA() {
 
   return (
     <section id="iletisim" className="scroll-mt-20 relative py-8 sm:py-10 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
+      {/* Anchor for Candidate jump */}
+      <div id="kadro-basvuru" className="absolute -top-20" />
+
       {/* Subtle background grid & glowing accents */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -129,26 +230,53 @@ export default function ContactCTA() {
           >
             <div>
               <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-gold/10 text-gold border border-gold/30 mb-2">
-                <Clock size={12} className="text-gold" />
-                {language === "tr" ? "Hızlı İletişim & Teklif" : "Direct Advisory & Proposal"}
-              </span>
-
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-snug">
-                {language === "tr" ? (
+                {activeTab === "corporate" ? (
                   <>
-                    Tesisiniz İçin <span className="text-gradient-gold">Hemen Teklif Alın</span>
+                    <Clock size={12} className="text-gold" />
+                    <span>{language === "tr" ? "Hızlı İletişim & Teklif" : "Direct Advisory & Proposal"}</span>
                   </>
                 ) : (
                   <>
-                    Request an <span className="text-gradient-gold">Operations Proposal</span>
+                    <Users size={12} className="text-gold" />
+                    <span>{language === "tr" ? "Kariyer & İşe Alım" : "Careers & Hiring"}</span>
                   </>
+                )}
+              </span>
+
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-snug">
+                {activeTab === "corporate" ? (
+                  language === "tr" ? (
+                    <>
+                      Tesisiniz İçin <span className="text-gradient-gold">Hemen Teklif Alın</span>
+                    </>
+                  ) : (
+                    <>
+                      Request an <span className="text-gradient-gold">Operations Proposal</span>
+                    </>
+                  )
+                ) : (
+                  language === "tr" ? (
+                    <>
+                      Kendi SGK&apos;lı <span className="text-gradient-gold">Kadromuza Katılın</span>
+                    </>
+                  ) : (
+                    <>
+                      Join Our <span className="text-gradient-gold">Direct Payroll Team</span>
+                    </>
+                  )
                 )}
               </h2>
 
               <p className="mt-2 text-white/70 text-xs sm:text-sm font-light leading-relaxed">
-                {language === "tr"
-                  ? "Antalya ve çevre bölgelerdeki 5 yıldızlı oteller, ticari tesisler ve kongre merkezleri için anahtar teslim departman işletimi ve operasyonel danışmanlık hizmeti sunuyoruz. Detayları iletin, aynı gün içinde yerinde analiz yaparak hizmet teklifimizi hazırlayalım."
-                  : "We deliver turnkey facility department management and operations advisory for 5-star resorts, commercial facilities, and congress venues across Antalya. Submit your scope to receive a tailored service proposal within 24 hours."}
+                {activeTab === "corporate" ? (
+                  language === "tr"
+                    ? "Antalya ve çevre bölgelerdeki 5 yıldızlı oteller, ticari tesisler ve kongre merkezleri için anahtar teslim departman işletimi ve kurumsal hizmet çözümleri sunuyoruz. Detayları iletin, en geç 24 saat içinde yerinde keşif ve yazılı hizmet teklifimizi sunalım."
+                    : "We deliver turnkey facility department management and operations solutions for 5-star resorts, commercial facilities, and congress venues across Antalya. Submit your scope to receive a tailored written service proposal within 24 hours."
+                ) : (
+                  language === "tr"
+                    ? "Antalya genelindeki otel ve tesis departman operasyonlarımızda, NOVA GLOBAL bünyesinde SGK'lı, düzenli maaş, servis ve yemek olanaklarıyla görev alacak çalışma arkadaşları arıyoruz."
+                    : "Join our dedicated operational teams across Antalya's premium resorts and facilities, directly employed under NOVA GLOBAL payroll with statutory benefits."
+                )}
               </p>
             </div>
 
@@ -167,13 +295,17 @@ export default function ContactCTA() {
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
-                    {language === "tr" ? "Saha Koordinasyon & Danışma WhatsApp" : "Field Coordination & Advisory"}
+                    {activeTab === "corporate"
+                      ? (language === "tr" ? "Saha Koordinasyon & Danışma WhatsApp" : "Field Coordination & Advisory")
+                      : (language === "tr" ? "İK & Başvuru Danışma Hattı" : "HR & Recruitment WhatsApp")}
                   </p>
                   <p className="text-white font-black text-sm sm:text-base group-hover:text-gold transition-colors">
                     0505 410 48 00
                   </p>
                   <p className="text-white/50 text-xs mt-0.5">
-                    {language === "tr" ? "Hızlı Danışmanlık & Canlı Mesajlaşma" : "Instant Advisory & WhatsApp Chat"}
+                    {activeTab === "corporate"
+                      ? (language === "tr" ? "Hızlı Danışmanlık & Canlı Mesajlaşma" : "Instant Advisory & WhatsApp Chat")
+                      : (language === "tr" ? "Aday Danışma & Başvuru Bilgilendirme" : "Direct Job Application Inquiry")}
                   </p>
                 </div>
               </a>
@@ -189,13 +321,17 @@ export default function ContactCTA() {
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
-                    {language === "tr" ? "Kurumsal E-Posta" : "Corporate Email"}
+                    {activeTab === "corporate"
+                      ? (language === "tr" ? "Kurumsal E-Posta" : "Corporate Email")
+                      : (language === "tr" ? "İnsan Kaynakları E-Posta" : "HR & Career Email")}
                   </p>
                   <p className="text-white font-black text-sm sm:text-base group-hover:text-gold transition-colors">
                     iknovaofis@gmail.com
                   </p>
                   <p className="text-white/50 text-xs mt-0.5">
-                    {language === "tr" ? "Resmi Hizmet Teklifleri & Sözleşmeler" : "Official Service Proposals & Contracts"}
+                    {activeTab === "corporate"
+                      ? (language === "tr" ? "Resmi Hizmet Teklifleri & Sözleşmeler" : "Official Service Proposals & Contracts")
+                      : (language === "tr" ? "Özgeçmiş & Kadro Başvuru Havuzu" : "CV & Recruitment Enquiries")}
                   </p>
                 </div>
               </a>
@@ -230,13 +366,13 @@ export default function ContactCTA() {
               <ShieldCheck size={16} className="text-gold flex-shrink-0" />
               <span>
                 {language === "tr"
-                  ? "Tüm operasyonlarımız NOVA saha koordinatörleri gözetiminde, sözleşmeli ve garantili sunulur."
-                  : "All operations are coordinated under dedicated NOVA supervisors under strict contractual quality standards."}
+                  ? "Tüm operasyonlarımız NOVA saha amirleri gözetiminde, sözleşmeli ve tanımlı hizmet seviyesiyle sunulur."
+                  : "All operations are coordinated under dedicated NOVA supervisors under strict contractual service standards."}
               </span>
             </div>
           </motion.div>
 
-          {/* RIGHT COLUMN: Pure B2B Operations Proposal Form (7 Cols) */}
+          {/* RIGHT COLUMN: Dual Tab Segmented Card (7 Cols) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -244,157 +380,394 @@ export default function ContactCTA() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="lg:col-span-7 flex flex-col justify-between"
           >
-            <div className="bg-white/[0.04] backdrop-blur-2xl rounded-2xl p-5 sm:p-7 border border-white/15 shadow-xl relative h-full flex flex-col justify-between">
+            <div className="bg-white/[0.04] backdrop-blur-2xl rounded-2xl p-4 sm:p-6 border border-white/15 shadow-xl relative h-full flex flex-col justify-between">
               
-              {/* Header */}
-              <div className="mb-4">
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-0.5 flex items-center gap-2">
-                  <Building2 size={18} className="text-gold" />
-                  <span>{language === "tr" ? "Tesisiniz İçin Hızlı Operasyon & Hizmet Teklifi" : "Request an Operations & Service Proposal"}</span>
-                </h3>
-                <p className="text-white/50 text-xs font-light">
-                  {language === "tr"
-                    ? "Tesisinizin ihtiyaç duyduğu operasyon alanlarını iletin; teklifiniz anında WhatsApp operasyon masamıza düşsün."
-                    : "Submit your facility's operational requirements to receive a tailored proposal directly via WhatsApp."}
-                </p>
+              {/* Apple-style Segmented Tab Switcher */}
+              <div className="flex p-1 mb-3.5 rounded-xl bg-black/40 border border-white/15">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab("corporate")}
+                  className={`flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                    activeTab === "corporate"
+                      ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper shadow-md"
+                      : "text-white/60 hover:text-white"
+                  }`}
+                >
+                  {language === "tr" ? "Kurumsal Hizmet Teklifi (B2B)" : "Corporate Proposal (B2B)"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab("candidate")}
+                  className={`flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                    activeTab === "candidate"
+                      ? "bg-gradient-to-r from-gold to-gold-light text-brand-deeper shadow-md"
+                      : "text-white/60 hover:text-white"
+                  }`}
+                >
+                  {language === "tr" ? "Kadromuza Katılın (İş)" : "Join Our Payroll"}
+                </button>
               </div>
 
-              {/* B2B CORPORATE PROPOSAL FORM */}
-              <form onSubmit={handleCorpSubmit} className="space-y-3 flex-grow flex flex-col justify-between">
-                <div className="space-y-3">
-                  
-                  {/* Name & Hotel Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div className="relative">
-                      <label htmlFor="corp-name" className="sr-only">Adınız Soyadınız</label>
-                      <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30">
-                        <User size={15} />
-                      </div>
-                      <input
-                        id="corp-name"
-                        type="text"
-                        name="name"
-                        value={corpData.name}
-                        onChange={handleCorpChange}
-                        placeholder={language === "tr" ? "Adınız Soyadınız / Göreviniz" : "Your Name & Title"}
-                        required
-                        className="w-full pl-9 pr-3 py-2.5 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
-                      />
-                    </div>
-
-                    <div className="relative">
-                      <label htmlFor="corp-hotel" className="sr-only">İşletme / Otel Adı</label>
-                      <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30">
-                        <Building2 size={15} />
-                      </div>
-                      <input
-                        id="corp-hotel"
-                        type="text"
-                        name="hotelName"
-                        value={corpData.hotelName}
-                        onChange={handleCorpChange}
-                        placeholder={language === "tr" ? "İşletme / Otel / Firma Adı" : "Hotel / Facility Name"}
-                        required
-                        className="w-full pl-9 pr-3 py-2.5 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
-                      />
-                    </div>
+              {/* TAB 1: B2B CORPORATE PROPOSAL FORM */}
+              {activeTab === "corporate" && (
+                <div className="flex-grow flex flex-col justify-between">
+                  {/* Header */}
+                  <div className="mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-0.5 flex items-center gap-2">
+                      <Building2 size={17} className="text-gold" />
+                      <span>{language === "tr" ? "Tesisiniz İçin Hızlı Operasyon & Hizmet Teklifi" : "Request an Operations & Service Proposal"}</span>
+                    </h3>
+                    <p className="text-white/50 text-xs font-light">
+                      {language === "tr"
+                        ? "Tesisinizin ihtiyaç duyduğu operasyon alanlarını iletin; teklifiniz anında WhatsApp operasyon masamıza düşsün."
+                        : "Submit your facility's operational requirements to receive a tailored proposal directly via WhatsApp."}
+                    </p>
                   </div>
 
-                  {/* Phone Number */}
-                  <div className="relative">
-                    <label htmlFor="corp-phone" className="sr-only">Telefon Numaranız</label>
-                    <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30">
-                      <Phone size={15} />
-                    </div>
-                    <input
-                      id="corp-phone"
-                      type="tel"
-                      name="phone"
-                      value={corpData.phone}
-                      onChange={handleCorpChange}
-                      placeholder={language === "tr" ? "Telefon Numaranız (05XX...)" : "Phone Number (+90...)"}
-                      required
-                      className="w-full pl-9 pr-3 py-2.5 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
-                    />
-                  </div>
+                  <form onSubmit={handleCorpSubmit} className="space-y-2.5 flex-grow flex flex-col justify-between">
+                    <div className="space-y-2.5">
+                      {/* Name & Hotel Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <div className="relative">
+                          <label htmlFor="corp-name" className="sr-only">Adınız Soyadınız</label>
+                          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30">
+                            <User size={14} />
+                          </div>
+                          <input
+                            id="corp-name"
+                            type="text"
+                            name="name"
+                            value={corpData.name}
+                            onChange={handleCorpChange}
+                            placeholder={language === "tr" ? "Adınız Soyadınız / Göreviniz" : "Your Name & Title"}
+                            required
+                            className="w-full pl-9 pr-3 py-2 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
+                          />
+                        </div>
 
-                  {/* Department Select */}
-                  <div className="relative">
-                    <label htmlFor="corp-department" className="sr-only">Hizmet Alanı</label>
-                    <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none">
-                      <Layers size={15} />
+                        <div className="relative">
+                          <label htmlFor="corp-hotel" className="sr-only">İşletme / Otel Adı</label>
+                          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30">
+                            <Building2 size={14} />
+                          </div>
+                          <input
+                            id="corp-hotel"
+                            type="text"
+                            name="hotelName"
+                            value={corpData.hotelName}
+                            onChange={handleCorpChange}
+                            placeholder={language === "tr" ? "İşletme / Otel / Firma Adı" : "Hotel / Facility Name"}
+                            required
+                            className="w-full pl-9 pr-3 py-2 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Phone Number */}
+                      <div className="relative">
+                        <label htmlFor="corp-phone" className="sr-only">Telefon Numaranız</label>
+                        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30">
+                          <Phone size={14} />
+                        </div>
+                        <input
+                          id="corp-phone"
+                          type="tel"
+                          name="phone"
+                          value={corpData.phone}
+                          onChange={handleCorpChange}
+                          placeholder={language === "tr" ? "Telefon Numaranız (05XX...)" : "Phone Number (+90...)"}
+                          required
+                          className="w-full pl-9 pr-3 py-2 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
+                        />
+                      </div>
+
+                      {/* Department Select */}
+                      <div className="relative">
+                        <label htmlFor="corp-department" className="sr-only">Hizmet Alanı</label>
+                        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none">
+                          <Layers size={14} />
+                        </div>
+                        <select
+                          id="corp-department"
+                          name="department"
+                          value={corpData.department}
+                          onChange={handleCorpChange}
+                          className="w-full pl-9 pr-3 py-2 bg-brand-dark border border-white/15 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-gold transition-all cursor-pointer"
+                        >
+                          <option value="Tüm Operasyon Alanları (Entegre Tesis İşletimi)">Tüm Operasyon Alanları (Entegre Tesis İşletimi)</option>
+                          <option value="Kat Hizmetleri & Housekeeping Operasyonu">Kat Hizmetleri & Housekeeping Operasyonu</option>
+                          <option value="Restoran & Ziyafet Servis Operasyonu">Restoran & Ziyafet Servis Operasyonu</option>
+                          <option value="Bulaşıkhane & Mutfak Sanitasyon Operasyonu">Bulaşıkhane & Mutfak Sanitasyon Operasyonu</option>
+                          <option value="Animasyon & Sahne Gösterileri Koordinasyonu">Animasyon & Sahne Gösterileri Koordinasyonu</option>
+                          <option value="İnşaat, Tadilat & Tesis Bakım Hizmetleri">İnşaat, Tadilat & Tesis Bakım Hizmetleri</option>
+                          <option value="Depo, Paketleme & Sevkiyat Operasyonları">Depo, Paketleme & Sevkiyat Operasyonları</option>
+                          <option value="Kongre, Fuar & Etkinlik Saha Operasyonları">Kongre, Fuar & Etkinlik Saha Operasyonları</option>
+                          <option value="B2B Satış Geliştirme & İletişim Operasyonu">B2B Satış Geliştirme & İletişim Operasyonu</option>
+                          <option value="Devlet Destekleri & Teşvik Danışmanlığı">Devlet Destekleri & Teşvik Danışmanlığı</option>
+                        </select>
+                      </div>
+
+                      {/* Optional Note */}
+                      <div className="relative">
+                        <label htmlFor="corp-message" className="sr-only">Operasyon Notu</label>
+                        <div className="absolute left-3 top-2.5 text-white/30">
+                          <MessageSquare size={14} />
+                        </div>
+                        <textarea
+                          id="corp-message"
+                          name="message"
+                          value={corpData.message}
+                          onChange={handleCorpChange}
+                          placeholder={language === "tr" ? "Tahmini kapsam (Oda sayısı, kuver, metraj veya operasyon notunuz - Opsiyonel)..." : "Estimated scope, department size, or specific notes (Optional)..."}
+                          rows={2}
+                          className="w-full pl-9 pr-3 py-1.5 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all resize-none"
+                        />
+                      </div>
+                      {/* KVKK & Data Transfer Notice */}
+                      <label className="flex items-start gap-2 text-[10px] text-white/70 cursor-pointer pt-0.5">
+                        <input
+                          type="checkbox"
+                          name="corpKvkkConsent"
+                          checked={corpData.corpKvkkConsent}
+                          onChange={handleCorpChange}
+                          className="mt-0.5 accent-gold cursor-pointer"
+                        />
+                        <span>
+                          {language === "tr"
+                            ? "Kurumsal iletişim bilgilerimin, hizmet keşfi ve teklif hazırlığı amacıyla işlenmesini ve doğrudan WhatsApp operasyon masasına iletilmesini onaylıyorum."
+                            : "I consent to the processing of contact details for proposal preparation and direct transmission to WhatsApp operations desk."}
+                        </span>
+                      </label>
                     </div>
-                    <select
-                      id="corp-department"
-                      name="department"
-                      value={corpData.department}
-                      onChange={handleCorpChange}
-                      className="w-full pl-9 pr-3 py-2.5 bg-brand-dark border border-white/15 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-gold transition-all cursor-pointer"
+
+                    {/* Submit CTA */}
+                    <button
+                      type="submit"
+                      disabled={formState !== "idle"}
+                      className="w-full mt-2 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-gold via-gold-bright to-gold text-brand-deeper font-extrabold text-xs sm:text-sm hover:shadow-xl hover:shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                     >
-                      <option value="Tüm Operasyon Alanları (Entegre Tesis İşletimi)">Tüm Operasyon Alanları (Entegre Tesis İşletimi)</option>
-                      <option value="Kat Hizmetleri & Housekeeping Operasyonu">Kat Hizmetleri & Housekeeping Operasyonu</option>
-                      <option value="Restoran & Ziyafet Servis Operasyonu">Restoran & Ziyafet Servis Operasyonu</option>
-                      <option value="Bulaşıkhane & Mutfak Sanitasyon Operasyonu">Bulaşıkhane & Mutfak Sanitasyon Operasyonu</option>
-                      <option value="Animasyon & Sahne Gösterileri Operasyonu">Animasyon & Sahne Gösterileri Operasyonu</option>
-                      <option value="İnşaat, Tadilat & Tesis Bakımı">İnşaat, Tadilat & Tesis Bakımı</option>
-                      <option value="Depo İçi Paketleme ve Sevkiyat Projeleri">Depo İçi Paketleme ve Sevkiyat Projeleri</option>
-                      <option value="Kongre, Fuar & Etkinlik Saha Operasyonları">Kongre, Fuar & Etkinlik Saha Operasyonları</option>
-                      <option value="B2B Lead Üretimi & Çağrı Operasyonu">B2B Lead Üretimi & Çağrı Operasyonu</option>
-                      <option value="Devlet Destekleri & Teşvik Danışmanlığı">Devlet Destekleri & Teşvik Danışmanlığı</option>
-                    </select>
-                  </div>
+                      {formState === "idle" && (
+                        <>
+                          <Send size={14} />
+                          <span>{language === "tr" ? "Hizmet Talebini WhatsApp'a İlet" : "Send Proposal Request via WhatsApp"}</span>
+                        </>
+                      )}
+                      {formState === "sending" && (
+                        <>
+                          <Loader2 size={14} className="animate-spin" />
+                          <span>{language === "tr" ? "İletiliyor..." : "Sending..."}</span>
+                        </>
+                      )}
+                      {formState === "sent" && (
+                        <>
+                          <CheckCircle2 size={14} className="text-emerald-800" />
+                          <span>{language === "tr" ? "Talebiniz Alındı & WhatsApp Açıldı!" : "Request Sent & WhatsApp Opened!"}</span>
+                        </>
+                      )}
+                    </button>
+                  </form>
 
-                  {/* Optional Note */}
-                  <div className="relative">
-                    <label htmlFor="corp-message" className="sr-only">Operasyon Notu</label>
-                    <div className="absolute left-3 top-3 text-white/30">
-                      <MessageSquare size={15} />
-                    </div>
-                    <textarea
-                      id="corp-message"
-                      name="message"
-                      value={corpData.message}
-                      onChange={handleCorpChange}
-                      placeholder={language === "tr" ? "Tahmini hizmet kapsamı, departman büyüklüğü veya belirtmek istediğiniz detaylar (Opsiyonel)..." : "Estimated scope, department size, or specific notes (Optional)..."}
-                      rows={2}
-                      className="w-full pl-9 pr-3 py-2 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all resize-none"
-                    />
+                  {/* Corporate Legal Disclaimer */}
+                  <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-[10px] sm:text-[11px] text-white/60 leading-relaxed">
+                    <p>
+                      <strong className="text-gold font-semibold">Hukuki Güvence & Bilgilendirme:</strong> NOVA GLOBAL, müşterilerine personel temini veya geçici işçi kiralama hizmeti sunmaz. Hizmetler; NOVA GLOBAL&apos;in kendi iş organizasyonu, kendi bordrolu çalışanları, saha amirleri ve tanımlı hizmet çıktılarıyla bağımsız hizmet alım sözleşmeleri kapsamında götürü bedelle sunulur. Doğru sözleşme tasarımı ve fiili uygulama ile muvazaa ve mevzuat risklerinin azaltılması hedeflenir.
+                    </p>
                   </div>
                 </div>
+              )}
 
-                {/* Submit CTA */}
-                <button
-                  type="submit"
-                  disabled={formState !== "idle"}
-                  className="w-full mt-2 flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-gradient-to-r from-gold via-gold-bright to-gold text-brand-deeper font-extrabold text-xs sm:text-sm hover:shadow-xl hover:shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
-                >
-                  {formState === "idle" && (
-                    <>
-                      <Send size={15} />
-                      <span>{language === "tr" ? "Hizmet Talebini WhatsApp'a İlet" : "Send Proposal Request via WhatsApp"}</span>
-                    </>
-                  )}
-                  {formState === "sending" && (
-                    <>
-                      <Loader2 size={15} className="animate-spin" />
-                      <span>{language === "tr" ? "İletiliyor..." : "Sending..."}</span>
-                    </>
-                  )}
-                  {formState === "sent" && (
-                    <>
-                      <CheckCircle2 size={15} className="text-emerald-800" />
-                      <span>{language === "tr" ? "Talebiniz Alındı & WhatsApp Açıldı!" : "Request Sent & WhatsApp Opened!"}</span>
-                    </>
-                  )}
-                </button>
-              </form>
+              {/* TAB 2: CANDIDATE / JOB APPLICATION FORM */}
+              {activeTab === "candidate" && (
+                <div className="flex-grow flex flex-col justify-between">
+                  {/* Header */}
+                  <div className="mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-0.5 flex items-center gap-2">
+                      <Briefcase size={17} className="text-gold" />
+                      <span>{language === "tr" ? "NOVA Kadrosuna Katılın (İş Başvurusu)" : "Join NOVA Direct Payroll"}</span>
+                    </h3>
+                    <p className="text-white/50 text-xs font-light">
+                      {language === "tr"
+                        ? "Antalya genelinde yürüttüğümüz tesis operasyonlarımızda NOVA GLOBAL bordrosunda görev alacak çalışma arkadaşları arıyoruz."
+                        : "Apply to join NOVA GLOBAL's direct operational payroll across Antalya resorts and facilities."}
+                    </p>
+                  </div>
 
-              {/* Legal Disclaimer Shield Box */}
-              <div className="mt-4 p-3 rounded-xl bg-white/[0.03] border border-white/10 text-[11px] text-white/60 leading-relaxed">
-                <p>
-                  <strong className="text-gold font-semibold">Hukuki Güvence & Bilgilendirme:</strong> NOVA GLOBAL bir özel istihdam bürosu değildir; personel temini, işçi kiralama veya geçici iş ilişkisi hizmeti vermez. Tüm hizmetler, NOVA GLOBAL&apos;in kendi SGK&apos;lı personeliyle, tanımlı hizmet kapsamı ve götürü bedel üzerinden hizmet alım sözleşmesi çerçevesinde sunulur.
-                </p>
-              </div>
+                  <form onSubmit={handleCandidateSubmit} className="space-y-2.5 flex-grow flex flex-col justify-between">
+                    <div className="space-y-2.5">
+                      {/* Name & Phone Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <div className="relative">
+                          <label htmlFor="cand-name" className="sr-only">Adınız Soyadınız</label>
+                          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30">
+                            <User size={14} />
+                          </div>
+                          <input
+                            id="cand-name"
+                            type="text"
+                            name="name"
+                            value={candidateData.name}
+                            onChange={handleCandidateChange}
+                            placeholder={language === "tr" ? "Adınız Soyadınız" : "Full Name"}
+                            required
+                            className="w-full pl-9 pr-3 py-2 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
+                          />
+                        </div>
+
+                        <div className="relative">
+                          <label htmlFor="cand-phone" className="sr-only">Telefon Numaranız</label>
+                          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30">
+                            <Phone size={14} />
+                          </div>
+                          <input
+                            id="cand-phone"
+                            type="tel"
+                            name="phone"
+                            value={candidateData.phone}
+                            onChange={handleCandidateChange}
+                            placeholder={language === "tr" ? "Telefon Numaranız (05XX...)" : "Phone Number (+90...)"}
+                            required
+                            className="w-full pl-9 pr-3 py-2 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      {/* District & Availability Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <div className="relative">
+                          <label htmlFor="cand-district" className="sr-only">İkamet İlçesi</label>
+                          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none">
+                            <MapPin size={14} />
+                          </div>
+                          <select
+                            id="cand-district"
+                            name="district"
+                            value={candidateData.district}
+                            onChange={handleCandidateChange}
+                            className="w-full pl-9 pr-3 py-2 bg-brand-dark border border-white/15 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-gold transition-all cursor-pointer"
+                          >
+                            <option value="Kepez / Antalya">Kepez / Antalya</option>
+                            <option value="Muratpaşa / Antalya">Muratpaşa / Antalya</option>
+                            <option value="Konyaaltı / Antalya">Konyaaltı / Antalya</option>
+                            <option value="Serik / Belek">Serik / Belek</option>
+                            <option value="Manavgat / Side">Manavgat / Side</option>
+                            <option value="Kemer / Göynük">Kemer / Göynük</option>
+                            <option value="Alanya">Alanya</option>
+                            <option value="Diğer (Antalya Dışı / Taşınabilir)">Diğer (Taşınabilir / Lojman)</option>
+                          </select>
+                        </div>
+
+                        <div className="relative">
+                          <label htmlFor="cand-avail" className="sr-only">İşe Başlama Durumu</label>
+                          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none">
+                            <Clock size={14} />
+                          </div>
+                          <select
+                            id="cand-avail"
+                            name="availability"
+                            value={candidateData.availability}
+                            onChange={handleCandidateChange}
+                            className="w-full pl-9 pr-3 py-2 bg-brand-dark border border-white/15 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-gold transition-all cursor-pointer"
+                          >
+                            <option value="Hemen Başlayabilirim">Hemen Başlayabilirim</option>
+                            <option value="3-5 Gün İçinde">3-5 Gün İçinde</option>
+                            <option value="15 Gün İçinde">15 Gün İçinde</option>
+                            <option value="Sezon Başında">Sezon Başında</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      {/* Desired Department */}
+                      <div className="relative">
+                        <label htmlFor="cand-dept" className="sr-only">Görev Almak İstediğiniz Departman</label>
+                        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none">
+                          <Briefcase size={14} />
+                        </div>
+                        <select
+                          id="cand-dept"
+                          name="department"
+                          value={candidateData.department}
+                          onChange={handleCandidateChange}
+                          className="w-full pl-9 pr-3 py-2 bg-brand-dark border border-white/15 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-gold transition-all cursor-pointer"
+                        >
+                          <option value="Kat Hizmetleri & Housekeeping Ekipleri">Kat Hizmetleri & Housekeeping Operasyonu</option>
+                          <option value="Restoran Servis & Ziyafet Ekipleri">Restoran & Ziyafet Servis Operasyonu</option>
+                          <option value="Bulaşıkhane & Mutfak Sanitasyon Ekipleri">Bulaşıkhane & Mutfak Sanitasyon Operasyonu</option>
+                          <option value="Animasyon, Sahne & Gösteri Ekipleri">Animasyon & Sahne Gösterileri Koordinasyonu</option>
+                          <option value="Tesis Tadilat, Boya & Bakım Ekipleri">İnşaat, Tadilat & Tesis Bakım Hizmetleri</option>
+                          <option value="Depo İçi Paketleme & Sevkiyat Ekipleri">Depo, Paketleme & Sevkiyat Operasyonları</option>
+                          <option value="Genel Başvuru (Açık Pozisyonlar)">Genel Başvuru (En Uygun Açık Pozisyon)</option>
+                        </select>
+                      </div>
+
+                      {/* Optional Notes */}
+                      <div className="relative">
+                        <label htmlFor="cand-notes" className="sr-only">Deneyim / Not</label>
+                        <div className="absolute left-3 top-2.5 text-white/30">
+                          <MessageSquare size={14} />
+                        </div>
+                        <textarea
+                          id="cand-notes"
+                          name="notes"
+                          value={candidateData.notes}
+                          onChange={handleCandidateChange}
+                          placeholder={language === "tr" ? "Daha önceki deneyimleriniz, hijyen belgesi vb. belirtmek istediğiniz notlar (Opsiyonel)..." : "Previous work experience or notes (Optional)..."}
+                          rows={2}
+                          className="w-full pl-9 pr-3 py-1.5 bg-white/5 border border-white/15 rounded-xl text-white text-xs sm:text-sm placeholder:text-white/30 focus:outline-none focus:border-gold focus:bg-white/[0.08] transition-all resize-none"
+                        />
+                      </div>
+
+                      {/* KVKK Consent Checkbox */}
+                      <label className="flex items-start gap-2 text-[10px] text-white/70 cursor-pointer pt-0.5">
+                        <input
+                          type="checkbox"
+                          name="kvkkConsent"
+                          checked={candidateData.kvkkConsent}
+                          onChange={handleCandidateChange}
+                          className="mt-0.5 accent-gold cursor-pointer"
+                        />
+                        <span>
+                          {language === "tr"
+                            ? "Kişisel verilerimin KVKK Aydınlatma Metni kapsamında şirketiniz bünyesinde işe alım ve istihdam değerlendirmesi amacıyla işlenmesini onaylıyorum."
+                            : "I consent to the processing of my data for internal employment consideration under privacy regulations."}
+                        </span>
+                      </label>
+                    </div>
+
+                    {/* Submit Candidate CTA */}
+                    <button
+                      type="submit"
+                      disabled={formState !== "idle"}
+                      className="w-full mt-2 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-gold via-gold-bright to-gold text-brand-deeper font-extrabold text-xs sm:text-sm hover:shadow-xl hover:shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    >
+                      {formState === "idle" && (
+                        <>
+                          <Send size={14} />
+                          <span>{language === "tr" ? "Kadro Başvurusunu WhatsApp'a İlet" : "Submit Application via WhatsApp"}</span>
+                        </>
+                      )}
+                      {formState === "sending" && (
+                        <>
+                          <Loader2 size={14} className="animate-spin" />
+                          <span>{language === "tr" ? "Başvuru İletiliyor..." : "Submitting..."}</span>
+                        </>
+                      )}
+                      {formState === "sent" && (
+                        <>
+                          <CheckCircle2 size={14} className="text-emerald-800" />
+                          <span>{language === "tr" ? "Başvurunuz Alındı & WhatsApp Açıldı!" : "Application Sent & WhatsApp Opened!"}</span>
+                        </>
+                      )}
+                    </button>
+                  </form>
+
+                  {/* STATUTORY MANDATORY DISCLAIMER BOX (VERBATIM) */}
+                  <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-gold/25 text-[10px] sm:text-[11px] text-white/70 leading-relaxed">
+                    <p>
+                      <strong className="text-gold font-semibold">Yasal Bilgilendirme:</strong> NOVA GLOBAL bir özel istihdam bürosu değildir. Başvurular yalnızca NOVA GLOBAL&apos;in kendi kadrosunda istihdam edilmek üzere değerlendirilir; üçüncü kişi veya kuruluşlara personel yerleştirme, iş bulma aracılığı ya da geçici iş ilişkisi hizmeti verilmez. NOVA GLOBAL, iş arayanlardan hiçbir aşamada ücret, komisyon veya herhangi bir menfaat talep etmez.
+                    </p>
+                  </div>
+                </div>
+              )}
 
             </div>
           </motion.div>

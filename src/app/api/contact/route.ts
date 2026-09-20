@@ -15,6 +15,29 @@ export async function POST(request: NextRequest) {
 
 
 
+    // Internal Candidate Application
+    if (type === 'candidate') {
+      const { district, department, availability, notes } = body;
+      console.log('👷 Yeni NOVA Bünyesi Kadro / İş Başvurusu:', {
+        type: 'INTERNAL_CANDIDATE_APPLICATION',
+        name,
+        phone,
+        district: district || 'Belirtilmedi',
+        department: department || 'Genel Başvuru',
+        availability: availability || 'Hemen',
+        notes: notes || '',
+        timestamp: new Date().toISOString(),
+      });
+
+      return NextResponse.json(
+        {
+          success: true,
+          message: 'Kadro başvurunuz başarıyla alındı. İK birimimiz en kısa sürede sizinle iletişime geçecektir.',
+        },
+        { status: 200 }
+      );
+    }
+
     // Corporate Proposal Request
     const { hotel, hotelName, email, department, message } = body;
     const resolvedHotel = hotel || hotelName || 'Belirtilmedi';

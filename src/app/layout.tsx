@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "NOVA GLOBAL | Otel Departman İşletimi, Saha Koordinasyonu & Danışmanlık",
   description:
-    "5 yıldızlı oteller ve sanayi tesisleri için kat hizmetleri, F&B servis, mutfak hijyeni ve fabrika hatlarında profesyonel departman işletim hizmeti; kurumsal firmalara B2B lead üretimi ve devlet teşvikleri danışmanlığı.",
+    "5 yıldızlı oteller ve sanayi tesisleri için kat hizmetleri, F&B servis, mutfak hijyeni ve fabrika hatlarında profesyonel departman işletim hizmeti; kurumsal firmalara B2B satış geliştirme ve devlet teşvikleri danışmanlığı.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     "restoran servis koordinasyonu",
     "steward mutfak hijyeni",
     "tesis ve fabrika saha operasyonları",
-    "b2b lead üretimi",
-    "çağrı merkezi yönlendirme",
+    "b2b satış geliştirme",
+    "kurumsal iletişim operasyonu",
     "devlet teşvikleri danışmanlığı",
     "kosgeb hibe danışmanlığı",
     "nova global",
   ],
   authors: [{ name: "NOVA GLOBAL", url: "https://www.novaorganizasyon7.com.tr" }],
-  creator: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
+  creator: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ",
   metadataBase: new URL("https://www.novaorganizasyon7.com.tr"),
   alternates: {
     canonical: "https://www.novaorganizasyon7.com.tr",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     url: "https://www.novaorganizasyon7.com.tr",
     title: "NOVA GLOBAL | Saha Koordinasyonu & Kurumsal Danışmanlık",
     description:
-      "5 yıldızlı oteller, şantiyeler ve sanayi tesisleri için profesyonel departman işletim hizmeti, saha koordinasyonu, B2B lead dağıtımı ve kurumsal danışmanlık.",
+      "5 yıldızlı oteller, şantiyeler ve sanayi tesisleri için profesyonel departman işletim hizmeti, saha koordinasyonu, B2B satış geliştirme ve kurumsal danışmanlık.",
     siteName: "NOVA GLOBAL",
     images: [
       {
@@ -89,7 +89,7 @@ const jsonLd = {
       "@type": "Organization",
       "@id": "https://www.novaorganizasyon7.com.tr/#organization",
       name: "NOVA ORGANİZASYON",
-      legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
+      legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ",
       url: "https://www.novaorganizasyon7.com.tr",
       logo: "https://www.novaorganizasyon7.com.tr/images/nova-emblem.jpg",
       telephone: "+905054104800",
@@ -97,7 +97,7 @@ const jsonLd = {
         "@type": "Organization",
         "@id": "https://novadigital.com.tr/#organization",
         name: "NOVA GLOBAL",
-        legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON DANIŞMANLIK VE LİMİTED ŞİRKETİ",
+        legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ",
         url: "https://novadigital.com.tr"
       },
       contactPoint: {

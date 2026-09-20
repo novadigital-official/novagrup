@@ -25,7 +25,7 @@ export default function Navbar() {
     { label: t.nav.departments, href: "#hizmetler" },
     { label: t.nav.workflow, href: "#is-akisi" },
     { label: t.nav.whyUs, href: "#neden-nova" },
-    { label: t.nav.advisory, href: "#iletisim" },
+    { label: t.nav.advisory, href: "#kadro-basvuru" },
     { label: t.nav.contact, href: "#iletisim" },
   ];
 

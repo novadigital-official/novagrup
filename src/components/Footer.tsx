@@ -51,6 +51,7 @@ export default function Footer() {
         { label: t.footer.col2Link2, href: "#is-akisi" },
         { label: t.footer.col2Link3, href: "#neden-nova" },
         { label: t.footer.col2Link4, href: "#neden-nova" },
+        { label: t.footer.col2Link5, href: "#kadro-basvuru" },
       ],
     },
     {
@@ -98,10 +99,31 @@ export default function Footer() {
               {t.footer.description}
             </p>
 
+            {/* Official Visible Künye Box */}
+            <div className="p-3 sm:p-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-[11px] text-white/70 space-y-1.5 max-w-md">
+              <div className="flex items-center justify-between border-b border-white/10 pb-1">
+                <span className="text-gold font-bold text-[10px] uppercase tracking-wider">
+                  Resmi Şirket Künyesi
+                </span>
+                <span className="text-[10px] text-white/40">MERSİS: 0632159982000001</span>
+              </div>
+              <p className="text-white/90 font-medium text-[11px] leading-tight">
+                NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-[10px] text-white/60">
+                <p><span className="text-white/40">V.D. & No:</span> Antalya Kurumlar — 632 159 9820</p>
+                <p><span className="text-white/40">Şirket Müdürü:</span> Çelebi ASAL</p>
+                <p className="sm:col-span-2"><span className="text-white/40">Ticaret Sicil:</span> Antalya Ticaret Sicili Md. (TTSG: 11164)</p>
+                <p className="sm:col-span-2 text-[10px] text-white/50 leading-relaxed">
+                  <span className="text-white/40">Tescilli Adres:</span> Kültür Mah. 3856 Sk. 1. Yeşil Yayla Apt. No:2 İç Kapı No:1 Kepez / Antalya
+                </p>
+              </div>
+            </div>
+
             <div className="pt-1 space-y-1.5 text-xs text-white/60">
               <div className="flex items-center gap-2">
                 <MapPin size={13} className="text-gold flex-shrink-0" />
-                <span>Antalya Merkez / Türkiye (Belek, Kemer, Lara, Kundu, Alanya)</span>
+                <span>Kültür Mah. 3856 Sk. No:2/1 Kepez / Antalya</span>
               </div>
               <div className="flex items-center gap-2">
                 <MessageCircle size={13} className="text-gold flex-shrink-0" />
@@ -190,7 +212,7 @@ export default function Footer() {
         {/* Official Statutory Disclaimer Bar */}
         <div className="py-3.5 px-4 rounded-xl bg-white/[0.03] border border-gold/20 text-[11px] text-white/60 leading-relaxed my-3 text-center sm:text-left">
           <p>
-            <strong className="text-gold font-semibold">Hukuki Bilgilendirme:</strong> NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ, 4857 sayılı İş Kanunu çerçevesinde tesis, bina ve işletmelere tanımlı kapsamda ve götürü bedel karşılığı anahtar teslim departman işletimi ve hizmet alım çözümleri sunan bir hizmet taahhüt firmasıdır. Şirketimiz bir özel istihdam bürosu değildir; üçüncü kişilere personel tedariki, işçi kiralama veya geçici iş ilişkisi hizmeti verilmemektedir. Sitede yer alan tüm hizmetler, şirketimizin kendi SGK&apos;lı kadrosu ve kendi denetim organizasyonuyla yürütülmektedir.
+            <strong className="text-gold font-semibold">Hukuki Bilgilendirme:</strong> NOVA GLOBAL, müşterilerine personel temini veya geçici işçi kiralama hizmeti sunmaz. Hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, kendi bordrolu çalışanları, saha sorumluları, hizmet ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. İş ilişkisinin hukuki niteliği yalnızca sözleşme metnine değil, tarafların fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Bu nedenle her proje için hizmet kapsamı, yönetim sorumlulukları, kalite kriterleri, iş sağlığı ve güvenliği görevleri ve raporlama düzeni yazılı sözleşmeyle ayrıca belirlenir. Doğru sözleşme tasarımı ve fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
           </p>
         </div>
 

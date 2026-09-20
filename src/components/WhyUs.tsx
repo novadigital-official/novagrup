@@ -81,7 +81,7 @@ export default function WhyUs() {
                 {/* Bottom verified badge */}
                 <div className="mt-3 pt-2 border-t border-black/[0.04] flex items-center gap-1.5 text-[10px] font-semibold text-brand-base/80">
                   <CheckCircle2 size={12} className="text-emerald-600" />
-                  <span>{language === "tr" ? "Sözleşmeli Garanti" : "Contractual SLA"}</span>
+                  <span>{language === "tr" ? "Tanımlı Hizmet Seviyesi" : "Contractual SLA"}</span>
                 </div>
               </motion.div>
             );
@@ -101,7 +101,7 @@ export default function WhyUs() {
             <p className="text-xs text-white/85 font-light">
               <strong className="text-white font-bold">{language === "tr" ? "Sürpriz maliyet yok: " : "Zero unexpected fees: "}</strong>
               {language === "tr"
-                ? "Tesisiniz için tanımlı kapsam ve götürü bedelle aynı gün yazılı hizmet teklifinizi hazırlayalım."
+                ? "Tesisiniz için tanımlı kapsam ve götürü bedelle en geç 24 saat içinde yazılı hizmet teklifinizi hazırlayalım."
                 : "Get a customized lump-sum service proposal with transparent SLAs prepared within 24 hours."}
             </p>
           </div>

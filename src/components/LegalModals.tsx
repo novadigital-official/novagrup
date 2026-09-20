@@ -73,7 +73,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
           </p>
           <h4 className="text-gold font-semibold text-sm">3. Hizmet Modeli ve Hukuki Çerçeve Beyanı</h4>
           <p>
-            NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ, 4857 sayılı İş Kanunu çerçevesinde tesis, bina ve işletmelere tanımlı kapsamda ve götürü bedel karşılığı anahtar teslim departman işletimi ve hizmet alım çözümleri sunan bir hizmet taahhüt firmasıdır. Şirketimiz bir özel istihdam bürosu değildir; üçüncü kişilere personel tedariki, işçi kiralama veya geçici iş ilişkisi hizmeti verilmemektedir. Sitede yer alan tüm hizmetler, şirketimizin kendi SGK&apos;lı kadrosu ve kendi denetim organizasyonuyla yürütülmektedir.
+            NOVA GLOBAL, müşterilerine personel temini veya geçici işçi kiralama hizmeti sunmaz. Hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, kendi bordrolu çalışanları, saha amirleri, hizmet ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. İş ilişkisinin hukuki niteliği yalnızca sözleşme metnine değil, tarafların fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Bu nedenle her proje için hizmet kapsamı, yönetim sorumlulukları, kalite kriterleri, iş sağlığı ve güvenliği görevleri ve raporlama düzeni yazılı sözleşmeyle ayrıca belirlenir. Doğru sözleşme tasarımı ve fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
           </p>
         </div>
       ),

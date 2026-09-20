@@ -8,6 +8,9 @@ export const siteConfig = {
     taxOffice: "Antalya Kurumlar V.D.",
     taxNo: "632 159 9820",
     city: "Kepez / ANTALYA",
+    address: "Kültür Mah. 3856 Sk. 1. Yeşil Yayla Apt. No:2 İç Kapı No:1 Kepez / Antalya",
+    director: "Çelebi ASAL",
+    tradeRegistry: "Antalya Ticaret Sicili Müdürlüğü (TTSG: 11.09.2026, Sayı: 11164)",
   },
   contact: {
     phone: "0505 410 48 00",
