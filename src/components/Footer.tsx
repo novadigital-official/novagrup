@@ -70,86 +70,64 @@ export default function Footer() {
     <footer className="bg-brand-darkest text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Footer Content */}
-        <div className="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        {/* Main Footer Grid */}
+        <div className="py-8 sm:py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
           
-          {/* Brand Col */}
-          <div className="lg:col-span-2 space-y-3">
-            <Link href="#hero" className="flex items-center gap-3.5 group">
-              <div className="relative w-14 sm:w-16 h-14 sm:h-16 rounded-2xl overflow-hidden shadow-xl shadow-black/50 border-2 border-gold/60 bg-white flex items-center justify-center group-hover:border-gold group-hover:shadow-gold/30 transition-all duration-300">
+          {/* Brand & Contacts Col */}
+          <div className="sm:col-span-2 space-y-4">
+            <Link href="#hero" className="inline-flex items-center gap-3 group">
+              <div className="relative w-11 h-11 rounded-xl overflow-hidden shadow-md border border-gold/40 bg-white flex items-center justify-center group-hover:border-gold transition-all duration-300">
                 <Image
                   src="/images/nova-emblem.jpg"
                   alt="NOVA Grup Logo"
-                  width={64}
-                  height={64}
-                  className="object-contain w-full h-full scale-135 group-hover:scale-145 transition-transform duration-300"
+                  width={44}
+                  height={44}
+                  className="object-contain w-full h-full scale-135"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-white font-black text-xl sm:text-2xl tracking-wider leading-none">
-                  NOVA <span className="text-gold font-semibold text-sm">GLOBAL</span>
+                <span className="text-white font-black text-lg tracking-wider leading-none">
+                  NOVA <span className="text-gold font-semibold text-xs">GLOBAL</span>
                 </span>
-                <span className="text-gold/90 text-[10px] font-bold tracking-[0.2em] uppercase mt-0.5">
+                <span className="text-gold/80 text-[10px] font-bold tracking-[0.18em] uppercase mt-0.5">
                   {language === "tr" ? "Turizm • İnşaat • Sanayi" : "Hospitality • Construction • Industry"}
                 </span>
               </div>
             </Link>
 
             <p className="text-white/60 text-xs leading-relaxed max-w-sm font-light">
-              {t.footer.description}
+              {language === "tr"
+                ? "Antalya ve Akdeniz bölgesinde 5 yıldızlı otel ve kurumsal tesisler için anahtar teslim departman işletimi ve götürü bedelli hizmet ortaklığı."
+                : "Turnkey department management and lump-sum service contracting for 5-star hotels and facilities across Antalya."}
             </p>
 
-            {/* Official Visible Künye Box */}
-            <div className="p-3 sm:p-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-[11px] text-white/70 space-y-1.5 max-w-md">
-              <div className="flex items-center justify-between border-b border-white/10 pb-1">
-                <span className="text-gold font-bold text-[10px] uppercase tracking-wider">
-                  Resmi Şirket Künyesi
-                </span>
-                <span className="text-[10px] text-white/40">MERSİS: 0632159982000001</span>
-              </div>
-              <p className="text-white/90 font-medium text-[11px] leading-tight">
-                NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-[10px] text-white/60">
-                <p><span className="text-white/40">V.D. & No:</span> Antalya Kurumlar — 632 159 9820</p>
-                <p><span className="text-white/40">Şirket Müdürü:</span> Çelebi ASAL</p>
-                <p className="sm:col-span-2"><span className="text-white/40">Ticaret Sicil:</span> Antalya Ticaret Sicili Md. (TTSG: 11164)</p>
-                <p className="sm:col-span-2 text-[10px] text-white/50 leading-relaxed">
-                  <span className="text-white/40">Tescilli Adres:</span> Kültür Mah. 3856 Sk. 1. Yeşil Yayla Apt. No:2 İç Kapı No:1 Kepez / Antalya
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-1 space-y-1.5 text-xs text-white/60">
-              <div className="flex items-center gap-2">
-                <MapPin size={13} className="text-gold flex-shrink-0" />
-                <span>Kültür Mah. 3856 Sk. 1. Yeşil Yayla Apt. No:2 İç Kapı No:1 Kepez / Antalya</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MessageCircle size={13} className="text-gold flex-shrink-0" />
+            {/* Quick Contact Links */}
+            <div className="space-y-2 text-xs text-white/60 pt-1">
+              <div className="flex items-center gap-2.5">
+                <MessageCircle size={14} className="text-gold flex-shrink-0" />
                 <a
                   href={siteConfig.social.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gold transition-colors"
+                  className="hover:text-gold transition-colors font-medium text-white/80"
                 >
-                  WhatsApp: 0505 410 48 00
+                  0505 410 48 00
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail size={13} className="text-gold flex-shrink-0" />
-                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-gold transition-colors">
+              <div className="flex items-center gap-2.5">
+                <Mail size={14} className="text-gold flex-shrink-0" />
+                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-gold transition-colors font-medium text-white/80">
                   iknovaofis@gmail.com
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <InstagramIcon size={13} className="text-gold flex-shrink-0" />
+              <div className="flex items-center gap-2.5">
+                <InstagramIcon size={14} className="text-gold flex-shrink-0" />
                 <a
                   href="https://instagram.com/novaofisss"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="text-white/70 hover:text-gold transition-colors"
+                  className="hover:text-gold transition-colors font-medium text-white/80"
                 >
                   @novaofisss
                 </a>
@@ -157,13 +135,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links Columns */}
+          {/* Nav Links Columns */}
           {footerLinks.map((group) => (
             <div key={group.title}>
-              <h4 className="text-white font-bold text-xs mb-3 tracking-wide text-gold">
+              <h4 className="text-gold font-bold text-[11px] mb-3 tracking-wider uppercase">
                 {group.title}
               </h4>
-              <ul className="space-y-2 text-xs text-white/60">
+              <ul className="space-y-2 text-xs text-white/55">
                 {group.links.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -180,57 +158,47 @@ export default function Footer() {
 
         </div>
 
-        {/* Legal Compliance Bar */}
-        <div className="py-3 border-t border-white/5 flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 text-[11px] text-white/50">
-          <span className="text-gold font-semibold">Yasal Bilgilendirme:</span>
-          <button
-            onClick={() => setActiveLegal("kvkk")}
-            className="hover:text-gold transition-colors underline cursor-pointer"
-          >
-            KVKK Aydınlatma Metni
-          </button>
-          <button
-            onClick={() => setActiveLegal("gizlilik")}
-            className="hover:text-gold transition-colors underline cursor-pointer"
-          >
-            Gizlilik ve Çerez Politikası
-          </button>
-          <button
-            onClick={() => setActiveLegal("kullanim")}
-            className="hover:text-gold transition-colors underline cursor-pointer"
-          >
-            Kullanım Şartları & 5651 Yasal Uyarı
-          </button>
-          <button
-            onClick={() => setActiveLegal("kunye")}
-            className="hover:text-gold transition-colors underline cursor-pointer"
-          >
-            Resmi Künye
-          </button>
+        {/* Legal Compliance & Disclaimer Bar */}
+        <div className="py-3 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-5">
+            <button
+              onClick={() => setActiveLegal("kvkk")}
+              className="hover:text-gold transition-colors underline cursor-pointer"
+            >
+              KVKK
+            </button>
+            <button
+              onClick={() => setActiveLegal("gizlilik")}
+              className="hover:text-gold transition-colors underline cursor-pointer"
+            >
+              Gizlilik & Çerez
+            </button>
+            <button
+              onClick={() => setActiveLegal("kullanim")}
+              className="hover:text-gold transition-colors underline cursor-pointer"
+            >
+              Kullanım Şartları
+            </button>
+            <button
+              onClick={() => setActiveLegal("kunye")}
+              className="hover:text-gold transition-colors underline cursor-pointer"
+            >
+              Resmi Şirket Künyesi
+            </button>
+          </div>
+
+          <p className="text-[10px] text-white/40 text-center sm:text-right max-w-md">
+            {language === "tr"
+              ? "NOVA GLOBAL, personel temini yapmaz; hizmetler kendi bordrolu kadrosuyla götürü bedelli hizmet sözleşmesi kapsamında sunulur."
+              : "NOVA GLOBAL provides turnkey facility management under lump-sum service contracts with its own payroll staff."}
+          </p>
         </div>
 
-        {/* Official Statutory Disclaimer Bar */}
-        <div className="py-3.5 px-4 rounded-xl bg-white/[0.03] border border-gold/20 text-[11px] text-white/60 leading-relaxed my-3 text-center sm:text-left">
-          <p>
-            <strong className="text-gold font-semibold">Hukuki Bilgilendirme:</strong> NOVA GLOBAL, müşterilerine personel temini, işçi kiralama veya geçici işçi sağlama hizmeti sunmaz. Hizmetler; NOVA GLOBAL’in kendi iş organizasyonu, bordrolu çalışanları, saha sorumluları, gerekli ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. Her proje için hizmet kapsamı, çıktı ve kalite kriterleri, yönetim sorumlulukları, iş sağlığı ve güvenliği görevleri, raporlama düzeni ve ücretlendirme yöntemi yazılı olarak belirlenir. İlişkinin hukuki niteliği yalnızca sözleşme başlığına değil, fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Doğru sözleşme tasarımı ve tutarlı fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
-          </p>
+        {/* Copyright Bar */}
+        <div className="py-3.5 border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-1.5 text-[11px] text-white/35">
+          <p>{t.footer.copyright}</p>
+          <p className="text-[10px] text-white/25">{t.footer.tagline}</p>
         </div>
-
-        {/* Bottom Bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-white/40"
-        >
-          <p className="text-center sm:text-left">
-            {t.footer.copyright}
-          </p>
-          <p className="text-white/30 text-[10px]">
-            {t.footer.tagline}
-          </p>
-        </motion.div>
       </div>
 
       {/* Legal Modal Popup */}

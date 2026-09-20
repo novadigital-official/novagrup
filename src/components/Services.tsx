@@ -97,14 +97,9 @@ export default function Services() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
                     
-                    {/* Top Tag & Floating Icon */}
-                    <div className="absolute top-2 left-2 right-2 flex items-center justify-between">
-                      <span className="px-2 py-0.5 rounded-full bg-black/50 backdrop-blur-md text-white text-[9px] font-bold tracking-wider uppercase border border-white/15 shadow-sm">
-                        {dept.tag}
-                      </span>
-                      <div className="w-6 h-6 rounded-full bg-white/95 backdrop-blur-md text-brand-deeper flex items-center justify-center shadow-md">
-                        <Icon size={13} className="text-brand-base" />
-                      </div>
+                    {/* Top Floating Icon */}
+                    <div className="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-white/95 backdrop-blur-md text-brand-deeper flex items-center justify-center shadow-md">
+                      <Icon size={14} className="text-brand-base" />
                     </div>
                   </div>
 
@@ -126,7 +121,7 @@ export default function Services() {
                     href="#iletisim"
                     onClick={(e) => scrollToSection(e, "iletisim")}
                     aria-label={`${dept.title} - ${t.services.ctaCard}`}
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl font-bold text-xs tracking-wide transition-all duration-300 bg-surface-warm hover:bg-brand-base text-brand-deeper hover:text-white border border-black/5 hover:border-transparent cursor-pointer"
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-xl font-bold text-xs tracking-wide transition-all duration-300 bg-surface-warm hover:bg-brand-base text-brand-deeper hover:text-white border border-black/5 hover:border-transparent cursor-pointer"
                   >
                     <span>{t.services.ctaCard}</span>
                     <ArrowRight size={13} />

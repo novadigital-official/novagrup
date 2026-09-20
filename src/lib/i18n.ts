@@ -50,19 +50,19 @@ export const content = {
       stat4Sub: "Antalya genelinde operasyonel süreklilik",
     },
     services: {
-      badge: "Operasyon Alanlarımız",
-      titlePart1: "Tesisinizin İhtiyacına Göre ",
-      titlePart2: "Yapılandırılmış Hizmet Paketleri",
+      badge: "Hizmetlerimiz",
+      titlePart1: "Tesisiniz İçin ",
+      titlePart2: "Tanımlı Hizmet Çözümleri",
       subtitle:
-        "Her hizmet; tanımlı görev tanımı, performans kriterleri ve NOVA saha amirinin sorumluluğunda, götürü bedelli hizmet alım sözleşmesiyle yürütülür.",
-      ctaCard: "Detaylı Bilgi & Danışmanlık",
+        "NOVA saha amirleri yönetiminde, götürü bedelli anahtar teslim hizmet modelleri.",
+      ctaCard: "Teklif Alın",
       cardBadge: "Götürü Bedel",
       departments: [
         {
           tag: "Housekeeping",
-          title: "Kat Hizmetleri & Housekeeping Operasyonu",
+          title: "Kat Hizmetleri & Housekeeping",
           description:
-            "5 yıldızlı otel ve tatil köylerinde; kat temizliği, genel alan (meydan) hijyeni ve çamaşırhane süreçlerinin 5 yıldızlı otel operasyon standartlarında yürütülmesi.",
+            "5 yıldızlı otel standartlarında oda hijyeni, kat ve genel alan bakımı ile çamaşırhane yönetimi.",
           features: [
             "Oda ve Kat Hijyen Standartları",
             "Meydan & Genel Alan Hijyen Planı",
@@ -72,9 +72,9 @@ export const content = {
         },
         {
           tag: "F&B Servis",
-          title: "Restoran & Ziyafet Servis Operasyonu",
+          title: "Restoran & Ziyafet Servisi",
           description:
-            "A la carte restoranlar, açık büfe salonları, banket ve kongre ziyafetlerinde standartlara uygun servis akışının sağlanması.",
+            "A la carte restoranlar, açık büfe, banket ve gala etkinliklerinde servis akış yönetimi.",
           features: [
             "Masa Düzeni & Kuver Açım Yönetimi",
             "Banket, Kokteyl & Gala Desteği",
@@ -84,9 +84,9 @@ export const content = {
         },
         {
           tag: "Mutfak Hijyeni",
-          title: "Bulaşıkhane & Mutfak Sanitasyon Operasyonu",
+          title: "Mutfak Hijyeni & Steward",
           description:
-            "Endüstriyel mutfaklarda bulaşık yıkama, kazan temizliği, zemin ve ekipman sanitasyonunun HACCP kurallarına uygun yürütülmesi.",
+            "HACCP kurallarına uygun endüstriyel mutfak sanitasyonu, bulaşıkhane ve atık yönetimi.",
           features: [
             "Steward Operasyonu & Kimyasal Takibi",
             "Gece Derin Temizlik & Dezenfeksiyon",
@@ -96,9 +96,9 @@ export const content = {
         },
         {
           tag: "Sahne & Gösteri",
-          title: "Animasyon & Sahne Gösterileri Koordinasyonu",
+          title: "Animasyon & Sahne Şovları",
           description:
-            "Tesis misafirlerine yönelik gündüz spor-aktivite programları, çocuk kulübü işletimi ve akşam profesyonel sahne şovlarının organizasyonu.",
+            "Gündüz spor aktiviteleri, çocuk kulübü ve akşam profesyonel sahne gösterileri organizasyonu.",
           features: [
             "Sezonluk Eğlence Konsepti Planlama",
             "Dans, Akrobasi & Tematik Akşam Şovları",
@@ -108,9 +108,9 @@ export const content = {
         },
         {
           tag: "İnşaat & Bakım",
-          title: "İnşaat, Tadilat & Tesis Bakım Hizmetleri",
+          title: "Tesis Bakım, Tadilat & Onarım",
           description:
-            "Sezon öncesi oda ve ortak alan yenilemeleri, boya-alçı uygulamaları, ince işçilik ve açılış öncesi derin temizlik taahhüdü.",
+            "Sezon öncesi oda yenilemeleri, boya-alçı uygulamaları ve teslim öncesi detaylı temizlik.",
           features: [
             "Oda Yenileme, Alçıpan & Boya İşleri",
             "İnşaat / Tadilat Sonrası Teslim Temizliği",
@@ -120,9 +120,9 @@ export const content = {
         },
         {
           tag: "Depo & Lojistik",
-          title: "Depo, Paketleme & Sevkiyat Operasyonları",
+          title: "Depo, Paketleme & Sevkiyat",
           description:
-            "Lojistik merkezleri, antrepolar ve e-ticaret depolarında; ürün kabul, tasnif, paketleme, etiketleme ve sevkiyata hazırlık süreçlerinin üstlenilmesi.",
+            "Ürün kabul, tasnif, barkodlama, paketleme ve sevkiyata hazırlık süreçlerinin yönetimi.",
           features: [
             "Paletleme, Streçleme & Koli Hazırlığı",
             "Barkodlama, Etiketleme & Sipariş Eşleme",
@@ -132,9 +132,9 @@ export const content = {
         },
         {
           tag: "Kongre & Fuar",
-          title: "Kongre, Fuar & Etkinlik Saha Operasyonları",
+          title: "Kongre, Fuar & Etkinlik",
           description:
-            "ANFAŞ ve kongre otellerinde düzenlenen zirve, fuar, sempozyum ve kurumsal etkinliklerde saha lojistiği ve salon koordinasyonunun yürütülmesi.",
+            "Kongre otelleri ve fuarlarda salon koordinasyonu, karşılama, akreditasyon ve saha lojistiği.",
           features: [
             "Stand Alanı Yönlendirme & Karşılama",
             "Kayıt Masası, Akreditasyon & Yaka Kartı",
@@ -144,9 +144,9 @@ export const content = {
         },
         {
           tag: "B2B Satış",
-          title: "B2B Satış Geliştirme & İletişim Operasyonu",
+          title: "B2B Satış Geliştirme",
           description:
-            "Kurumsal işletmeler için hedef pazar araştırması, ön teyitli ticari görüşme organizasyonu ve B2B müşteri iletişim süreçlerinin yürütülmesi.",
+            "Kurumsal işletmeler için hedef pazar araştırması ve ön teyitli ticari randevu organizasyonu.",
           features: [
             "Hedef Sektör & Karar Verici Haritalama",
             "KVKK Uyumlu Ticari İletişim & Filtreleme",
@@ -156,9 +156,9 @@ export const content = {
         },
         {
           tag: "Teşvik & Hibe",
-          title: "Devlet Destekleri & Teşvik Danışmanlığı",
+          title: "Devlet Destekleri & Teşvik",
           description:
-            "İşletmenizin yararlanabileceği SGK prim teşvikleri, KOSGEB hibe programları ve Ticaret Bakanlığı desteklerinin tespiti ve başvuru takibi.",
+            "SGK prim teşvikleri, KOSGEB ve Ticaret Bakanlığı hibe başvuru ve takip süreçleri.",
           features: [
             "SGK İstihdam Teşvikleri Analizi & Takibi",
             "KOSGEB Hibe & Kredi Başvuru Yönetimi",
@@ -367,19 +367,19 @@ export const content = {
       stat4Sub: "Operational continuity across Antalya",
     },
     services: {
-      badge: "Operational Sectors",
-      titlePart1: "Customized Service Packages ",
-      titlePart2: "Tailored to Your Facility",
+      badge: "Services",
+      titlePart1: "Defined Service Solutions ",
+      titlePart2: "For Your Facility",
       subtitle:
-        "Every service is executed under defined SLAs, strict performance benchmarks, and dedicated NOVA supervisors with transparent lump-sum contracts.",
-      ctaCard: "Detailed Info & Inquiry",
+        "Turnkey lump-sum operational solutions managed directly by NOVA field supervisors.",
+      ctaCard: "Request Quote",
       cardBadge: "Lump-Sum",
       departments: [
         {
           tag: "Housekeeping",
-          title: "Housekeeping & Public Areas Operations",
+          title: "Housekeeping & Public Areas",
           description:
-            "5-star hotel standard room cleaning, public area care, and laundry flow management.",
+            "5-star hotel standard room hygiene, public area sanitation, and laundry flow management.",
           features: [
             "Defined Room Hygiene Standards",
             "Public Area Periodic Sanitation",
@@ -389,9 +389,9 @@ export const content = {
         },
         {
           tag: "F&B Service",
-          title: "Restaurant & Banquet Service Operations",
+          title: "Restaurant & Banquet Service",
           description:
-            "Standard-compliant food & beverage service operations for resorts, main buffets, and private events.",
+            "Standard-compliant service flow for a la carte dining, open buffets, and private events.",
           features: [
             "Table Layout & Cover Flow",
             "Banquet, Cocktail & Gala Operations",
@@ -401,9 +401,9 @@ export const content = {
         },
         {
           tag: "Kitchen Hygiene",
-          title: "Stewarding & Kitchen Sanitation Operations",
+          title: "Stewarding & Kitchen Sanitation",
           description:
-            "Turnkey dishwashing, kitchen prep sanitation, and nightly deep-cleaning operations complying with HACCP.",
+            "Turnkey dishwashing, kitchen prep sanitation, and HACCP-compliant nightly deep cleaning.",
           features: [
             "Steward Operations & Chemical Controls",
             "Nightly Deep Clean & Sanitation",
@@ -413,9 +413,9 @@ export const content = {
         },
         {
           tag: "Entertainment",
-          title: "Animation & Stage Shows Operations",
+          title: "Animation & Stage Shows",
           description:
-            "Daytime sports and activities, kids club management, and high-energy evening stage performances.",
+            "Daytime sports, kids club programs, and high-energy evening stage performances.",
           features: [
             "Seasonal Entertainment Concept",
             "Dance, Acrobatics & Thematic Shows",
@@ -425,9 +425,9 @@ export const content = {
         },
         {
           tag: "Renovation & Care",
-          title: "Construction, Renovation & Maintenance",
+          title: "Facility Care & Renovation",
           description:
-            "Pre-season hotel room overhaul, painting, post-construction deep cleaning and periodic maintenance.",
+            "Pre-season room overhauls, painting, repairs, and post-renovation deep cleaning.",
           features: [
             "Room Renovation, Drywall & Paint",
             "Post-Construction Turnkey Cleaning",
@@ -437,9 +437,9 @@ export const content = {
         },
         {
           tag: "Warehouse & Logistics",
-          title: "Warehouse Packaging & Dispatch Operations",
+          title: "Warehouse & Packaging Logistics",
           description:
-            "Project-based operational support for warehouse sorting, palletizing, packaging, and logistics dispatch.",
+            "Product receiving, sorting, barcoding, palletizing, and shipping logistics management.",
           features: [
             "Palletizing, Wrapping & Packing",
             "Barcoding, Labeling & Order Matching",
@@ -449,9 +449,9 @@ export const content = {
         },
         {
           tag: "Congress & Events",
-          title: "Congress, Expo & Event Field Operations",
+          title: "Congress & Event Operations",
           description:
-            "Turnkey field coordination for stand management, registration desks, hall logistics, and VIP arrivals.",
+            "Turnkey field coordination for registration desks, hall logistics, and event flow.",
           features: [
             "Stand Guidance & Guest Welcoming",
             "Registration & Accreditation Desks",
@@ -461,9 +461,9 @@ export const content = {
         },
         {
           tag: "B2B Sales",
-          title: "B2B Sales Development & Direct Outreach",
+          title: "B2B Sales Development",
           description:
-            "Target market research, pre-qualified B2B sales meetings, and commercial outreach management.",
+            "Target market research and pre-qualified commercial meeting scheduling.",
           features: [
             "Target Market & Decision-Maker Mapping",
             "KVKK-Compliant Outreach & Qualification",
@@ -473,9 +473,9 @@ export const content = {
         },
         {
           tag: "Grants & Subsidies",
-          title: "Government Incentives & Subsidies Advisory",
+          title: "Government Incentives Advisory",
           description:
-            "Corporate advisory for social security employment subsidies, KOSGEB grants, and export trade programs.",
+            "Expert tracking for social security employment subsidies and ministerial grant programs.",
           features: [
             "Labor Subsidy Analysis & Tracking",
             "KOSGEB Grant Application Management",
