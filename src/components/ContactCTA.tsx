@@ -102,7 +102,7 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="iletisim" className="scroll-mt-20 relative py-14 sm:py-16 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
+    <section id="iletisim" className="scroll-mt-20 relative py-8 sm:py-10 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
       {/* Subtle background grid & glowing accents */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -117,23 +117,23 @@ export default function ContactCTA() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
           
           {/* LEFT COLUMN: Fast Info & Direct Contact Channels (5 Cols) */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-5 flex flex-col justify-between space-y-6"
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.4 }}
+            className="lg:col-span-5 flex flex-col justify-between space-y-4"
           >
             <div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-gold/10 text-gold border border-gold/30 mb-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-gold/10 text-gold border border-gold/30 mb-2">
                 <Clock size={12} className="text-gold" />
                 {language === "tr" ? "Hızlı İletişim & Teklif" : "Direct Advisory & Proposal"}
               </span>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-snug">
                 {language === "tr" ? (
                   <>
                     Tesisiniz İçin <span className="text-gradient-gold">Hemen Teklif Alın</span>
@@ -145,7 +145,7 @@ export default function ContactCTA() {
                 )}
               </h2>
 
-              <p className="mt-3 text-white/70 text-xs sm:text-sm font-light leading-relaxed">
+              <p className="mt-2 text-white/70 text-xs sm:text-sm font-light leading-relaxed">
                 {language === "tr"
                   ? "Antalya ve çevre bölgelerdeki 5 yıldızlı oteller, ticari tesisler ve kongre merkezleri için anahtar teslim departman işletimi ve operasyonel danışmanlık hizmeti sunuyoruz. Detayları iletin, aynı gün içinde yerinde analiz yaparak hizmet teklifimizi hazırlayalım."
                   : "We deliver turnkey facility department management and operations advisory for 5-star resorts, commercial facilities, and congress venues across Antalya. Submit your scope to receive a tailored service proposal within 24 hours."}

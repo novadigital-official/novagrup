@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Zap, Users2, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
+import { scrollToSection } from "@/lib/scroll";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center hero-mesh pt-28 pb-16 sm:pb-20 overflow-hidden"
+      className="relative flex items-center justify-center hero-mesh pt-20 pb-8 sm:pt-24 sm:pb-10 overflow-hidden"
     >
       {/* Background patterns */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -46,16 +46,16 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           
           {/* Left Column: Headline & Value Proposition */}
           <div className="lg:col-span-7 text-center lg:text-left">
             {/* Main Headline */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.15] mb-4 tracking-tight break-words"
+              transition={{ duration: 0.4, delay: 0.15 }}
+              className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-[1.18] mb-3 tracking-tight break-words"
             >
               {t.hero.headlinePart1}
               <span className="text-gradient-gold">{t.hero.headlineGold}</span>
@@ -65,72 +65,74 @@ export default function Hero() {
 
             {/* Sub-headline */}
             <motion.p
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-xs sm:text-base text-white/70 leading-relaxed mb-6 max-w-xl mx-auto lg:mx-0 font-light break-words"
+              transition={{ duration: 0.4, delay: 0.25 }}
+              className="text-xs sm:text-sm text-white/70 leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 font-light break-words"
             >
               {t.hero.subheadline}
             </motion.p>
 
             {/* Key Value Badges */}
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-lg mx-auto lg:mx-0"
+              transition={{ duration: 0.4, delay: 0.35 }}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2 max-w-lg mx-auto lg:mx-0"
             >
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
-                <Users2 size={16} className="text-gold flex-shrink-0" />
-                <span className="text-xs text-white/90 font-medium break-words">{t.hero.badge1}</span>
+              <div className="flex items-center gap-2 p-2 rounded-xl bg-white/5 border border-white/10 text-left">
+                <Users2 size={15} className="text-gold flex-shrink-0" />
+                <span className="text-[11px] text-white/90 font-medium break-words">{t.hero.badge1}</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
-                <Zap size={16} className="text-gold flex-shrink-0" />
-                <span className="text-xs text-white/90 font-medium break-words">{t.hero.badge2}</span>
+              <div className="flex items-center gap-2 p-2 rounded-xl bg-white/5 border border-white/10 text-left">
+                <Zap size={15} className="text-gold flex-shrink-0" />
+                <span className="text-[11px] text-white/90 font-medium break-words">{t.hero.badge2}</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
-                <ShieldCheck size={16} className="text-gold flex-shrink-0" />
-                <span className="text-xs text-white/90 font-medium break-words">{t.hero.badge3}</span>
+              <div className="flex items-center gap-2 p-2 rounded-xl bg-white/5 border border-white/10 text-left">
+                <ShieldCheck size={15} className="text-gold flex-shrink-0" />
+                <span className="text-[11px] text-white/90 font-medium break-words">{t.hero.badge3}</span>
               </div>
             </motion.div>
 
             {/* Action Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 max-w-lg mx-auto lg:mx-0"
+              transition={{ duration: 0.4, delay: 0.45 }}
+              className="mt-5 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 max-w-lg mx-auto lg:mx-0"
             >
-              <Link
+              <a
                 href="#iletisim"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-gold via-gold-bright to-gold text-brand-deeper font-black text-xs sm:text-sm hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5 transition-all duration-300"
+                onClick={(e) => scrollToSection(e, "iletisim")}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold via-gold-bright to-gold text-brand-deeper font-black text-xs sm:text-sm hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
               >
                 <span>{t.hero.primaryCta}</span>
-                <ArrowRight size={15} />
-              </Link>
-              <Link
+                <ArrowRight size={14} />
+              </a>
+              <a
                 href="#hizmetler"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs sm:text-sm border border-white/15 hover:border-gold/40 transition-all duration-300"
+                onClick={(e) => scrollToSection(e, "hizmetler")}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs sm:text-sm border border-white/15 hover:border-gold/40 transition-all duration-300 cursor-pointer"
               >
                 <span>{t.hero.secondaryCta}</span>
-              </Link>
+              </a>
             </motion.div>
           </div>
 
           {/* Right Column: Visual Operational Showcase */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.95, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
             className="lg:col-span-5 relative"
           >
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Photo Showcase Grid */}
-              <div className="grid grid-cols-2 gap-2.5 p-2 rounded-2xl bg-gradient-to-br from-white/10 via-white/5 to-white/0 backdrop-blur-xl border border-white/15 shadow-xl shadow-black/40">
+              <div className="grid grid-cols-2 gap-2 p-2 rounded-2xl bg-gradient-to-br from-white/10 via-white/5 to-white/0 backdrop-blur-xl border border-white/15 shadow-xl shadow-black/40">
                 
                 {/* Photo 1: Housekeeping Maid */}
-                <div className="relative h-36 sm:h-40 rounded-xl overflow-hidden group">
+                <div className="relative h-28 sm:h-32 rounded-xl overflow-hidden group">
                   <Image
                     src="/images/hotel-housekeeping.png"
                     alt="NOVA Housekeeping"
@@ -149,7 +151,7 @@ export default function Hero() {
                 </div>
 
                 {/* Photo 2: F&B Waiter */}
-                <div className="relative h-36 sm:h-40 rounded-xl overflow-hidden group">
+                <div className="relative h-28 sm:h-32 rounded-xl overflow-hidden group">
                   <Image
                     src="/images/hotel-waiter.png"
                     alt="NOVA F&B Service"
@@ -167,11 +169,11 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* Photo 3: Factory & Industrial Production */}
-                <div className="relative h-36 sm:h-40 rounded-xl overflow-hidden group">
+                {/* Photo 3: Warehouse & Logistics */}
+                <div className="relative h-28 sm:h-32 rounded-xl overflow-hidden group">
                   <Image
                     src="/images/factory-operations.jpg"
-                    alt="NOVA Factory Operations"
+                    alt="NOVA Warehouse Operations"
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -185,11 +187,11 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* Photo 4: Construction & Renovation */}
-                <div className="relative h-36 sm:h-40 rounded-xl overflow-hidden group">
+                {/* Photo 4: Facility Renovation */}
+                <div className="relative h-28 sm:h-32 rounded-xl overflow-hidden group">
                   <Image
                     src="/images/construction-renovation.jpg"
-                    alt="NOVA Construction & Renovation"
+                    alt="NOVA Facility Care"
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

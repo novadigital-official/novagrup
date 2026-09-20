@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ClipboardCheck, UserCheck2, Bus, ShieldCheck, ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
+import { scrollToSection } from "@/lib/scroll";
 
 const stepIcons = [ClipboardCheck, UserCheck2, Bus, ShieldCheck];
 
@@ -11,7 +11,7 @@ export default function Workflow() {
   const { t } = useLanguage();
 
   return (
-    <section id="is-akisi" className="py-16 sm:py-20 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-deeper border-y border-gold/15 text-white relative overflow-hidden">
+    <section id="is-akisi" className="py-8 sm:py-10 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-deeper border-y border-gold/15 text-white relative overflow-hidden">
       {/* Subtle background ambient lights */}
       <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-brand-light/15 blur-3xl pointer-events-none" />
@@ -20,51 +20,51 @@ export default function Workflow() {
         
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-12"
+          viewport={{ once: true, margin: "-30px" }}
+          transition={{ duration: 0.4 }}
+          className="text-center max-w-3xl mx-auto mb-6 sm:mb-8"
         >
-          <span className="inline-block px-3.5 py-1 rounded-full border border-gold/30 bg-gold/10 text-gold text-xs font-bold tracking-[0.16em] uppercase mb-3">
+          <span className="inline-block px-3 py-0.5 rounded-full border border-gold/30 bg-gold/10 text-gold text-[11px] font-bold tracking-[0.16em] uppercase mb-2">
             {t.workflow.badge}
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-snug">
             {t.workflow.titlePart1}
             <span className="text-gradient-gold">{t.workflow.titleGold}</span>
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-white/70 font-light leading-relaxed">
+          <p className="mt-1.5 text-xs sm:text-sm text-white/70 font-light leading-relaxed">
             {t.workflow.subtitle}
           </p>
         </motion.div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 relative">
           {t.workflow.steps.map((step, index) => {
             const Icon = stepIcons[index] || ClipboardCheck;
 
             return (
               <motion.div
                 key={step.title}
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="relative bg-white/[0.04] backdrop-blur-xl rounded-2xl p-5 sm:p-6 border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] hover:shadow-xl hover:shadow-black/30 transition-all duration-300 flex flex-col justify-between group"
+                transition={{ duration: 0.35, delay: index * 0.06 }}
+                className="relative bg-white/[0.04] backdrop-blur-xl rounded-2xl p-4 border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] hover:shadow-lg hover:shadow-black/30 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Step Number & Icon Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl font-black text-gold/30 group-hover:text-gold/70 transition-colors">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-2xl font-black text-gold/30 group-hover:text-gold/70 transition-colors">
                       {step.number}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 text-gold flex items-center justify-center shadow-md group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300">
-                      <Icon size={18} />
+                    <div className="w-8 h-8 rounded-lg bg-gold/15 border border-gold/30 text-gold flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300">
+                      <Icon size={16} />
                     </div>
                   </div>
 
                   {/* Step Title & Desc */}
-                  <h3 className="text-base font-bold text-white mb-2 leading-snug group-hover:text-gold transition-colors">
+                  <h3 className="text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-gold transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-white/65 text-xs leading-relaxed font-light">
@@ -73,9 +73,9 @@ export default function Workflow() {
                 </div>
 
                 {/* Progress Indicator */}
-                <div className="mt-5 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-semibold text-gold/80">
+                <div className="mt-4 pt-2.5 border-t border-white/10 flex items-center justify-between text-[10px] font-semibold text-gold/80">
                   <span>{t.workflow.stage} {index + 1}</span>
-                  <div className="w-2 h-2 rounded-full bg-gold shadow-sm shadow-gold/50" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold shadow-sm shadow-gold/50" />
                 </div>
               </motion.div>
             );
@@ -84,27 +84,28 @@ export default function Workflow() {
 
         {/* Bottom Callout banner */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10 p-5 sm:p-6 rounded-2xl bg-white/[0.05] backdrop-blur-xl border border-gold/30 text-white flex flex-col sm:flex-row items-center justify-between gap-5 shadow-xl"
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="mt-6 p-4 rounded-2xl bg-white/[0.05] backdrop-blur-xl border border-gold/30 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg"
         >
           <div>
-            <h4 className="text-base font-bold text-white mb-1">
+            <h4 className="text-sm sm:text-base font-bold text-white mb-0.5">
               {t.workflow.bannerTitle}
             </h4>
-            <p className="text-white/65 text-xs sm:text-sm font-light">
+            <p className="text-white/65 text-xs font-light">
               {t.workflow.bannerDesc}
             </p>
           </div>
-          <Link
+          <a
             href="#iletisim"
-            className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-gold to-gold-light text-brand-deeper font-bold text-xs sm:text-sm hover:shadow-lg hover:shadow-gold/20 transition-all hover:-translate-y-0.5"
+            onClick={(e) => scrollToSection(e, "iletisim")}
+            className="flex-shrink-0 inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light text-brand-deeper font-black text-xs hover:shadow-lg hover:shadow-gold/20 transition-all hover:-translate-y-0.5 cursor-pointer"
           >
-            {t.workflow.bannerBtn}
-            <ArrowRight size={15} />
-          </Link>
+            <span>{t.workflow.bannerBtn}</span>
+            <ArrowRight size={14} />
+          </a>
         </motion.div>
 
       </div>

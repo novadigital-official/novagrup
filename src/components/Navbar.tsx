@@ -6,6 +6,7 @@ import { Menu, X, ChevronRight, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
+import { scrollToSection } from "@/lib/scroll";
 
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
@@ -21,44 +22,16 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: t.nav.departments, href: "/#hizmetler" },
-    { label: t.nav.workflow, href: "/#is-akisi" },
-    { label: t.nav.whyUs, href: "/#neden-nova" },
-    { label: t.nav.advisory, href: "/#iletisim" },
-    { label: t.nav.contact, href: "/#iletisim" },
+    { label: t.nav.departments, href: "#hizmetler" },
+    { label: t.nav.workflow, href: "#is-akisi" },
+    { label: t.nav.whyUs, href: "#neden-nova" },
+    { label: t.nav.advisory, href: "#iletisim" },
+    { label: t.nav.contact, href: "#iletisim" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setIsMobileMenuOpen(false);
-    if (href.startsWith("/#") && typeof window !== "undefined" && window.location.pathname === "/") {
-      const targetId = href.replace("/#", "");
-      const targetEl = document.getElementById(targetId);
-      if (targetEl) {
-        e.preventDefault();
-        const navHeight = 70;
-        const rect = targetEl.getBoundingClientRect();
-        const scrollTarget = window.pageYOffset + rect.top - navHeight;
-        window.scrollTo({
-          top: scrollTarget,
-          behavior: "smooth",
-        });
-        window.history.pushState(null, "", href.replace("/", ""));
-      }
-    } else if (href.startsWith("#")) {
-      const targetId = href.replace("#", "");
-      const targetEl = document.getElementById(targetId);
-      if (targetEl) {
-        e.preventDefault();
-        const navHeight = 70;
-        const rect = targetEl.getBoundingClientRect();
-        const scrollTarget = window.pageYOffset + rect.top - navHeight;
-        window.scrollTo({
-          top: scrollTarget,
-          behavior: "smooth",
-        });
-        window.history.pushState(null, "", href);
-      }
-    }
+    scrollToSection(e, href);
   };
 
   return (

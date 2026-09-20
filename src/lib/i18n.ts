@@ -209,40 +209,40 @@ export const content = {
     whyUs: {
       badge: "Neden NOVA GLOBAL?",
       titlePart1: "Tesisiniz İçin Güvenli, Şeffaf ve ",
-      titlePart2: "Götürü Bedelli Hizmet Ortaklığı.",
+      titlePart2: "Götürü Bedelli Hizmet Ortaklığı",
       subtitle:
-        "İş gücü belirsizliğini, operasyonel aksamaları ve mevzuat risklerini geride bırakın. Tüm süreçler sözleşmeli ve denetimli ilerlesin.",
+        "İş gücü belirsizliği ve mevzuat riskini geride bırakın; sözleşmeli, amir denetimli ve garantili ilerleyin.",
       visualTag: "Kurumsal Güvence",
-      visualHeading: "Uluslararası Hizmet Seviyesi (SLA)",
+      visualHeading: "SLA Standartlarında Çıktı",
       visualSub:
-        "Housekeeping, servis, stewarding, tesis bakımı ve lojistikte NOVA saha amirleri gözetiminde kesintisiz operasyon.",
+        "Tüm departmanlarda NOVA saha amirleri gözetiminde kesintisiz operasyon.",
       visualBadge1Title: "Kendi SGK'lı Kadromuz",
       visualBadge1Sub: "Tam Yasal Sorumluluk",
       advantages: [
         {
           title: "Kendi SGK'lı Kadromuzla Çalışırız",
           description:
-            "Sahanızda görev alan herkes NOVA GLOBAL bordrosundadır. SGK primleri, maaş ödemeleri, kıdem-ihbar ve tüm işçilik hakları şirketimiz sorumluluğundadır.",
+            "Sahanızdaki tüm ekipler NOVA GLOBAL bordroludur. SGK primleri, maaş ve işçilik hakları tamamen şirketimiz sorumluluğundadır.",
         },
         {
           title: "Saha Amirlerimizle Birebir Takip",
           description:
-            "Ekiplerimiz başıboş çalışmaz; her operasyonun başında NOVA'nın kadrolu saha amiri bulunur. Tesis yönetiminiz tek bir muhatapla iletişim kurar.",
+            "Her operasyonun başında kadrolu saha amirimiz bulunur. Tesis yönetiminiz sahada tek bir profesyonel muhatapla çalışır.",
         },
         {
           title: "Götürü Bedel, Sürprizsiz Fiyatlama",
           description:
-            "Kişi/gün değil; oda, kuver, alan veya proje bazlı sabit hizmet bedeliyle faturalama yapılır. Bütçenizi dönemin başında net olarak bilirsiniz.",
+            "Kişi/gün değil; oda, kuver, alan veya proje bazlı sabit hizmet bedeliyle faturalandırma yapılır. Bütçeniz baştan nettir.",
         },
         {
           title: "Mevzuata Uyumlu Süreç Yönetimi",
           description:
-            "4857 sayılı İş Kanunu ve 6331 sayılı İSG Kanunu gerekleri eksiksiz yerine getirilir. Alt işverenlik ve hizmet alımı süreçleri tam hukuki koruma altındadır.",
+            "4857 sayılı İş Kanunu ve İSG şartları eksiksiz karşılanır. Tesisiniz alt işverenlik ve muvazaa risklerinden tam korunur.",
         },
         {
           title: "Esnek Kapsam Düzenlemesi",
           description:
-            "Sezonluk doluluk dalgalanmalarına veya operasyonel ihtiyaç değişimlerine göre sözleşme kapsamı karşılıklı mutabakatla revize edilebilir.",
+            "Sezonluk doluluk dalgalanmalarına ve operasyon ihtiyaçlarına göre sözleşme kapsamı karşılıklı mutabakatla hızla revize edilir.",
         },
       ],
     },
@@ -525,40 +525,40 @@ export const content = {
     whyUs: {
       badge: "Why NOVA GLOBAL?",
       titlePart1: "Reliable, Transparent & ",
-      titlePart2: "Lump-Sum Service Partnership.",
+      titlePart2: "Lump-Sum Service Partnership",
       subtitle:
-        "Leave labor unpredictability, operational friction, and compliance headaches behind. Everything runs under written contracts and active supervision.",
-      visualTag: "Corporate Assurance",
-      visualHeading: "International SLA Benchmark",
+        "Eliminate labor friction and legal liabilities. Everything runs under written contracts and active supervision.",
+      visualTag: "Corporate SLA",
+      visualHeading: "Guaranteed Deliverables",
       visualSub:
-        "Flawless operational execution across all departments managed directly by NOVA supervisors.",
-      visualBadge1Title: "Directly Employed Payroll",
-      visualBadge1Sub: "Full Legal & Financial Accountability",
+        "Flawless operations overseen directly by on-site NOVA field supervisors.",
+      visualBadge1Title: "Own Payroll Staff",
+      visualBadge1Sub: "Full Legal Responsibility",
       advantages: [
         {
           title: "Directly Employed Payroll Staff",
           description:
-            "Everyone deployed at your facility is on NOVA GLOBAL's payroll. Social security, wages, and statutory severance rights are fully our responsibility.",
+            "All personnel are on NOVA GLOBAL payroll. Social security, wages, and severance rights are fully our liability.",
         },
         {
           title: "Dedicated On-Site Field Supervisors",
           description:
-            "Crews never work unsupervised; each operation is spearheaded by an on-site NOVA supervisor. Your leadership communicates with a single accountable partner.",
+            "Operations are led on-site by our supervisor. Your management liaises with a single accountable partner.",
         },
         {
           title: "Fixed Lump-Sum, Predictable Pricing",
           description:
-            "Billing is based on rooms, covers, square meters, or projects—never daily man-rates. Your budget remains predictable from day one.",
+            "Invoicing by room, cover, or project—never daily man-rates. Your budget is predictable from day one.",
         },
         {
           title: "Strict Legal & Labor Compliance",
           description:
-            "All statutory requirements of Turkish Labor Law No. 4857 and OHS Law No. 6331 are strictly fulfilled, providing total legal safety.",
+            "Full compliance with Turkish Labor Law No. 4857 and OHS regulations, shielding your enterprise completely.",
         },
         {
           title: "Flexible Scope & Peak Scalability",
           description:
-            "Service scope and capacity can be adjusted smoothly based on seasonal occupancy fluctuations through mutual agreement.",
+            "Contract scope adapts smoothly to seasonal occupancy fluctuations through rapid mutual agreement.",
         },
       ],
     },
