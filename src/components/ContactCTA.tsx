@@ -276,42 +276,37 @@ export default function ContactCTA() {
               <p className="mt-2 text-white/70 text-xs sm:text-sm font-light leading-relaxed">
                 {activeTab === "corporate" ? (
                   language === "tr"
-                    ? "Antalya ve çevre bölgelerdeki 5 yıldızlı oteller, ticari tesisler ve kongre merkezleri için anahtar teslim departman işletimi ve kurumsal hizmet çözümleri sunuyoruz. Detayları iletin, en geç 24 saat içinde yerinde keşif ve yazılı hizmet teklifimizi sunalım."
-                    : "We deliver turnkey facility department management and operations solutions for 5-star resorts, commercial facilities, and congress venues across Antalya. Submit your scope to receive a tailored written service proposal within 24 hours."
+                    ? "Antalya genelindeki otel ve kurumsal tesisler için anahtar teslim departman işletimi sunuyoruz. Detayları iletin, en geç 24 saat içinde teklifimizi hazırlayalım."
+                    : "Turnkey department management and facility operations across Antalya. Submit your scope to receive a tailored proposal within 24 hours."
                 ) : (
                   language === "tr"
-                    ? "Antalya genelindeki otel ve tesis departman operasyonlarımızda, NOVA GLOBAL bünyesinde SGK'lı, düzenli maaş, servis ve yemek olanaklarıyla görev alacak çalışma arkadaşları arıyoruz."
-                    : "Join our dedicated operational teams across Antalya's premium resorts and facilities, directly employed under NOVA GLOBAL payroll with statutory benefits."
+                    ? "Antalya genelindeki otel operasyonlarımızda, NOVA GLOBAL bordrosunda tam SGK, servis ve yemek olanaklarıyla görev alacak çalışma arkadaşları arıyoruz."
+                    : "Join our dedicated operational teams across Antalya, directly employed under NOVA GLOBAL payroll with full statutory benefits."
                 )}
               </p>
             </div>
 
             {/* Direct Contact Cards */}
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {/* WhatsApp Card */}
               <a
                 href={siteConfig.social.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Saha Koordinasyon WhatsApp"
-                className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
+                className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
               >
-                <div className="w-11 h-11 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
-                  <MessageCircle size={19} />
+                <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
+                  <MessageCircle size={18} />
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
                     {activeTab === "corporate"
-                      ? (language === "tr" ? "Saha Koordinasyon & Danışma WhatsApp" : "Field Coordination & Advisory")
-                      : (language === "tr" ? "İK & Başvuru Danışma Hattı" : "HR & Recruitment WhatsApp")}
+                      ? (language === "tr" ? "Saha Koordinasyon WhatsApp" : "Field Coordination WhatsApp")
+                      : (language === "tr" ? "İK & Başvuru Danışma" : "HR & Recruitment WhatsApp")}
                   </p>
-                  <p className="text-white font-black text-sm sm:text-base group-hover:text-gold transition-colors">
+                  <p className="text-white font-black text-sm group-hover:text-gold transition-colors">
                     0505 410 48 00
-                  </p>
-                  <p className="text-white/50 text-xs mt-0.5">
-                    {activeTab === "corporate"
-                      ? (language === "tr" ? "Hızlı Danışmanlık & Canlı Mesajlaşma" : "Instant Advisory & WhatsApp Chat")
-                      : (language === "tr" ? "Aday Danışma & Başvuru Bilgilendirme" : "Direct Job Application Inquiry")}
                   </p>
                 </div>
               </a>
@@ -320,24 +315,19 @@ export default function ContactCTA() {
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 aria-label="Email"
-                className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
+                className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
               >
-                <div className="w-11 h-11 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
-                  <Mail size={19} />
+                <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
+                  <Mail size={18} />
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
                     {activeTab === "corporate"
                       ? (language === "tr" ? "Kurumsal E-Posta" : "Corporate Email")
-                      : (language === "tr" ? "İnsan Kaynakları E-Posta" : "HR & Career Email")}
+                      : (language === "tr" ? "İnsan Kaynakları" : "HR Email")}
                   </p>
-                  <p className="text-white font-black text-sm sm:text-base group-hover:text-gold transition-colors">
+                  <p className="text-white font-black text-sm group-hover:text-gold transition-colors">
                     iknovaofis@gmail.com
-                  </p>
-                  <p className="text-white/50 text-xs mt-0.5">
-                    {activeTab === "corporate"
-                      ? (language === "tr" ? "Resmi Hizmet Teklifleri & Sözleşmeler" : "Official Service Proposals & Contracts")
-                      : (language === "tr" ? "Özgeçmiş & Kadro Başvuru Havuzu" : "CV & Recruitment Enquiries")}
                   </p>
                 </div>
               </a>
@@ -348,33 +338,20 @@ export default function ContactCTA() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
+                className="flex items-center gap-3.5 p-3 rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-gold/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-md"
               >
-                <div className="w-11 h-11 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
-                  <InstagramIcon size={19} />
+                <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:bg-gold group-hover:text-brand-deeper transition-all duration-300 text-gold">
+                  <InstagramIcon size={18} />
                 </div>
                 <div>
                   <p className="text-gold/80 text-[10px] font-bold uppercase tracking-wider">
                     {language === "tr" ? "Sosyal Medya" : "Social Media"}
                   </p>
-                  <p className="text-white font-black text-sm sm:text-base group-hover:text-gold transition-colors">
+                  <p className="text-white font-black text-sm group-hover:text-gold transition-colors">
                     @novaofisss
-                  </p>
-                  <p className="text-white/50 text-xs mt-0.5">
-                    {language === "tr" ? "Saha ve Operasyon Güncellemeleri" : "Field & Operations Updates"}
                   </p>
                 </div>
               </a>
-            </div>
-
-            {/* Micro Badge */}
-            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-white/50 flex items-center gap-2.5">
-              <ShieldCheck size={16} className="text-gold flex-shrink-0" />
-              <span>
-                {language === "tr"
-                  ? "Tüm operasyonlarımız NOVA saha amirleri gözetiminde, sözleşmeli ve tanımlı hizmet seviyesiyle sunulur."
-                  : "All operations are coordinated under dedicated NOVA supervisors under strict contractual service standards."}
-              </span>
             </div>
           </motion.div>
 
@@ -595,12 +572,12 @@ export default function ContactCTA() {
                     </button>
                   </form>
 
-                  {/* Corporate Legal Disclaimer */}
-                  <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-[10px] sm:text-[11px] text-white/60 leading-relaxed">
-                    <p>
-                      <strong className="text-gold font-semibold">Hukuki Bilgilendirme:</strong> NOVA GLOBAL, müşterilerine personel temini, işçi kiralama veya geçici işçi sağlama hizmeti sunmaz. Hizmetler; NOVA GLOBAL&apos;in kendi iş organizasyonu, bordrolu çalışanları, saha sorumluları, gerekli ekipmanları ve tanımlı hizmet çıktılarıyla yürütülen bağımsız hizmet alım sözleşmeleri kapsamında sunulur. Her proje için hizmet kapsamı, çıktı ve kalite kriterleri, yönetim sorumlulukları, iş sağlığı ve güvenliği görevleri, raporlama düzeni ve ücretlendirme yöntemi yazılı olarak belirlenir. İlişkinin hukuki niteliği yalnızca sözleşme başlığına değil, fiili çalışma düzenine ve saha uygulamasına göre değerlendirilir. Doğru sözleşme tasarımı ve tutarlı fiili uygulama ile personel temini, muvazaa ve geçici iş ilişkisi risklerinin azaltılması hedeflenir.
-                    </p>
-                  </div>
+                  {/* Corporate Legal Notice */}
+                  <p className="mt-2 text-center text-[10px] text-white/45 leading-relaxed">
+                    {language === "tr"
+                      ? "NOVA GLOBAL iş/personel temin bürosu değildir. Hizmetler, kendi bordrolu ekiplerimiz ve saha amirlerimizle götürü bedelli hizmet alım sözleşmesiyle yürütülür."
+                      : "NOVA GLOBAL is not a staffing agency. Services are delivered under lump-sum service contracts with our own payroll staff and field supervisors."}
+                  </p>
                 </div>
               )}
 

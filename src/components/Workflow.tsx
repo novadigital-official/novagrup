@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ClipboardCheck, UserCheck2, Bus, ShieldCheck, ArrowRight } from "lucide-react";
+import { ClipboardCheck, UserCheck2, Bus, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { scrollToSection } from "@/lib/scroll";
 
 const stepIcons = [ClipboardCheck, UserCheck2, Bus, ShieldCheck];
 
@@ -81,32 +80,6 @@ export default function Workflow() {
             );
           })}
         </div>
-
-        {/* Bottom Callout banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="mt-6 p-4 rounded-2xl bg-white/[0.05] backdrop-blur-xl border border-gold/30 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg"
-        >
-          <div>
-            <h4 className="text-sm sm:text-base font-bold text-white mb-0.5">
-              {t.workflow.bannerTitle}
-            </h4>
-            <p className="text-white/65 text-xs font-light">
-              {t.workflow.bannerDesc}
-            </p>
-          </div>
-          <a
-            href="#iletisim"
-            onClick={(e) => scrollToSection(e, "iletisim")}
-            className="flex-shrink-0 inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light text-brand-deeper font-black text-xs hover:shadow-lg hover:shadow-gold/20 transition-all hover:-translate-y-0.5 cursor-pointer"
-          >
-            <span>{t.workflow.bannerBtn}</span>
-            <ArrowRight size={14} />
-          </a>
-        </motion.div>
 
       </div>
     </section>

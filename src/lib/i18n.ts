@@ -19,12 +19,12 @@ export const content = {
       headlineGold: "Departman İşletim ve ",
       headlinePart2: "Hizmet Alım Çözümleri.",
       subheadline:
-        "Kat hizmetleri, servis, mutfak hijyeni, teknik bakım ve tesis destek operasyonlarında; tanımlı hizmet kapsamı, NOVA saha amirleri gözetimi ve götürü bedelli sözleşme modeliyle anahtar teslim hizmet sunuyoruz.",
+        "Antalya genelindeki otel ve kurumsal tesislerde; NOVA saha amirleri gözetiminde, tanımlı kapsam ve götürü bedelli anahtar teslim operasyonel çözümler.",
       badge1: "Kendi SGK'lı Kadromuz",
-      badge2: "Götürü Bedelli Hizmet Sözleşmesi",
-      badge3: "Tanımlı Kapsam, Ölçülebilir Çıktı",
+      badge2: "Götürü Bedelli Sözleşme",
+      badge3: "Saha Amiri Koordinasyonu",
       primaryCta: "Hizmet Teklifi İsteyin",
-      secondaryCta: "Hizmet Kapsamlarımızı İnceleyin",
+      secondaryCta: "Hizmetlerimizi İnceleyin",
       photo1Tag: "Housekeeping",
       photo1Title: "Kat Hizmetleri & Meydan",
       photo2Tag: "F&B Servis",
@@ -207,11 +207,11 @@ export const content = {
       bannerBtn: "Hizmet Teklifi İsteyin",
     },
     whyUs: {
-      badge: "Neden NOVA GLOBAL?",
+      badge: "Neden NOVA?",
       titlePart1: "Tesisiniz İçin Güvenli, Şeffaf ve ",
       titlePart2: "Götürü Bedelli Hizmet Ortaklığı",
       subtitle:
-        "İş gücü belirsizliği ve mevzuat riskini geride bırakın; yazılı sözleşmeli, amir denetimli ve tanımlı hizmet seviyesiyle ilerleyin.",
+        "İş gücü belirsizliği ve mevzuat riskini geride bırakın; sözleşmeli, amir denetimli kurumsal çözüm.",
       visualTag: "Kurumsal Güvence",
       visualHeading: "Sözleşmeye Bağlı Hizmet Seviyesi (SLA)",
       visualSub:
@@ -220,29 +220,29 @@ export const content = {
       visualBadge1Sub: "İşverenlik Sorumluluğu NOVA'da",
       advantages: [
         {
-          title: "Kendi SGK'lı Kadromuzla Çalışırız",
+          title: "Kendi SGK'lı Kadromuz",
           description:
-            "Sahanızdaki tüm ekipler NOVA GLOBAL bordroludur. SGK primleri, maaş ve işçilik hakları tamamen şirketimiz sorumluluğundadır.",
+            "Sahanızdaki tüm ekipler NOVA GLOBAL bordroludur. SGK primleri, maaş ve tüm işçilik hakları şirketimiz sorumluluğundadır.",
         },
         {
-          title: "Saha Amirlerimizle Birebir Takip",
+          title: "Saha Amirleriyle Birebir Takip",
           description:
-            "Her operasyonun başında kadrolu saha amirimiz bulunur. Tesis yönetiminiz sahada tek bir profesyonel muhatapla çalışır.",
+            "Her operasyonun başında kadrolu saha amirimiz yer alır. Tesis yönetiminiz sahada tek bir profesyonel muhatapla iletişim kurar.",
         },
         {
-          title: "Götürü Bedel, Sürprizsiz Fiyatlama",
+          title: "Götürü Bedel, Sürprizsiz Fiyat",
           description:
-            "Kişi/gün değil; housekeeping'de oda, genel alan ve çamaşırhane çıktıları; F&B'de kuver ve tanımlı servis paketi bazlı sabit götürü bedelle faturalama yapılır. Bütçeniz baştan nettir.",
+            "Kişi/gün değil; oda, kuver veya m² çıktısı bazlı sabit götürü bedelle faturalandırılır. Bütçeniz dönemin başında nettir.",
         },
         {
           title: "Mevzuata Uyumlu Süreç Yönetimi",
           description:
-            "4857 sayılı İş Kanunu ve 6331 sayılı İş Sağlığı ve Güvenliği Kanunu çerçevesinde süreçlerin mevzuata uygun yürütülmesi hedeflenir. Alt işverenlik ve hizmet alımı süreçleri yazılı sözleşmeyle yapılandırılır.",
+            "4857 sayılı İş Kanunu ve 6331 sayılı İSG mevzuatına uygun, yazılı sözleşmelerle yapılandırılmış bağımsız hizmet alım modeli.",
         },
         {
-          title: "Esnek Kapsam Düzenlemesi",
+          title: "Esnek Kapsam ve Sezonluk Ölçek",
           description:
-            "Sezonluk doluluk dalgalanmalarına ve operasyon ihtiyaçlarına göre sözleşme kapsamı karşılıklı mutabakatla hızla revize edilir.",
+            "Sezonluk doluluk değişimlerine ve operasyonel ihtiyaçlara göre sözleşme kapsamı karşılıklı mutabakatla hızla uyarlanabilir.",
         },
       ],
     },
@@ -524,11 +524,11 @@ export const content = {
       bannerBtn: "Request a Proposal",
     },
     whyUs: {
-      badge: "Why NOVA GLOBAL?",
+      badge: "Why NOVA?",
       titlePart1: "Reliable, Transparent & ",
       titlePart2: "Lump-Sum Service Partnership",
       subtitle:
-        "Eliminate labor friction and legal liabilities. Everything runs under written contracts and active supervision.",
+        "Eliminate labor friction and legal liabilities through contractual, supervisor-led outsourcing.",
       visualTag: "Corporate SLA",
       visualHeading: "Contractual Service Level (SLA)",
       visualSub:
@@ -544,17 +544,17 @@ export const content = {
         {
           title: "Dedicated On-Site Field Supervisors",
           description:
-            "Operations are led on-site by our supervisor. Your management liaises with a single accountable partner.",
+            "Operations are led on-site by our field supervisor. Your management coordinates with a single accountable partner.",
         },
         {
           title: "Fixed Lump-Sum, Predictable Pricing",
           description:
-            "Invoicing by defined deliverables (rooms/common areas in housekeeping, covers/service packages in F&B)—never daily man-rates. Your budget is predictable.",
+            "Invoicing by defined deliverables—such as rooms, covers, or square meters—never unpredictable daily man-rates.",
         },
         {
           title: "Strict Labor & OHS Compliance",
           description:
-            "Processes are structured to align with Labor Law No. 4857 and Occupational Health & Safety Law No. 6331. Service outsourcing agreements are governed under written contracts.",
+            "Processes are structured under written contracts complying with Turkish Labor Law No. 4857 and OHS regulations.",
         },
         {
           title: "Flexible Scope & Peak Scalability",
