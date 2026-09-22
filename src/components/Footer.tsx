@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Mail, MapPin, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
@@ -156,6 +156,41 @@ export default function Footer() {
             </div>
           ))}
 
+        </div>
+
+        {/* NOVA GRUP Çözüm Ekosistemi & İştirak Portalları Bar */}
+        <div className="py-3.5 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2 text-gold/90 font-semibold tracking-wider uppercase text-[11px]">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+            <span>{language === "tr" ? "NOVA GRUP Çözüm Ekosistemi:" : "NOVA GROUP Solution Ecosystem:"}</span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-white/70">
+            <a
+              href="https://antalyaepoksizemin.com.tr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-gold transition-colors group"
+            >
+              <span className="font-semibold text-white/90 group-hover:text-gold">Nova Zemin:</span>
+              <span className="text-white/60 group-hover:text-white/80">
+                {language === "tr" ? "Endüstriyel Epoksi & Silim" : "Industrial Epoxy & Grinding"}
+              </span>
+              <ExternalLink size={12} className="text-gold/70 group-hover:text-gold group-hover:translate-x-0.5 transition-all" />
+            </a>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <a
+              href="https://antalyadatadilat.com.tr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-gold transition-colors group"
+            >
+              <span className="font-semibold text-white/90 group-hover:text-gold">Nova Yapı:</span>
+              <span className="text-white/60 group-hover:text-white/80">
+                {language === "tr" ? "Tesis Renovasyon & Tadilat" : "Facility Renovation & Contracting"}
+              </span>
+              <ExternalLink size={12} className="text-gold/70 group-hover:text-gold group-hover:translate-x-0.5 transition-all" />
+            </a>
+          </div>
         </div>
 
         {/* Legal Compliance & Disclaimer Bar */}
