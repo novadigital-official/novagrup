@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -58,8 +58,8 @@ export default function Footer() {
       title: t.footer.col3Title,
       links: [
         { label: t.footer.col3Link1, href: "#iletisim" },
-        { label: t.footer.col3Link2, href: "https://wa.me/905054104800" },
-        { label: t.footer.col3Link3, href: "tel:05054104800" },
+        { label: t.footer.col3Link2, href: "https://wa.me/905070871789" },
+        { label: t.footer.col3Link3, href: "tel:05070871789" },
         { label: t.footer.col3Link4, href: `mailto:${siteConfig.contact.email}` },
         { label: t.footer.col3Link5, href: "https://instagram.com/novaofisss" },
       ],
@@ -111,7 +111,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-gold transition-colors font-medium text-white/80"
                 >
-                  0505 410 48 00
+                  0507 087 17 89
                 </a>
               </div>
               <div className="flex items-center gap-2.5">

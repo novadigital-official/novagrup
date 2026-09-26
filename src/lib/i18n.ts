@@ -1,4 +1,4 @@
-export type Language = "tr" | "en";
+﻿export type Language = "tr" | "en";
 
 export const content = {
   tr: {
@@ -9,7 +9,7 @@ export const content = {
       whyUs: "Neden NOVA?",
       advisory: "Kadroya Katıl",
       contact: "İletişim",
-      phone: "0505 410 48 00",
+      phone: "0507 087 17 89",
       ctaButton: "Teklif Alın",
       mobileCta: "Teklif Alın",
     },
@@ -253,7 +253,7 @@ export const content = {
       subtitle:
         "Operasyon kapsamınızı ve tesis bilgilerinizi iletin; saha keşfi sonrası en geç 24 saat içinde yazılı hizmet teklifimizi sunalım.",
       directContactLabel: "Saha Koordinasyon WhatsApp",
-      phone: "0505 410 48 00",
+      phone: "0507 087 17 89",
       contactPerson: "Hızlı Teklif & Mesaj Masası",
       emailLabel: "Kurumsal E-Posta",
       email: "iknovaofis@gmail.com",
@@ -307,7 +307,7 @@ export const content = {
       col3Title: "İletişim",
       col3Link1: "Yazılı Hizmet Teklifi",
       col3Link2: "WhatsApp Danışma Masası",
-      col3Link3: "Tel: 0505 410 48 00",
+      col3Link3: "Tel: 0507 087 17 89",
       col3Link4: "iknovaofis@gmail.com",
       col3Link5: "Instagram: @novaofisss",
       copyright: "© 2026 NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ. Tüm hakları saklıdır.",

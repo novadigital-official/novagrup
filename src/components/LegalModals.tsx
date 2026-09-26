@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { X, ShieldCheck, FileText, Lock, Building } from "lucide-react";
 
@@ -95,7 +95,7 @@ export function LegalModal({ type, onClose }: LegalModalProps) {
             <p><strong>Kurucu & Şirket Müdürü:</strong> Çelebi ASAL</p>
             <p><strong>Resmi Web Sitesi:</strong> www.novaorganizasyon7.com.tr</p>
             <p><strong>Kurumsal E-Posta:</strong> iknovaofis@gmail.com</p>
-            <p><strong>Kurumsal İletişim & Saha:</strong> 0505 410 48 00</p>
+            <p><strong>Kurumsal İletişim & Saha:</strong> 0507 087 17 89</p>
             <p><strong>Hizmet Bölgesi:</strong> Türkiye Geneli (Otel, Tesis ve Kurumsal İşletmeler)</p>
             <p><strong>Faaliyet Alanı:</strong> Tanımlı Kapsamda Departman İşletimi, Tesis Hizmet Alım Çözümleri & Saha Operasyonları</p>
           </div>

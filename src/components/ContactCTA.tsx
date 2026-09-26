@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -135,7 +135,7 @@ export default function ContactCTA() {
           (corpData.message ? `📝 *Talep / Operasyon Notu:* ${corpData.message}\n` : "") +
           `\n_novaorganizasyon7.com.tr kurumsal operasyon masası üzerinden iletildi._`
         );
-        window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
+        window.open(`https://wa.me/905070871789?text=${waText}`, "_blank");
       }
 
       setFormState("sent");
@@ -183,7 +183,7 @@ export default function ContactCTA() {
           (candidateData.notes ? `📝 *Deneyim / Not:* ${candidateData.notes}\n` : "") +
           `\n_NOVA GLOBAL kendi bünyesinde SGK'lı istihdam değerlendirmesi için iletilmiştir._`
         );
-        window.open(`https://wa.me/905054104800?text=${waText}`, "_blank");
+        window.open(`https://wa.me/905070871789?text=${waText}`, "_blank");
       }
 
       setFormState("sent");
@@ -306,7 +306,7 @@ export default function ContactCTA() {
                       : (language === "tr" ? "İK & Başvuru Danışma" : "HR & Recruitment WhatsApp")}
                   </p>
                   <p className="text-white font-black text-sm group-hover:text-gold transition-colors">
-                    0505 410 48 00
+                    0507 087 17 89
                   </p>
                 </div>
               </a>

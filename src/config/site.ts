@@ -1,4 +1,4 @@
-export const siteConfig = {
+﻿export const siteConfig = {
   domain: "novaorganizasyon7.com.tr",
   url: "https://novaorganizasyon7.com.tr",
   company: {
@@ -13,10 +13,10 @@ export const siteConfig = {
     tradeRegistry: "Antalya Ticaret Sicili Müdürlüğü (TTSG: 11.09.2026, Sayı: 11164)",
   },
   contact: {
-    phone: "0505 410 48 00",
+    phone: "0507 087 17 89",
     phoneIntl: "+90 505 410 48 00",
-    phoneRaw: "905054104800",
-    secondaryPhone: "0505 410 48 00",
+    phoneRaw: "905070871789",
+    secondaryPhone: "0507 087 17 89",
     email: "iknovaofis@gmail.com",
     department: "Saha Operasyon & Danışmanlık Masası",
     titleTR: "Saha Operasyon Masası",
@@ -25,7 +25,7 @@ export const siteConfig = {
   social: {
     instagram: "novaofisss",
     instagramUrl: "https://instagram.com/novaofisss",
-    whatsappUrl: "https://wa.me/905054104800",
+    whatsappUrl: "https://wa.me/905070871789",
   },
   location: {
     cityTR: "Antalya Merkez / Türkiye",

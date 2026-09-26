@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/LanguageContext";
@@ -92,7 +92,7 @@ const jsonLd = {
       legalName: "NOVA GLOBAL BİLİŞİM TURİZM ORGANİZASYON VE DANIŞMANLIK LİMİTED ŞİRKETİ",
       url: "https://www.novaorganizasyon7.com.tr",
       logo: "https://www.novaorganizasyon7.com.tr/images/nova-emblem.jpg",
-      telephone: "+905054104800",
+      telephone: "+905070871789",
       parentOrganization: {
         "@type": "Organization",
         "@id": "https://novadigital.com.tr/#organization",
@@ -102,7 +102,7 @@ const jsonLd = {
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+905054104800",
+        telephone: "+905070871789",
         contactType: "customer service",
         availableLanguage: ["Turkish", "English"],
       },
