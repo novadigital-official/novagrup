@@ -1,4 +1,4 @@
-﻿export type Language = "tr" | "en";
+export type Language = "tr" | "en";
 
 export const content = {
   tr: {
@@ -96,7 +96,7 @@ export const content = {
         },
         {
           tag: "Sahne & Gösteri",
-          title: "Animasyon & Sahne Şovları",
+          title: "Animasyon, Sahne Şovları & Konser",
           description:
             "Gündüz spor aktiviteleri, çocuk kulübü ve akşam profesyonel sahne gösterileri organizasyonu.",
           features: [
@@ -274,7 +274,7 @@ export const content = {
       deptOption2: "Kat Hizmetleri & Housekeeping Operasyonu",
       deptOption3: "Restoran & Ziyafet Servis Operasyonu",
       deptOption4: "Bulaşıkhane & Mutfak Sanitasyon Operasyonu",
-      deptOption5: "Animasyon & Sahne Gösterileri Koordinasyonu",
+      deptOption5: "Animasyon, Sahne Şovları & Konser Koordinasyonu",
       deptOption6: "İnşaat, Tadilat & Tesis Bakım Hizmetleri",
       deptOption7: "Depo, Paketleme & Sevkiyat Operasyonları",
       deptOption8: "Kongre, Fuar & Etkinlik Saha Operasyonları",
@@ -292,7 +292,7 @@ export const content = {
       col1Link1: "Kat Hizmetleri & Housekeeping",
       col1Link2: "Restoran & Ziyafet Servisi",
       col1Link3: "Bulaşıkhane & Sanitasyon",
-      col1Link4: "Animasyon & Gösteri Operasyonu",
+      col1Link4: "Animasyon, Sahne & Konser",
       col1Link5: "İnşaat, Tadilat & Bakım",
       col1Link6: "Depo, Paketleme & Sevkiyat",
       col1Link7: "Kongre & Fuar Operasyonları",
@@ -413,7 +413,7 @@ export const content = {
         },
         {
           tag: "Entertainment",
-          title: "Animation & Stage Shows",
+          title: "Animation, Stage Shows & Concerts",
           description:
             "Daytime sports, kids club programs, and high-energy evening stage performances.",
           features: [
@@ -591,7 +591,7 @@ export const content = {
       deptOption2: "Housekeeping & Public Areas Operations",
       deptOption3: "Restaurant & Banquet Service Operations",
       deptOption4: "Stewarding & Kitchen Sanitation Operations",
-      deptOption5: "Animation & Stage Shows Operations",
+      deptOption5: "Animation, Stage Shows & Concert Operations",
       deptOption6: "Construction, Renovation & Maintenance",
       deptOption7: "Warehouse Packaging & Dispatch Operations",
       deptOption8: "Congress, Expo & Event Field Operations",
@@ -609,7 +609,7 @@ export const content = {
       col1Link1: "Housekeeping & Public Areas",
       col1Link2: "Restaurant & Banquet Operations",
       col1Link3: "Stewarding & Kitchen Sanitation",
-      col1Link4: "Animation & Stage Shows",
+      col1Link4: "Animation, Stage & Concerts",
       col1Link5: "Construction & Renovation",
       col1Link6: "Warehouse Packaging & Dispatch",
       col1Link7: "Congress & Expo Field Operations",

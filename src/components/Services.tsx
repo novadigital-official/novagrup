@@ -23,11 +23,11 @@ const departmentImages = [
   "/images/hotel-housekeeping.png",
   "/images/hotel-waiter.png",
   "/images/hotel-steward.jpg",
-  "/images/hotel-animation-show.jpg",
+  "/images/hotel-animation-concert.jpg",
   "/images/construction-renovation.jpg",
   "/images/factory-operations.jpg",
-  "/images/call-center-lead.jpg",
   "/images/hotel-event.png",
+  "/images/call-center-lead.jpg",
   "/images/grant-incentive-consulting.jpg",
 ];
 

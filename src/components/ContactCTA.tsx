@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -481,7 +481,7 @@ export default function ContactCTA() {
                           <option value="Kat Hizmetleri & Housekeeping Operasyonu">Kat Hizmetleri & Housekeeping Operasyonu</option>
                           <option value="Restoran & Ziyafet Servis Operasyonu">Restoran & Ziyafet Servis Operasyonu</option>
                           <option value="Bulaşıkhane & Mutfak Sanitasyon Operasyonu">Bulaşıkhane & Mutfak Sanitasyon Operasyonu</option>
-                          <option value="Animasyon & Sahne Gösterileri Koordinasyonu">Animasyon & Sahne Gösterileri Koordinasyonu</option>
+                          <option value="Animasyon, Sahne Şovları & Konser Koordinasyonu">Animasyon, Sahne Şovları & Konser Koordinasyonu</option>
                           <option value="İnşaat, Tadilat & Tesis Bakım Hizmetleri">İnşaat, Tadilat & Tesis Bakım Hizmetleri</option>
                           <option value="Depo, Paketleme & Sevkiyat Operasyonları">Depo, Paketleme & Sevkiyat Operasyonları</option>
                           <option value="Kongre, Fuar & Etkinlik Saha Operasyonları">Kongre, Fuar & Etkinlik Saha Operasyonları</option>
@@ -693,7 +693,7 @@ export default function ContactCTA() {
                           <option value="Kat Hizmetleri & Housekeeping Ekipleri">Kat Hizmetleri & Housekeeping Operasyonu</option>
                           <option value="Restoran Servis & Ziyafet Ekipleri">Restoran & Ziyafet Servis Operasyonu</option>
                           <option value="Bulaşıkhane & Mutfak Sanitasyon Ekipleri">Bulaşıkhane & Mutfak Sanitasyon Operasyonu</option>
-                          <option value="Animasyon, Sahne & Gösteri Ekipleri">Animasyon & Sahne Gösterileri Koordinasyonu</option>
+                          <option value="Animasyon, Sahne & Konser Ekipleri">Animasyon, Sahne Şovları & Konser Koordinasyonu</option>
                           <option value="Tesis Tadilat, Boya & Bakım Ekipleri">İnşaat, Tadilat & Tesis Bakım Hizmetleri</option>
                           <option value="Depo İçi Paketleme & Sevkiyat Ekipleri">Depo, Paketleme & Sevkiyat Operasyonları</option>
                           <option value="Genel Başvuru (Açık Pozisyonlar)">Genel Başvuru (En Uygun Açık Pozisyon)</option>
