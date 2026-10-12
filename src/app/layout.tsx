@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/LanguageContext";
@@ -115,6 +115,99 @@ const jsonLd = {
       publisher: {
         "@id": "https://www.novaorganizasyon7.com.tr/#organization",
       },
+    },
+    {
+      "@type": "Service",
+      name: "Kongre, Fuar ve Konser Saha Operasyonu",
+      description: "Kongre otelleri, ANFAŞ Fuar Merkezi, konser ve festival alanlarında salon koordinasyonu, sahne kurulum desteği, akreditasyon yönetimi, VIP karşılama ve saha lojistiği. Antalya ve Türkiye genelinde profesyonel etkinlik saha ekibi.",
+      provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
+      areaServed: ["Antalya", "İstanbul", "İzmir", "Türkiye"],
+      serviceType: "Fuar, Kongre ve Konser Saha Koordinasyonu",
+    },
+    {
+      "@type": "Service",
+      name: "Animasyon, Sahne Şovları ve Konser Organizasyonu",
+      description: "5 yıldızlı oteller ve tatil köyleri için gündüz spor animasyonu, mini club programları ve akşam profesyonel sahne gösterileri koordinasyonu. Dans, akrobasi, tematik şov ve konser organizasyonu.",
+      provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
+      areaServed: ["Antalya", "Belek", "Kemer", "Alanya", "Kundu"],
+      serviceType: "Otel Animasyon ve Sahne Organizasyonu",
+    },
+    {
+      "@type": "Service",
+      name: "Otel Kat Hizmetleri ve Housekeeping Departman İşletimi",
+      description: "5 yıldızlı otel standartlarında oda hijyeni, kat ve genel alan bakımı, çamaşırhane yönetimi. NOVA saha amiri gözetiminde götürü bedelli anahtar teslim departman işletimi.",
+      provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
+      areaServed: ["Antalya", "Belek", "Kemer", "Alanya", "Kundu"],
+      serviceType: "Otel Housekeeping Departman İşletimi",
+    },
+    {
+      "@type": "Service",
+      name: "Restoran ve Ziyafet Servis Operasyonu",
+      description: "Alakart restoranlar, açık büfe, banket, kokteyl ve gala etkinliklerinde servis akış yönetimi. Profesyonel F&B saha operasyonu.",
+      provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
+      areaServed: ["Antalya", "Türkiye"],
+      serviceType: "F&B Servis Departman Operasyonu",
+    },
+    {
+      "@type": "Service",
+      name: "B2B Satış Geliştirme ve Kurumsal İletişim Operasyonu",
+      description: "Kurumsal işletmeler için hedef pazar araştırması, karar verici haritalama ve ön teyitli ticari randevu organizasyonu. KVKK uyumlu B2B satış geliştirme ve çağrı operasyonu.",
+      provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
+      areaServed: ["Türkiye"],
+      serviceType: "B2B Satış Geliştirme ve Çağrı Operasyonu",
+    },
+    {
+      "@type": "Service",
+      name: "Devlet Destekleri ve Teşvik Danışmanlığı",
+      description: "SGK prim teşvikleri, KOSGEB hibe ve kredi başvuruları, Ticaret Bakanlığı ihracat destekleri ve fuar desteği dosya yönetimi. Resmi kurum süreçlerinin uçtan uca takibi.",
+      provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
+      areaServed: ["Türkiye"],
+      serviceType: "Devlet Teşvikleri ve Hibe Danışmanlığı",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "NOVA GLOBAL kongre ve fuar organizasyonlarında hangi hizmetleri sunuyor?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "NOVA GLOBAL; kongre otelleri, ANFAŞ Fuar Merkezi ve etkinlik alanlarında salon koordinasyonu, karşılama, akreditasyon yönetimi, sahne kurulum desteği, VIP protokol ve saha lojistiği hizmetleri sunmaktadır. Tüm ekip kendi SGK'lı bordromuzda çalışmaktadır.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Konser ve festival etkinliklerinde saha personeli desteği veriyor musunuz?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Evet. NOVA GLOBAL; konser, festival ve sahne etkinliklerinde saha koordinasyonu, yönlendirme ekibi, sahne destek personeli ve organizasyon lojistiği hizmetleri sağlamaktadır. Antalya ve Türkiye genelinde hizmet vermekteyiz.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Antalya'daki 5 yıldızlı otellere kat hizmetleri ve housekeeping departmanı işletimi yapıyor musunuz?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Evet. NOVA GLOBAL, Belek, Kemer, Kundu, Alanya ve Antalya merkezdeki 5 yıldızlı otellere götürü bedelli kat hizmetleri ve housekeeping departmanı işletimi sunmaktadır. Tüm personel NOVA bordrosunda SGK'lı olarak çalışmaktadır.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Devlet teşvikleri ve KOSGEB hibe başvurusu konusunda destek veriyor musunuz?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Evet. NOVA GLOBAL; SGK istihdam teşvikleri analizi, KOSGEB hibe ve kredi başvuru yönetimi ile resmi kurum süreçlerinin uçtan uca takibini sağlamaktadır.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "NOVA GLOBAL ile nasıl iletişime geçebilirim?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Web sitemizdeki kurumsal teklif formunu doldurabilir, 0507 087 17 89 numaralı WhatsApp hattımızdan ulaşabilir veya iknovaofis@gmail.com adresine e-posta gönderebilirsiniz. Instagram: @novaofisss",
+          },
+        },
+      ],
     },
   ],
 };
