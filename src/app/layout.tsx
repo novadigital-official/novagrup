@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NOVA GLOBAL | Otel Departman İşletimi, Saha Koordinasyonu & Danışmanlık",
+  title: "NOVA GLOBAL | Antalya Otel Departman İşletimi, Kongre, Fuar & Etkinlik Saha Hizmetleri",
   description:
-    "5 yıldızlı oteller ve sanayi tesisleri için kat hizmetleri, F&B servis, mutfak hijyeni ve fabrika hatlarında profesyonel departman işletim hizmeti; kurumsal firmalara B2B satış geliştirme ve devlet teşvikleri danışmanlığı.",
+    "Antalya (Belek, Kundu, Kemer, Alanya) 5 yıldızlı otelleri için 4857 sayılı İş Kanunu kapsamında kurumsal alt işverenlik ve departman işletimi; ANFAŞ ve Türkiye genelinde kongre, fuar, konser etkinlik saha lojistiği ve dış kaynak (outsourcing) operasyonları.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -26,16 +26,17 @@ export const metadata: Metadata = {
     shortcut: ["/favicon.ico"],
   },
   keywords: [
-    "otel departman yönetimi",
-    "departman işletim hizmeti",
-    "kat hizmetleri operasyonu",
-    "restoran servis koordinasyonu",
-    "steward mutfak hijyeni",
-    "tesis ve fabrika saha operasyonları",
-    "b2b satış geliştirme",
-    "kurumsal iletişim operasyonu",
-    "devlet teşvikleri danışmanlığı",
-    "kosgeb hibe danışmanlığı",
+    "antalya otel departman işletimi",
+    "4857 alt işverenlik antalya",
+    "dış kaynak outsourcing saha operasyonları",
+    "antalya kongre saha personeli",
+    "anfaş fuar operasyon ekibi",
+    "belek otel housekeeping işletimi",
+    "kemer kundu restoran ziyafet servisi",
+    "konser festival saha lojistiği antalya",
+    "steward mutfak hijyeni operasyonu",
+    "b2b satış geliştirme çağrı operasyonu",
+    "devlet teşvikleri danışmanlığı antalya",
     "nova global",
   ],
   authors: [{ name: "NOVA GLOBAL", url: "https://www.novaorganizasyon7.com.tr" }],

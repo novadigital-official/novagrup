@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -155,7 +155,17 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+        </div>
 
+        {/* GEO & Bölgesel Operasyon Ağı Bar */}
+        <div className="py-3 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-2.5 text-xs">
+          <div className="flex items-center gap-2 text-gold/90 font-semibold tracking-wider uppercase text-[11px]">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+            <span>{language === "tr" ? "Operasyon & Hizmet Bölgelerimiz:" : "Operational & Service Regions:"}</span>
+          </div>
+          <div className="text-center md:text-right text-[11px] text-white/65 leading-relaxed">
+            <span className="font-medium text-white/85">Antalya</span> (Belek • Kundu • Kemer • Manavgat • Alanya) • <span className="text-white/85">ANFAŞ Fuar Merkezi & Kongre Tesisleri</span> • <span className="text-white/85">Tüm Türkiye</span>
+          </div>
         </div>
 
         {/* NOVA GRUP Çözüm Ekosistemi & İştirak Portalları Bar */}

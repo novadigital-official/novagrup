@@ -54,7 +54,7 @@ export const content = {
       titlePart1: "Tesisiniz İçin ",
       titlePart2: "Tanımlı Hizmet Çözümleri",
       subtitle:
-        "NOVA saha amirleri yönetiminde, tanımlı kapsam ve götürü bedelli hizmet modelleri.",
+        "4857 sayılı İş Kanunu m.2 çerçevesinde NOVA saha amirleri yönetiminde, tanımlı kapsam ve götürü bedelli kurumsal dış kaynak (outsourcing) modelleri.",
       ctaCard: "Teklif Alın",
       cardBadge: "Götürü Bedel",
       departments: [
@@ -62,7 +62,7 @@ export const content = {
           tag: "Housekeeping",
           title: "Kat Hizmetleri & Housekeeping",
           description:
-            "5 yıldızlı otel standartlarında oda hijyeni, kat ve genel alan bakımı ile çamaşırhane yönetimi.",
+            "Belek, Kundu, Kemer ve Alanya 5 yıldızlı resort otellerinde oda hijyeni, kat ve genel alan bakımı ile çamaşırhane işletimi.",
           features: [
             "Oda ve Kat Hijyen Standartları",
             "Meydan & Genel Alan Hijyen Planı",
@@ -74,7 +74,7 @@ export const content = {
           tag: "F&B Servis",
           title: "Restoran & Ziyafet Servisi",
           description:
-            "Alakart restoranlar, açık büfe, banket ve gala etkinliklerinde servis akış yönetimi.",
+            "Resort oteller, alakart restoranlar, banket, kokteyl ve gala etkinliklerinde profesyonel servis akış koordinasyonu.",
           features: [
             "Masa Düzeni & Kuver Açım Yönetimi",
             "Banket, Kokteyl & Gala Desteği",
@@ -95,12 +95,12 @@ export const content = {
           ],
         },
         {
-          tag: "Sahne & Gösteri",
+          tag: "Sahne & Konser",
           title: "Animasyon, Sahne Şovları & Konser",
           description:
-            "Gündüz spor aktiviteleri, çocuk kulübü ve akşam profesyonel sahne gösterileri organizasyonu.",
+            "Antalya ve Ege bölgesi resort otelleri ile etkinlik alanlarında konser, festival, çocuk kulübü ve sahne gösterileri saha yönetimi.",
           features: [
-            "Sezonluk Eğlence Konsepti Planlama",
+            "Konser & Sahne Lojistiği Planlama",
             "Dans, Akrobasi & Tematik Akşam Şovları",
             "Mini Club Pedagojik Aktivite Programı",
             "NOVA Etkinlik Koordinatörü Denetimi",
@@ -134,7 +134,7 @@ export const content = {
           tag: "Kongre & Fuar",
           title: "Kongre, Fuar & Etkinlik",
           description:
-            "Kongre otelleri ve fuarlarda salon koordinasyonu, karşılama, akreditasyon ve saha lojistiği.",
+            "ANFAŞ Fuar Merkezi, Antalya Expo Center ve Türkiye geneli kongre otellerinde salon koordinasyonu, akreditasyon ve saha lojistiği.",
           features: [
             "Stand Alanı Yönlendirme & Karşılama",
             "Kayıt Masası, Akreditasyon & Yaka Kartı",
