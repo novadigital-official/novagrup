@@ -206,7 +206,7 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="iletisim" className="scroll-mt-20 relative py-6 sm:py-8 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
+    <section id="iletisim" className="scroll-mt-20 relative py-5 sm:py-6 bg-gradient-to-b from-brand-deeper via-brand-dark to-brand-darkest overflow-hidden text-white">
       {/* Anchor for Candidate jump */}
       <div id="kadro-basvuru" className="absolute -top-20" />
 
@@ -224,7 +224,7 @@ export default function ContactCTA() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 items-stretch">
           
           {/* LEFT COLUMN: Fast Info & Direct Contact Channels (5 Cols) */}
           <motion.div
@@ -573,10 +573,10 @@ export default function ContactCTA() {
                   </form>
 
                   {/* Corporate Legal Notice */}
-                  <p className="mt-2 text-center text-[10px] text-white/45 leading-relaxed">
+                  <p className="mt-1.5 text-center text-[10px] text-white/40 leading-normal">
                     {language === "tr"
-                      ? "NOVA GLOBAL; kurumsal tesislere tanımlı kapsamda departman işletimi sunar. Tüm operasyonlar NOVA GLOBAL’in kendi bordrolu kadrosu, yetkili saha amirleri ve performans çıktılarıyla bağımsız hizmet alım sözleşmesi kapsamında yürütülür."
-                      : "NOVA GLOBAL provides defined department operation services for corporate facilities. All operations are executed under independent service contracts with NOVA GLOBAL's own payroll teams, field supervisors, and defined performance deliverables."}
+                      ? "Operasyonlar NOVA GLOBAL’in kendi bordrolu kadrosu ve saha amirleriyle 4857 sayılı İş Kanunu kapsamında yürütülür."
+                      : "All operations are executed under independent service contracts with NOVA GLOBAL's direct payroll teams."}
                   </p>
                 </div>
               )}
@@ -784,10 +784,8 @@ export default function ContactCTA() {
                   </form>
 
                   {/* Candidate Informational Notice */}
-                  <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-gold/20 text-[10px] sm:text-[11px] text-white/70 leading-relaxed">
-                    <p>
-                      <strong className="text-gold font-semibold">Kariyer Bilgilendirmesi:</strong> Tüm iş başvuruları doğrudan NOVA GLOBAL bünyesinde bordrolu istihdam edilmek üzere değerlendirilir. Şirketimiz, iş arayan adaylardan hiçbir aşamada ücret, komisyon veya herhangi bir menfaat talep etmez.
-                    </p>
+                  <div className="mt-1.5 px-2.5 py-1 rounded-lg bg-white/[0.02] border border-gold/15 text-[10px] text-white/60 text-center leading-normal">
+                    <span className="text-gold font-medium">Kariyer Notu:</span> Tüm başvurular doğrudan NOVA GLOBAL bordrolu kadrosu içindir. Adaylardan ücret veya komisyon talep edilmez.
                   </div>
                 </div>
               )}

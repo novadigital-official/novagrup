@@ -164,7 +164,7 @@ export default function Footer() {
             <span>{language === "tr" ? "Operasyon & Hizmet Bölgelerimiz:" : "Operational & Service Regions:"}</span>
           </div>
           <div className="text-center md:text-right text-[11px] text-white/65 leading-relaxed">
-            <span className="font-medium text-white/85">Antalya</span> (Belek • Kundu • Kemer • Manavgat • Alanya) • <span className="text-white/85">ANFAŞ Fuar Merkezi & Kongre Tesisleri</span> • <span className="text-white/85">Tüm Türkiye</span>
+            <span className="font-medium text-white/85">Antalya</span> (Belek • Kundu • Kemer • Manavgat • Alanya) • <span className="font-medium text-white/85">Ege</span> (Bodrum • Marmaris • Kuşadası • Didim) • <span className="text-white/85">ANFAŞ & Kongre Tesisleri</span> • <span className="text-white/85">Tüm Türkiye</span>
           </div>
         </div>
 

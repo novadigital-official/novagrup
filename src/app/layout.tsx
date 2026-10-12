@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NOVA GLOBAL | Antalya Otel Departman İşletimi, Kongre, Fuar & Etkinlik Saha Hizmetleri",
+  title: "NOVA GLOBAL | Antalya & Ege Otel Departman İşletimi, Kongre, Fuar & Etkinlik Saha Hizmetleri",
   description:
-    "Antalya (Belek, Kundu, Kemer, Alanya) 5 yıldızlı otelleri için 4857 sayılı İş Kanunu kapsamında kurumsal alt işverenlik ve departman işletimi; ANFAŞ ve Türkiye genelinde kongre, fuar, konser etkinlik saha lojistiği ve dış kaynak (outsourcing) operasyonları.",
+    "Antalya (Belek, Kundu, Kemer, Alanya) ve Ege (Bodrum, Marmaris, Kuşadası, Didim) 5 yıldızlı resort otelleri için 4857 sayılı İş Kanunu kapsamında kurumsal alt işverenlik ve departman işletimi; ANFAŞ ve Türkiye genelinde kongre, fuar, konser etkinlik saha lojistiği ve dış kaynak (outsourcing) operasyonları.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -27,16 +27,18 @@ export const metadata: Metadata = {
   },
   keywords: [
     "antalya otel departman işletimi",
-    "4857 alt işverenlik antalya",
+    "bodrum otel departman işletimi",
+    "marmaris kuşadası didim otel saha ekibi",
+    "4857 alt işverenlik antalya ege",
     "dış kaynak outsourcing saha operasyonları",
     "antalya kongre saha personeli",
     "anfaş fuar operasyon ekibi",
-    "belek otel housekeeping işletimi",
-    "kemer kundu restoran ziyafet servisi",
-    "konser festival saha lojistiği antalya",
+    "belek bodrum otel housekeeping işletimi",
+    "kemer marmaris restoran ziyafet servisi",
+    "konser festival saha lojistiği antalya bodrum",
     "steward mutfak hijyeni operasyonu",
     "b2b satış geliştirme çağrı operasyonu",
-    "devlet teşvikleri danışmanlığı antalya",
+    "devlet teşvikleri danışmanlığı",
     "nova global",
   ],
   authors: [{ name: "NOVA GLOBAL", url: "https://www.novaorganizasyon7.com.tr" }],
@@ -120,9 +122,9 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "Kongre, Fuar ve Konser Saha Operasyonu",
-      description: "Kongre otelleri, ANFAŞ Fuar Merkezi, konser ve festival alanlarında salon koordinasyonu, sahne kurulum desteği, akreditasyon yönetimi, VIP karşılama ve saha lojistiği. Antalya ve Türkiye genelinde profesyonel etkinlik saha ekibi.",
+      description: "Kongre otelleri, ANFAŞ Fuar Merkezi, Bodrum ve Antalya festival/konser alanlarında salon koordinasyonu, sahne kurulum desteği, akreditasyon yönetimi, VIP karşılama ve saha lojistiği. Antalya, Muğla, Aydın, İzmir ve Türkiye genelinde profesyonel etkinlik saha ekibi.",
       provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
-      areaServed: ["Antalya", "İstanbul", "İzmir", "Türkiye"],
+      areaServed: ["Antalya", "Bodrum", "Marmaris", "Kuşadası", "Didim", "İzmir", "İstanbul", "Türkiye"],
       serviceType: "Fuar, Kongre ve Konser Saha Koordinasyonu",
     },
     {
@@ -130,23 +132,23 @@ const jsonLd = {
       name: "Animasyon, Sahne Şovları ve Konser Organizasyonu",
       description: "5 yıldızlı oteller ve tatil köyleri için gündüz spor animasyonu, mini club programları ve akşam profesyonel sahne gösterileri koordinasyonu. Dans, akrobasi, tematik şov ve konser organizasyonu.",
       provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
-      areaServed: ["Antalya", "Belek", "Kemer", "Alanya", "Kundu"],
+      areaServed: ["Antalya", "Belek", "Kemer", "Alanya", "Kundu", "Bodrum", "Marmaris", "Kuşadası", "Didim"],
       serviceType: "Otel Animasyon ve Sahne Organizasyonu",
     },
     {
       "@type": "Service",
       name: "Otel Kat Hizmetleri ve Housekeeping Departman İşletimi",
-      description: "5 yıldızlı otel standartlarında oda hijyeni, kat ve genel alan bakımı, çamaşırhane yönetimi. NOVA saha amiri gözetiminde götürü bedelli anahtar teslim departman işletimi.",
+      description: "Antalya ve Ege Rivierası (Bodrum, Marmaris, Kuşadası, Didim) 5 yıldızlı otel standartlarında oda hijyeni, kat ve genel alan bakımı, çamaşırhane yönetimi. NOVA saha amiri gözetiminde götürü bedelli anahtar teslim departman işletimi.",
       provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
-      areaServed: ["Antalya", "Belek", "Kemer", "Alanya", "Kundu"],
+      areaServed: ["Antalya", "Belek", "Kemer", "Alanya", "Kundu", "Bodrum", "Marmaris", "Kuşadası", "Didim"],
       serviceType: "Otel Housekeeping Departman İşletimi",
     },
     {
       "@type": "Service",
       name: "Restoran ve Ziyafet Servis Operasyonu",
-      description: "Alakart restoranlar, açık büfe, banket, kokteyl ve gala etkinliklerinde servis akış yönetimi. Profesyonel F&B saha operasyonu.",
+      description: "Alakart restoranlar, açık büfe, banket, kokteyl ve gala etkinliklerinde servis akış yönetimi. Antalya ve Ege resort tesislerinde profesyonel F&B saha operasyonu.",
       provider: { "@id": "https://www.novaorganizasyon7.com.tr/#organization" },
-      areaServed: ["Antalya", "Türkiye"],
+      areaServed: ["Antalya", "Bodrum", "Marmaris", "Kuşadası", "Didim", "Türkiye"],
       serviceType: "F&B Servis Departman Operasyonu",
     },
     {
