@@ -206,6 +206,32 @@ export const content = {
         "Tesisinizi yerinde inceleyelim, en geç 24 saat içinde kapsamı netleştirilmiş yazılı hizmet teklifimizi sunalım.",
       bannerBtn: "Hizmet Teklifi İsteyin",
     },
+    faq: {
+      badge: "Sıkça Sorulan Sorular",
+      title: "Hizmetlerimiz Hakkında Kısa Yanıtlar",
+      items: [
+        {
+          q: "Kongre ve fuar organizasyonlarında hangi hizmetleri sunuyorsunuz?",
+          a: "Kongre otelleri, ANFAŞ Fuar Merkezi ve etkinlik alanlarında salon koordinasyonu, karşılama, akreditasyon yönetimi, sahne kurulum desteği, VIP protokol ve saha lojistiği hizmetleri sunuyoruz.",
+        },
+        {
+          q: "Konser ve festival etkinliklerinde saha koordinasyonu yapıyor musunuz?",
+          a: "Evet. Konser, festival ve sahne etkinliklerinde saha koordinasyonu, yönlendirme, sahne destek operasyonu ve organizasyon lojistiği hizmetleri veriyoruz.",
+        },
+        {
+          q: "Hangi bölgelerde hizmet veriyorsunuz?",
+          a: "Antalya (Belek, Kundu, Kemer, Manavgat, Alanya), Ege (Bodrum, Marmaris, Kuşadası, Didim) ve Türkiye genelindeki kongre ile fuar merkezlerinde hizmet veriyoruz.",
+        },
+        {
+          q: "Otellerde departman işletimini nasıl sunuyorsunuz?",
+          a: "Kat hizmetleri, restoran ve ziyafet servisi gibi departmanları tanımlı kapsam ve götürü bedelle, NOVA saha amirleri yönetiminde işletiyoruz.",
+        },
+        {
+          q: "Teklif nasıl alabilirim?",
+          a: "Sitedeki kurumsal teklif formunu doldurabilir, WhatsApp hattımızdan veya e-posta ile ulaşabilirsiniz. Tesisinizi yerinde inceleyip kapsamı netleştirilmiş yazılı teklifimizi en geç 24 saat içinde sunarız.",
+        },
+      ],
+    },
     whyUs: {
       badge: "Neden NOVA?",
       titlePart1: "Tesisiniz İçin Güvenli, Şeffaf ve ",
@@ -522,6 +548,32 @@ export const content = {
       bannerDesc:
         "We evaluate your property within 24 hours to present a transparent, customized service proposal.",
       bannerBtn: "Request a Proposal",
+    },
+    faq: {
+      badge: "Frequently Asked Questions",
+      title: "Quick Answers About Our Services",
+      items: [
+        {
+          q: "What services do you provide for congress and trade fair events?",
+          a: "We provide hall coordination, guest reception, accreditation management, stage setup support, VIP protocol and field logistics at congress hotels, the ANFAS Fair Center and other event venues.",
+        },
+        {
+          q: "Do you provide field coordination for concerts and festivals?",
+          a: "Yes. We provide field coordination, guest guidance, stage support operations and event logistics for concerts, festivals and stage events.",
+        },
+        {
+          q: "Which regions do you serve?",
+          a: "We serve Antalya (Belek, Kundu, Kemer, Manavgat, Alanya), the Aegean coast (Bodrum, Marmaris, Kusadasi, Didim) and congress and fair centers across Turkey.",
+        },
+        {
+          q: "How do you run hotel department operations?",
+          a: "We operate departments such as housekeeping and restaurant banquet service with a defined scope and lump-sum fee, under the management of NOVA field supervisors.",
+        },
+        {
+          q: "How can I request a proposal?",
+          a: "You can fill in the corporate proposal form on this site, or reach us via our WhatsApp line or e-mail. After an on-site review of your facility, we present a written proposal with a defined scope within 24 hours.",
+        },
+      ],
     },
     whyUs: {
       badge: "Why NOVA?",

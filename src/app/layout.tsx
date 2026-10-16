@@ -167,51 +167,6 @@ const jsonLd = {
       areaServed: ["Türkiye"],
       serviceType: "Devlet Teşvikleri ve Hibe Danışmanlığı",
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "NOVA GLOBAL kongre ve fuar organizasyonlarında hangi hizmetleri sunuyor?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "NOVA GLOBAL; kongre otelleri, ANFAŞ Fuar Merkezi ve etkinlik alanlarında salon koordinasyonu, karşılama, akreditasyon yönetimi, sahne kurulum desteği, VIP protokol ve saha lojistiği hizmetleri sunmaktadır. Tüm ekip kendi SGK'lı bordromuzda çalışmaktadır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Konser ve festival etkinliklerinde saha personeli desteği veriyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. NOVA GLOBAL; konser, festival ve sahne etkinliklerinde saha koordinasyonu, yönlendirme ekibi, sahne destek personeli ve organizasyon lojistiği hizmetleri sağlamaktadır. Antalya ve Türkiye genelinde hizmet vermekteyiz.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Antalya'daki 5 yıldızlı otellere kat hizmetleri ve housekeeping departmanı işletimi yapıyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. NOVA GLOBAL, Belek, Kemer, Kundu, Alanya ve Antalya merkezdeki 5 yıldızlı otellere götürü bedelli kat hizmetleri ve housekeeping departmanı işletimi sunmaktadır. Tüm personel NOVA bordrosunda SGK'lı olarak çalışmaktadır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Devlet teşvikleri ve KOSGEB hibe başvurusu konusunda destek veriyor musunuz?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Evet. NOVA GLOBAL; SGK istihdam teşvikleri analizi, KOSGEB hibe ve kredi başvuru yönetimi ile resmi kurum süreçlerinin uçtan uca takibini sağlamaktadır.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "NOVA GLOBAL ile nasıl iletişime geçebilirim?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Web sitemizdeki kurumsal teklif formunu doldurabilir, 0507 087 17 89 numaralı WhatsApp hattımızdan ulaşabilir veya iknovaofis@gmail.com adresine e-posta gönderebilirsiniz. Instagram: @novaofisss",
-          },
-        },
-      ],
-    },
   ],
 };
 
